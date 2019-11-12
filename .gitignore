@@ -1,0 +1,24 @@
+# OS junk files
+*.DS_Store
+
+# Office temp files
+~$*
+
+# Zip backups
+*.zip
+
+# tex junk files from compiling
+*.log
+*.aux
+*.bbl
+*.blg
+*.lot
+*.lof
+*.out
+*.gz
+*.toc
+*.tks
+
+
+# keynote files for making figures
+*.key
