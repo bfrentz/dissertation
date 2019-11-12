@@ -4,8 +4,10 @@ Bryce Frentz
 Created 11/04/19
 
 
-Changes (11/04/19)
-* Working on chapter one, introduction
+Updates 
+* (11/04/19) Working on chapter one, introduction
+* (11/09/19) Finished text and figures for chapter 1.
+* (11/12/19) Added tables to chapter 1.
 
 
 
