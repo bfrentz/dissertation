@@ -17,8 +17,8 @@
 \contentsline {section}{\numberline {1.5}The $^{14}$N$\left ( p,\gamma \right ) ^{15}$O reaction}{24}{section.1.5}
 \contentsline {subsection}{\numberline {1.5.1}Reaction cross section}{24}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Lifetime}{28}{subsection.1.5.2}
-\contentsline {section}{\numberline {1.6}The Doppler Shift Attenuation Method for lifetime measurements}{30}{section.1.6}
-\contentsline {section}{\numberline {1.7}Thesis outline}{33}{section.1.7}
+\contentsline {section}{\numberline {1.6}The Doppler Shift Attenuation Method for lifetime measurements}{31}{section.1.6}
+\contentsline {section}{\numberline {1.7}Thesis outline}{35}{section.1.7}
 \contentsline {chapter}{{Chapter\ 2: Experimental setup and procedures}}{37}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction}{37}{section.2.1}
 \contentsline {section}{\numberline {2.2}Accelerators, beamline, and high-purity Germanium detectors}{37}{section.2.2}
@@ -50,3 +50,4 @@
 \contentsline {chapter}{{Chapter\ 7: Results and conclusions}}{47}{chapter.7}
 \contentsline {chapter}{{Appendix\ A: GNU GENERALISMS}}{49}{appendix.A}
 \contentsline {section}{\numberline {A.1}Definitions}{49}{section.A.1}
+\contentsline {chapter}{Bibliography}{53}{appendix*.24}
