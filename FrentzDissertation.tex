@@ -176,17 +176,17 @@
 \end{acknowledge}
 
 % A symbols section is optional.
-\begin{symbols}
-  \sym{\mathcal{F}}{sighting frequency of Gnus about campus}
-  \sym{p}{student population}
-  \sym{f}{type of food available}
-  \sym{d}{day of week}
-  \sym{c}{speed of light}
-  \sym{m}{mass}
-  \sym{e}{elementary charge}
-  \sym{a,b}{miscellaneous constants}  
-  \sym{E}{energy}  
-\end{symbols}
+%\begin{symbols}
+%  \sym{\mathcal{F}}{sighting frequency of Gnus about campus}
+%  \sym{p}{student population}
+%  \sym{f}{type of food available}
+%  \sym{d}{day of week}
+%  \sym{c}{speed of light}
+%  \sym{m}{mass}
+%  \sym{e}{elementary charge}
+%  \sym{a,b}{miscellaneous constants}  
+%  \sym{E}{energy}  
+%\end{symbols}
 
 \mainmatter
 % Place the text body here.
@@ -197,59 +197,59 @@
 %
 % An unnumbered chapter (features)
 %
-\unnumchapter{Features of Formatting in This Example File}
-% The \unnumchapter command allows you to include an unnumbered chapter as part of
-% the main text before Chapter 1. It will appear in your table of contents, and you
-% should have at most one such chapter (although nothing in the class file will
-% prevent you from creating more).
-
-% The usual \cite{} command is also available, and should work as expected.
-This \verb+chapter+ has been added to the original sample file to highlight the
-various features with the formatting that conforms to the Graduate school
-guidelines --- whether obtained due to the use of \nddiss\/ class file or just
-plain good practice.
-\begin{itemize}
-\item An important note on line-breaks via \verb+\\+ in titles: the
-  titles of the thesis as well as chapters and table captions use
-  \verb+\MakeTextUppercase{}+ from the \verb+textcase+ package.  Due
-  to the nature of the \verb+center+ environment, any line-breaks
-  introduced in titles and captions should be protected, as in
-  \verb+\protect\\+.
-  To preserve the case in titles and captions, use, e.g.,
-  \verb+\NoCaseChange{Gnus}+.
-\item In the \emph{dedication}, the title name has been modified. So, you know
-how to and that it can be done.
-\item The entries in the \emph{List of figures} and \emph{List of Tables} are
-single-spaced themselves but are double-spaced from the other.
-\item The table captions are not in all CAPS as well for the reason mentioned
-above.
-\item Appropriate space is left between the \verb+Table xx+ and its
-corresponding caption (which is double-spaced itself) as in table \ref{tbl:bogus1}.
-\item Tables look much better without the vertical lines (good practice).
-\item There is double-spacing between the table entries but single-spacing
-within the entry.
-\item The chapter (see Chapter \ref{chap:golfing}) or section titles are
-double-spaced as mentioned in the guidelines.
-\item There is a \verb+subsubsection+ present (eg. section \ref{sec:data}) and
-is properly formatted in the TOC.
-\item Sections deeper than \verb+subsubsection+ should not appear in the TOC.
-\item Table \ref{tbl:defs} is an example of the use of \textsf{landscape}
-environment in which a normal table is formatted in a \emph{landscape} mode.
-\item The \textsf{longtable} environment is used in Tables \ref{tbl:votes} and
-\ref{tbl:rotated-rankings}, in normal and \verb+landscape+ mode, respectively. The
-table captions are formatted properly in both cases.
-\item In the table \ref{tbl:votes}, the \verb+footnote+ in the table header 
-does not appear at all. This is not an error of the \nddiss\/ class but of the
-\textsf{longtable} package.
-\item An example of citing a website is shown in the bibliography (see
-\citep{gairley2000}) which is formatted using the \verb+nddiss2e.bst+
-citation style file.
-\item A bit of information on the \nddiss\/ class file and the typesetting program
-used is included in a box on the last page of the thesis.
-\item Footnotes should space properly.
-\item Items in \verb+itemize+, \verb+enumerate+, and \verb+description+ environment
-should automatically single-space within an item, but double space between items.
-\end{itemize}
+%\unnumchapter{Features of Formatting in This Example File}
+%% The \unnumchapter command allows you to include an unnumbered chapter as part of
+%% the main text before Chapter 1. It will appear in your table of contents, and you
+%% should have at most one such chapter (although nothing in the class file will
+%% prevent you from creating more).
+%
+%% The usual \cite{} command is also available, and should work as expected.
+%This \verb+chapter+ has been added to the original sample file to highlight the
+%various features with the formatting that conforms to the Graduate school
+%guidelines --- whether obtained due to the use of \nddiss\/ class file or just
+%plain good practice.
+%\begin{itemize}
+%\item An important note on line-breaks via \verb+\\+ in titles: the
+%  titles of the thesis as well as chapters and table captions use
+%  \verb+\MakeTextUppercase{}+ from the \verb+textcase+ package.  Due
+%  to the nature of the \verb+center+ environment, any line-breaks
+%  introduced in titles and captions should be protected, as in
+%  \verb+\protect\\+.
+%  To preserve the case in titles and captions, use, e.g.,
+%  \verb+\NoCaseChange{Gnus}+.
+%\item In the \emph{dedication}, the title name has been modified. So, you know
+%how to and that it can be done.
+%\item The entries in the \emph{List of figures} and \emph{List of Tables} are
+%single-spaced themselves but are double-spaced from the other.
+%\item The table captions are not in all CAPS as well for the reason mentioned
+%above.
+%\item Appropriate space is left between the \verb+Table xx+ and its
+%corresponding caption (which is double-spaced itself) as in table \ref{tbl:bogus1}.
+%\item Tables look much better without the vertical lines (good practice).
+%\item There is double-spacing between the table entries but single-spacing
+%within the entry.
+%\item The chapter (see Chapter \ref{chap:golfing}) or section titles are
+%double-spaced as mentioned in the guidelines.
+%\item There is a \verb+subsubsection+ present (eg. section \ref{sec:data}) and
+%is properly formatted in the TOC.
+%\item Sections deeper than \verb+subsubsection+ should not appear in the TOC.
+%\item Table \ref{tbl:defs} is an example of the use of \textsf{landscape}
+%environment in which a normal table is formatted in a \emph{landscape} mode.
+%\item The \textsf{longtable} environment is used in Tables \ref{tbl:votes} and
+%\ref{tbl:rotated-rankings}, in normal and \verb+landscape+ mode, respectively. The
+%table captions are formatted properly in both cases.
+%\item In the table \ref{tbl:votes}, the \verb+footnote+ in the table header 
+%does not appear at all. This is not an error of the \nddiss\/ class but of the
+%\textsf{longtable} package.
+%\item An example of citing a website is shown in the bibliography (see
+%\citep{gairley2000}) which is formatted using the \verb+nddiss2e.bst+
+%citation style file.
+%\item A bit of information on the \nddiss\/ class file and the typesetting program
+%used is included in a box on the last page of the thesis.
+%\item Footnotes should space properly.
+%\item Items in \verb+itemize+, \verb+enumerate+, and \verb+description+ environment
+%should automatically single-space within an item, but double space between items.
+%\end{itemize}
 
 %
 % Chapter 1
@@ -299,9 +299,9 @@ should automatically single-space within an item, but double space between items
 % Appendix (optional)
 %
 
-\appendix
+%\appendix
 
-\include{appendix}
+%\include{appendix}
 
 
 %
