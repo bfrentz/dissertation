@@ -58,6 +58,7 @@ E_{ion} = qV_{T} = \dfrac{1}{2} m_{ion} v_{ion}^{2}
 
 \begin{equation}
 E_{ion} = q(V_{extractor} + V_{T}).
+\label{eqn: beam energy}
 \end{equation}
 
 \begin{figure}
@@ -130,13 +131,28 @@ Altogether, though, these sources are ideal for this work. They provide the nece
 \label{sec: beamline}
 
 
-Why vaccuum and how?
+Upon exiting the accelerator, the beam envelope contains a distribution of different masses, charges, and energies because the ion sources are indiscriminate in their production methods. For example, an ion source might produce some ionized diatomic gas, instead of monoatomic, like producing $\ce{^{1}H}+\ce{^{1}H}$ due to insufficient breakup of the source gas. However, all particles created in the same ionization state will have the same energy, dictated by Equation \ref{eqn: beam energy}. In order to filter such contaminants out of the beam, analyzing magnets are employed. These are typically 90$^{\deg}$ dipole magnets, also utilizing the cyclotron motion of ions in a magnetic field in order to select a given type of particle at a specific energy. These magnets are typically located at the exit of accelerators, and, due to their fixed size, have a fixed radius, $R_{am}$, through which a beam can pass. Therefore, for a given particle of mass $m$, energy $E$, and charge state $q$, the magnetic field, $B_{am}$, inside the analyzing magnet can be tuned to allow through only a specific particle/energy combination by
 
-Cold trap
+\begin{equation}
+B_{am} = \dfrac{\sqrt{2 m E}}{q R_{am}} = \dfrac{\sqrt{2m}}{q R_{am}} \sqrt{E} = k \sqrt{E}
+\label{eqn: analyzingMagnet}
+\end{equation}
+
+\noindent, where $k$ is a constant for a unique combination of particle and charge state. This separates the in-beam contaminants from the ions of experimental interest.  
+
+In order to deliver the beam of ions to the target chamber and experimental hall, a series of steering and focusing elements are placed along the beam pipes. As the beam is self-repulsive due to it all being the same charge, these are necessary to contain the beam and keep its intensity at acceptable levels for experimental purposes. They also allow adjustment of the beam's position in order to deliver it to a specific experimental setup and allowing for simple transitions between different target locations. 
+
+Vacuum systems are important components of the beam production and experimental operation. All experimental components, like the ion source chamber, acceleration tubes, target chamber, and connecting beam pipes need to be free of residual gas. If not, the beam quality would suffer dramatically, collisions of the beam with the remaining atmosphere would cause significant intensity and energy losses, preventing transport and, ultimately, the measurement. In order to maintain an experimental vacuum level (typically $\sim 10^{-7}$ Torr), a series of metal pipes run from the ion source to the target chamber. These are connected by air-tight gaskets and have isolating valves employed with high-vacuum pumps (cryogenic or turbomolecular) along the line. These enable easier maintenance or changing of experimental conditions without destroying the vacuum created through the entire beam line. Without high-vacuum, there would be additional adverse effects on the target quality. Contaminants, typically hydrocarbons, present in residual gas can accumulate on the surface of the target due to the beam heating the surface. This is unwanted, as it not only provides an additional layer of energy loss for the beam before interacting with the target but also a significant contaminant in experimental results due to carbon's high cross-section.
+
+Besides maintaining clean, high-vacuum near a target, another common method for reducing the carbon build-up on experimental surfaces is to utilize a so called cold trap in front of a target. A cold trap is is a liquid nitrogen cooled copper pipe designed to be nearly the same size and shape as the beam pipe to prevent it from interfering with an experiment. An example of a cold trap like the one used in this work is shown in Fig. \ref{fig: coldtrap}. The cold trap works much like a cryogenic pump. By cooling the copper pipe with liquid nitrogen, the residual hydrocarbons in the beam pipe and target chamber will condense on the surface of the pipe, trapping them before most can reach the target and cause carbon buildup. 
 
 
-Upon exiting the accelerator, the beam envelope contains a distribution of different masses, charges, and energies because the ion sources are indiscriminate in their production methods.
-Magnets for steering, focusing, analyzing
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: coldtrap}
+\caption{Depiction of a cold trap used in this work. The reservoir on top is filled with liquid nitrogen and connected to the copper pipe inside the target chamber, causing the copper pipe inside to be cooled. At cold temperatures, most of the contaminants present in the beam pipe will condense on the copper pipe instead of building up on the target surface.}
+\end{figure}
+
 
 
 \subsection{Radiation detection}
