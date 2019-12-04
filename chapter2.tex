@@ -88,10 +88,29 @@ The corona system is the real workhorse maintaining the stability of the acceler
 \subsection{Ion sources}
 \label{sec: ion sources}
 
-A key item for the successful operation of any accelerator is the ion source, which produces the beams of charged particles used in experiments. Generating such beams is not a trivial task and, as such, many methods have been developed for achieving this. The two types relevant to this work, however, are the Electron-Cyclotron Resonance (ECR) ion source, used in the Sta. Ana accelerator at the NSL, and the radio frequency (RF) ion source, utilized in the JN accelerator at CASPAR.  Both systems are housed within their respective accelerator terminals, which acts as a Faraday cage and shields the internal components from external fields.
+A key item for the successful operation of any accelerator is the ion source, which produces the beams of charged particles used in experiments. Generating such beams is not a trivial task and, as such, many methods have been developed for achieving this. The two types relevant to this work, however, are the Electron-Cyclotron Resonance (ECR) ion source, used in the Sta. Ana accelerator at the NSL, and the radio frequency (RF) ion source, utilized in the JN accelerator at CASPAR.  Both systems are housed within their respective accelerator terminals, which acts as a Faraday cage and shields the internal components from external fields. Additionally, both systems operate on the same basic principle, namely that a given gas is ionized through the use of electron collisions in the source, but the mode of electron excitation is different. 
+
+For the specifics of the ECR system, the 5U employs a Pantechnik Nanogen 14.5 GHz ECR source. This utilizes the cyclotron resonance of electrons (as the name obviously implies) to produce and maintain a plasma.
 
 
-ECR
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: ecris}
+\caption{Depiction of the interior of an ECR ion source with magnetic components labeled cite{Melin1997}. This example shows a source operating from left to right, with the gas and RF generator inputs depicted as well as the exit for the ions. As discussed in the text, the combination of magnets confines the plasma in the center as it is pushed from left to right and out of the source.}
+\end{figure}
+
+
+During operation, neutral gas (which includes the element to be accelerated as a component) is injected into a cavity surrounded by magnets. These magnets provide a superposition of axial and multipole fields in order to achieve a minimum at the center of the cavity increasing radially outwards with the goal of confining and stabilizing the generated ions. A cartoon depiction of such a system is presented in Fig. \ref{fig: ecris}. In order to generate the ions from neutral gas, a current is supplied to the chamber by a negative bias probe providing a constant supply of charge. From this, then, electrons are stripped and continually accelerated in cyclotron motion following the familiar cyclotron frequency relation:
+
+\begin{equation}
+\omega_{ecr} = \dfrac{e | B |_{ECR}}{m_{e}} = \omega_{rf}
+\label{eqn: ecr}
+\end{equation}
+
+\noindent where $\omega_{ecr}$ is the frequency for the cyclotron resonance of electrons in a given magnetic field $B_{ECR}$, $e$ and $m_{e}$ are the charge and mass of the electron, respectively, and $\omega_{rf}$ is the frequency supplied by a radio radio-frequency (RF) power supply. This last term is included to highlight that during operation this is supplied externally and controlled in the use of the source in order to produce the plasma. After ionization, the magnetic configuration confines the plasma radially, while the axial magnetic field (provided by the extractor) pushes it through the cavity towards the exit of the source. 
+
+An ECR ion source has many advantages of over other common ion source designs. The primary advantage lies in its ability to deliver high-intensity beams (as much as hundreds of $\mu A$). For use in nuclear astrophysics experiments, such as the ones performed in this work, low cross sections are a problem to overcome, which is mitigated through this higher production. Additionally, due to the relatively simple restrictions on the inputs, these sources can provide a wide array of species, as they can produce beams of nearly anything that can be made into a gas, and exhibit long term stability, reliability, and longevity cite{Melin1997}.  On the other hand, however, ECR ion sources also have some disadvantages compared to other common sources. One main drawback is that the ions are produced through the production of a plasma, meaning they are not directly controlled by any operational parameter cite{Melin1997}. This leads to complicated tuning and sensitive operation, experimentally. Additionally, such sources are only capable of generating positive beams and can therefore only be utilized in single stage accelerators. 
+
 
 RF
 
