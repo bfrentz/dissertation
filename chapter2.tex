@@ -120,7 +120,7 @@ The radio frequency (RF) ion source utilized at CASPAR operates on a very simila
 \caption{Depiction of the interior of a RF ion source with magnetic components labeled cite{Li2015}. The coils on either side provide the field to ionize the gas, whereas the probe on top provides the field necessary to extract the ions from the chamber.}
 \end{figure}
 
-The RF ion source at CASPAR was also recently refurbished before installation, leaving it capable of beam production at even higher intensities than the ECR ion source inside the Sta. Ana accelerator. It can produce beams up to 150 $\mu A$, enabling similar high-intensity experiments. Another similarity to the ECR ion source is that it provides excellent operational stability and reliability. It does, however have significant drawbacks as well. The first and foremost of these is the degredation of the ion source canal. Operating the source causes a buildup on the exit canal of the source tube (higher intensity operation accelerates this process), necessitating significant maintenance. Additionally, the glass tube housing the plasma is quite sensitive. If power is supplied to the source when gas is not present, significant damage to the tube can occur. This is only mitigated with vigilant operation. The other major drawback is that the source is only capable of providing beams of two species (typically hydrogen and helium). In order to change the delivered species, a full tank opening and source alignment is required. 
+The RF ion source at CASPAR was also recently refurbished before installation, leaving it capable of beam production at even higher intensities than the ECR ion source inside the Sta. Ana accelerator. It can produce beams up to 150 $\mu A$, enabling similar high-intensity experiments. Another similarity to the ECR ion source is that it provides excellent operational stability and reliability. It does, however have significant drawbacks as well. The first and foremost of these is the degradation of the ion source canal. Operating the source causes a buildup on the exit canal of the source tube (higher intensity operation accelerates this process), necessitating significant maintenance. Additionally, the glass tube housing the plasma is quite sensitive. If power is supplied to the source when gas is not present, significant damage to the tube can occur. This is only mitigated with vigilant operation. The other major drawback is that the source is only capable of providing beams of two species (typically hydrogen and helium). In order to change the delivered species, a full tank opening and source alignment is required. 
 
 Altogether, though, these sources are ideal for this work. They provide the necessary ion beams at high intensity, enabling the experiments. 
 
@@ -140,7 +140,14 @@ B_{am} = \dfrac{\sqrt{2 m E}}{q R_{am}} = \dfrac{\sqrt{2m}}{q R_{am}} \sqrt{E} =
 
 \noindent, where $k$ is a constant for a unique combination of particle and charge state. This separates the in-beam contaminants from the ions of experimental interest.  
 
-In order to deliver the beam of ions to the target chamber and experimental hall, a series of steering and focusing elements are placed along the beam pipes. As the beam is self-repulsive due to it all being the same charge, these are necessary to contain the beam and keep its intensity at acceptable levels for experimental purposes. They also allow adjustment of the beam's position in order to deliver it to a specific experimental setup and allowing for simple transitions between different target locations. 
+In order to deliver the beam of ions to the target chamber and experimental hall, a series of steering and focusing elements are placed along the beam pipes. As the beam is self-repulsive due to it all being the same charge, these are necessary to contain the beam and keep its intensity at acceptable levels for experimental purposes. They also allow adjustment of the beam's position in order to deliver it to a specific experimental setup and allowing for simple transitions between different target locations. A schematic of the Sta. Ana and its beam transportation equipment is provided in Fig. \ref{fig: staAnaSchematic}. 
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: staAnaSchematic}
+\caption{Schematic of the Sta. Ana accelerator at the NSL and its associated beam line. The target room containing experimental equipment is located after the switching magnet and is highlighted later (see Section \ref{sec: expND}). For the implanted target production (see Section \ref{sec: implantation}) occurred at the implantation station off the neutron dipole, shown in this figure.}
+\end{figure}
 
 Vacuum systems are important components of the beam production and experimental operation. All experimental components, like the ion source chamber, acceleration tubes, target chamber, and connecting beam pipes need to be free of residual gas. If not, the beam quality would suffer dramatically, collisions of the beam with the remaining atmosphere would cause significant intensity and energy losses, preventing transport and, ultimately, the measurement. In order to maintain an experimental vacuum level (typically $\sim 10^{-7}$ Torr), a series of metal pipes run from the ion source to the target chamber. These are connected by air-tight gaskets and have isolating valves employed with high-vacuum pumps (cryogenic or turbomolecular) along the line. These enable easier maintenance or changing of experimental conditions without destroying the vacuum created through the entire beam line. Without high-vacuum, there would be additional adverse effects on the target quality. Contaminants, typically hydrocarbons, present in residual gas can accumulate on the surface of the target due to the beam heating the surface. This is unwanted, as it not only provides an additional layer of energy loss for the beam before interacting with the target but also a significant contaminant in experimental results due to carbon's high cross-section.
 
@@ -211,21 +218,43 @@ This set of data was taken over the course of five* separate experiments. The fi
 \subsection{Experiment at Notre Dame}
 \label{sec: expND}
 
-The goal of this experiment was to measure the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction cross-section in a low energy range of the Sta. Ana accelerator, proton energy range of E$_{p}$ = 800 - 1200 keV, to provide a self consistent data set with which to compare the results of a measurement at CASPAR and test experimental procedures before moving to the more challenging environment at CASPAR. The setup used in this experimental phase is depicted in Fig. \ref{fig: setup}. In order to reduce confounding effects, it was also used identically at CASPAR. 
+The goal of this experiment was to measure the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction cross-section in a low energy range of the Sta. Ana accelerator, proton energy range of E$_{p}$ = 800 - 1200 keV, to provide a self consistent data set with which to compare the results of a measurement at CASPAR and test experimental procedures before moving to the more challenging environment at CASPAR. The laboratory's layout is shown in Fig. \ref{fig: nsl}, with this phase of the measurement occurring on the Solid Target beam line, a schematic of which is shown in Fig. \ref{fig: targetRoom}. A diagram of the specific setup used in this experimental phase is depicted in Fig. \ref{fig: setup}. In order to reduce confounding effects, it was also used identically at CASPAR. 
 
-In this measurement, the $\gamma$-rays were observed with a coaxial p-type HPGe detector rated with 130\% relative efficiency (relative to the efficiency of a 3" $\cross$ 3" NaI detector with 1332 keV $\gamma$-rays). Five mm of lead shielding was placed in front of the crystal's face to reduce the number of low-energy x-rays entering the detector (<100 keV photon energy) because they increase the dead time in the electronics decreasing processing time for signals of interest. The detector was placed at an angle of 55$^{\deg}$ in order to minimize any angular distribution effects on the cross section, as that is the minimum of the second order Legendre polynomial which describes the angular behavior of the cross section. The detector was placed on a sliding, isolating platform, enabling it's distance to the target to be easily changed. Measurements were primarily taken with the detector in close geometry, with only 2 mm between the target and lead shielding (closer would have resulted in them touching on the corner because of their different orientation) but some were measured in far geometry, up to 25.4 cm between the target and lead shielding. This was done to provide a reference for the effects of summing on our detector response at high energies, which will be discussed further in following chapter. Additionally, a more detailed description of all targets used in this work will be presented in the next chapter, but for completeness, this portion of the experiment utilized a solid, TiN target. 
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: nsl}
+\caption{The Notre Dame Nuclear Science Laboratory, with experimental areas important for this work identified. }
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: targetRoom}
+\caption{Schematic of the Sta. Ana accelerator's target room, showing all experimental stations. The solid target beam line used in this experiment is emphasized for clarity. For these experiments, the target chamber and detectors were placed at the location named Georgina. } 
+\end{figure}
+
+
+In this measurement, the $\gamma$-rays were observed with a coaxial p-type HPGe detector rated with 130\% relative efficiency (relative to the efficiency of a 3" $\times$ 3" NaI detector with 1332 keV $\gamma$-rays). Five mm of lead shielding was placed in front of the crystal's face to reduce the number of low-energy x-rays entering the detector (<100 keV photon energy) because they increase the dead time in the electronics decreasing processing time for signals of interest. The detector was placed at an angle of 55$^{\deg}$ in order to minimize any angular distribution effects on the cross section, as that is the minimum of the second order Legendre polynomial which describes the angular behavior of the cross section. The detector was placed on a sliding, isolating platform, enabling it's distance to the target to be easily changed. Measurements were primarily taken with the detector in close geometry, with only 2 mm between the target and lead shielding (closer would have resulted in them touching on the corner because of their different orientation) but some were measured in far geometry, up to 25.4 cm between the target and lead shielding. This was done to provide a reference for the effects of summing on our detector response at high energies, which will be discussed further in following chapter. Additionally, a more detailed description of all targets used in this work will be presented in the next chapter, but for completeness, this portion of the experiment utilized a solid, TiN target. This measurement was performed 
 
 
 \subsection{The CASPAR facility}
 \label{sec: caspar}
 
-In an attempt to extend the data range down to the lowest possible energies and provide a proof-of-principle for the facility, a second phase of the experiment was performed at the CASPAR facility. CASPAR is the Compact Accelerator System for Performing Astrophysical Research, located on the 4850 ft level of the Sanford Underground Research Facility, and is the first underground accelerator facility in the United States. This facility was originially the Homestake Gold Mine in Western South Dakota, just outside (and underneath) the town of Lead. It is also the location of the famous Ray Davis underground neutrino experiment in which the solar neutrino problem was identified cite{DavisExperiment}. The accelerator located at the facility is the recently refurbished JN Van de Graaff, which had been employed at the NSL since its arrival in the early 2000's. Fig. \ref{fig: casparPictures} shows some pictures of the facility.
+In an attempt to extend the data range down to the lowest possible energies and provide a proof-of-principle for the facility, a second phase of the experiment was performed at the CASPAR facility. CASPAR is the Compact Accelerator System for Performing Astrophysical Research, located on the 4850 ft level of the Sanford Underground Research Facility, and is the first underground accelerator facility in the United States. This facility was originially the Homestake Gold Mine in Western South Dakota, just outside (and underneath) the town of Lead. It is also the location of the famous Ray Davis underground neutrino experiment in which the solar neutrino problem was identified cite{DavisExperiment}. The accelerator located at the facility is the recently refurbished JN Van de Graaff, which had been employed at the NSL since its arrival in the early 2000's. Fig. \ref{fig: casparPictures} shows some pictures of the facility while Fig. \ref{fig: casparSchematic} provides a detailed schematic of the equipment available at the CASPAR facility. 
 
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/energyProduction.png}
 \label{fig: casparPictures}
 \caption{Pictures of the CASPAR facility. }
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: casparSchematic}
+\caption{Schematic of the equipment employed at the CASPAR facility. In this case, the figure is read right-to-left, with beam generated in the JN accelerator on the right of the figure. }
 \end{figure}
 
 
@@ -241,7 +270,7 @@ Some of the problems with performing low-energy nuclear astrophysics measurement
 
 Additionally, the JN accelerator at CASPAR expands on the potential measurement range compared to the LUNA II facility, the other preeminent underground nuclear astrophysics laboratory in the world cite{Formicola2005}. The two have similar background reduction due to their environments and equal capacity to perform extensive measurements. However, until the LUNA MV facility is completed cite{something}, CASPAR's expanded energy regime allows its measurements to overlap with those performed at surface laboratories, unlike LUNA II, making it the ideal facility for low-energy nuclear astrophysics. 
 
-The measurements at CASPAR were undertaken over the course of five weeks in February 2018, May 2018, and August / September 2018. These covered the proton energy range from E$_{p}$ = 270 - 1100 keV, overlapping with the measurements at the NSL. As stated in Section \ref{sec: expND}, the equipment like detector, electronics, and overall setup used in this campaign was the same as what was used at the NSL. The only significant different was the different targets used in this experiment. These were sputtered ZrN targets of varying thickness (\textbf{TARGET THICKNESSES}) produced specifically for this experiment in Bochum, Germany. Given the high intensity of the beam delivered at CASPAR, these were constantly monitored for degredation and carbon buildup to reduce target effects on the measurement. 
+The measurements at CASPAR were undertaken over the course of five weeks in February 2018, May 2018, and August / September 2018. These covered the proton energy range from E$_{p}$ = 270 - 1100 keV, overlapping with the measurements at the NSL. As stated in Section \ref{sec: expND}, the equipment like detector, electronics, and overall setup used in this campaign was the same as what was used at the NSL. The only significant different was the different targets used in this experiment. These were sputtered ZrN targets of varying thickness (\textbf{TARGET THICKNESSES}) produced specifically for this experiment in Bochum, Germany. The targets were produced by sputtering a layer of Zr onto a W backing in a nitrogen atmosphere. Given the high intensity of the beam delivered at CASPAR, these were constantly monitored for degradation and carbon buildup to reduce target effects on the measurement. 
 
 
 
@@ -309,18 +338,87 @@ Therefore, by performing a lineshape analysis on the distribution of the measure
 \subsection{Target production}
 \label{sec: implantation}
 
+To take advantage of the Doppler Shift Attenuation Method, therefore, the active layer of the target must be dense to slow down the recoiling nucleus in an appreciable time and must have a lot of target nuclei since the 6.79 MeV state in $^{15}$O is populated weakly. As such, implanted nitrogen targets were utilized in this work. As the previous measurements utilized enough nitrogen to saturate tantalum to a composition of Ta$_{2}$N$_{3}$ cite{Bertone2001, Schurmann2008}, it was concluded that Ta backings should be utilized in this work too, albeit with a lower nitrogen content. Additionally, to examine any systematic effects that the backing material could have on the ultimate extraction of a lifetime, backings of tungsten and molybdenum would also be implanted with nitrogen for comparison. With each backing material, targets were produced with three different levels of nitrogen to isolate the effect of nitrogen saturation on the observed Doppler Shift. 
 
-Why Implantation
-Seuthe
-How did we produce them and why
+The properties of implanted Ta-N targets were studied in Seuthe et al. cite{Seuthe1987}. In that work, various nuclides, including $^{14}$N, were implanted into Ta and Au with energy up to 200 keV and subsequently studied with (p, $\gamma$) reactions. In this work, target saturation occurred with nitrogen doses creating the Ta$_{2}$N$_{3}$ compound. The authors identified this to be a reliable method for producing isotopically enriched targets capable of withstanding high intensity beam loads. Therefore, the procedure for fabricating implanted nitrogen targets used herein was based off their work.
+
+Before the implantation, the target backings were cut and cleaned according to standard procedures at the NSL. The targets were then produced in July 2019 with the Sta. Ana accelerator at the NSL by accelerating a $^{14}$N beam into the various backings at the implantation station we created off of the neutron dipole, shown in Fig. \ref{fig: staAnaSchematic}. For operational stability, the $^{14}$N was implanted at 350 keV, in contrast to the 200 keV by cite{Seuthe1987}. As such, the targets produced in this work had a comparatively broader distribution of nitrogen, creating a larger active volume. Nominally, for the different levels of nitrogen saturation, the goal was to implant doses equivalent to 10\%, 20\%, and 30\% nitrogen in the compound. These were chosen as they provided a significantly different nitrogen content from the targets used in Refs. cite{Bertone2001, Schurmann2008} but were expected to also highlight any systematic differences in nitrogen content. Going to higher dose implantations like the 60\% necessary for saturation was deemed a diminishing return compared to the longer time for production.
+
+The actual amount of nitrogen implanted in the targets was assessed by scanning the 1057 keV resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. This was chosen as it gives off three strong $\gamma$-rays in its decay: 3043, 5241, and 8284 keV, respectively. The area under the resonance scan is directly related to the number of active atoms in the target:
+
+\begin{equation}
+A_{\gamma} = n \times \dfrac{\lambda_{r}^{2}}{2} \times \omega\gamma
+\label{eqn: targetYield}
+\end{equation}
+
+\noindent where $A_{\gamma}$ is the area under the yield curve, $n$ is the number of target atoms, $\lambda_{r}$ is the De Broglie wavelength of the resonance, and $\omega\gamma$ is the resonance strength. The process is made simpler if a target with known characteristics is available for comparison. When relating the areas of the yield curves for the two targets, the resonance features cancel, leaving:
+
+\begin{equation}
+\dfrac{A_{\gamma}^{1}}{A_{\gamma}^{2}} = \dfrac{n_{1}}{n_{2}}.
+\end{equation}
+
+\noindent Thus, by comparing the area of the yield curves with a known target, the unknown number of target atoms is easily determined. In this work, the reference target was a sputtered TiN target used by Li \textit{et al.} cite{Li2016} and produced in Bochum, Germany, with 3.34 $\times 10^{17}$ $^{14}$N atoms/cm$^{2}$. 
+
+A typical spectrum from the implanted targets produced at the NSL is shown in Fig. \ref{fig: implantedSpectrum}, specifically from the low-dose Ta target. The yield curves for all the implanted targets produced in this work are presented in Fig. \ref{fig: yieldCurves}, while a comparison of the high-dose yield curves with that of the reference target is provided in Fig. \ref.{fig: yieldComparison}. As the reference target's nitrogen layer is on the target's surface, the resonance occurs at the nominal proton energy (1057 keV) while the resonance is seen at higher proton energies for the implanted targets due to the energy loss in the material before reaching the layer containing the high concentrations of nitrogen. From these, it is evident that the implanted targets produced in this work have significantly higher concentrations of nitrogen than the sputtered TiN target used for reference. This is ideal for the lifetime measurements due to the weak population of the 6.79 MeV state of interest. A complete summary of the implanted targets fabricated in this way and their actual nitrogen contents are shown in Table \ref{table: implantedTargets}. 
+
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\label{fig: implantedSpectrum}
+\caption{A typical spectrum from the implanted targets produced at the NSL. This spectrum specifically comes from the low-dose tantalum backed target at an on-resonance proton energy. The three prominent decay peaks at 3043, 5241, and 8284 keV, respectively, are shown with the arrows while the contaminant peak from $^{19}$F$\left( p, \alpha\gamma \right)^{16}$O at 6190 keV is in the box.  }
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\label{fig: yieldCurves}
+\caption{Yield curves (showing the 5241 keV line) for the different implanted targets produced as a part of this work with each backing and nitrogen dose: a) Mo targets, b) Ta targets, and c) W targets. The legend of each only gives the nominal goal percentage of nitrogen in the targets, not the actual implanted does (see text for details).}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\label{fig: yieldComparison}
+\caption{Yield curves of the 5141 keV line for the high dose implantation of each backing and the reference target: a) yield curve for the TiN target and b) yield curve for the high dose implanted targets plotted with that of the TiN target. Percentages quoted in the legend are for identification and differentiation only (see text for details).}
+\end{figure}
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+                        &        &                                               \\ \midrule
+R/DC $\rightarrow$ 6.17 & Others & Total                                         \\
+0.14 $\pm$ 0.05         & 0.1    & 3.20 $\pm$ 0.54                               \\
+0.06$^{+0.01}_{-0.02} $  & $--$   & 1.77 $\pm$ 0.20                               \\
+0.133 $|pm$ 0.02        & 0.02   & 1.70 $\pm$ 0.22                               \\
+0.04 $\pm$ 0.01         & $--$   & 1.68 $\pm$ 0.09                               \\
+$--$                    & $--$   & 1.74 $\pm$ 0.14 (stat) $\pm$ 0.14 (sys)$^{c}$ \\
+0.12                    & 0.11   & 1.81                                          \\
+0.13 $\pm$ 0.06         & 0.08   & 1.66 $\pm$ 0.08                               \\
+$--$                    & $--$   & $--$                                          \\
+$--$                    & $--$   & $--$                                          \\ \bottomrule
+\end{tabular}
+\caption{All targets produced via the implantation method for this work and their respective nitrogen content. }
+\label{table: implantedTargets}
+\end{table}
+
 
 
 \subsection{Measurement at Notre Dame}
 \label{sec: lifetimeND}
 
 
-How did we do it
-Highlight similarities and differences to previous measurements.
+
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\label{fig: schroderSfac}
+\caption{Astrophysical $S$ factor for the R/DC $\rightarrow$ 6.79 MeV transition from cite{Schroder1987}. With the exception of the resonance at $E_{c.m.}$ = 259 keV, the $S$ factor is remarkably flat, even decreasing at high energies, indicating that the state is weakly populated in all energy ranges accessible with the Sta. Ana accelerator used herein. }
+\end{figure}
+
 
 
 
