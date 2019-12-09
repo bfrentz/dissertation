@@ -62,7 +62,8 @@ E_{ion} = q(V_{extractor} + V_{T}).
 \end{equation}
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/vdgDiagram.png}
 \label{fig: vdg principles}
 \caption{A diagram of a Van de Graaff accelerator \cite{RolfsBook}. The charge transportation in this figure is shown with a belt, like the JN accelerator model at CASPAR, while the 5U accelerator at the NSL uses a Pelletron chain. }
 \end{figure}
@@ -77,7 +78,8 @@ I_{chains} = I_{beam} + I_{column} + I_{corona}.
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/inside5U.png}
 \label{fig: column}
 \caption{View inside the Sta. Ana accelerator tank, showing the equipotential hoops as part of the column.}
 \end{figure}
@@ -95,7 +97,8 @@ For the specifics of the ECR system, the 5U employs a Pantechnik Nanogen 14.5 GH
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/ecrSchematic.png}
 \label{fig: ecris}
 \caption{Depiction of the interior of an ECR ion source with magnetic components labeled cite{Melin1997}. This example shows a source operating from left to right, with the gas and RF generator inputs depicted as well as the exit for the ions. As discussed in the text, the combination of magnets confines the plasma in the center as it is pushed from left to right and out of the source.}
 \end{figure}
@@ -115,7 +118,7 @@ An ECR ion source has many advantages of over other common ion source designs. T
 The radio frequency (RF) ion source utilized at CASPAR operates on a very similar principle to the ECR ion source inside the Sta. Ana accelerator. A depiction of the RF ion source's components is given in Fig. \ref{fig: rfis}. In this case, the source chamber is a glass tube filled with a monoatomic gas, at CASPAR the only options are $\ce{^{1}H}$ and $\ce{^{4}He}$.  Electromagnetic coils are placed on both sides of this tube and generate RF waves in the tube, between the rings. In response to these waves, the electrons oscillate through and collide with the source gas, ionizing it. At the rear of the glass tube, an electrode supplies a constant, positive voltage (with respect to the terminal), forcing any ionized atoms towards the exit of the source. Upon leaving the source, as with the ECR ion source, the ions are accelerated because of their repulsion to the positively charged terminal. 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\includegraphics[width=\linewidth]{figures/rfSchematic.png}
 \label{fig: rfis}
 \caption{Depiction of the interior of a RF ion source with magnetic components labeled cite{Li2015}. The coils on either side provide the field to ionize the gas, whereas the probe on top provides the field necessary to extract the ions from the chamber.}
 \end{figure}
@@ -144,7 +147,8 @@ In order to deliver the beam of ions to the target chamber and experimental hall
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/staAnaSchematic.png}
 \label{fig: staAnaSchematic}
 \caption{Schematic of the Sta. Ana accelerator at the NSL and its associated beam line. The target room containing experimental equipment is located after the switching magnet and is highlighted later (see Section \ref{sec: expND}). For the implanted target production (see Section \ref{sec: implantation}) occurred at the implantation station off the neutron dipole, shown in this figure.}
 \end{figure}
@@ -155,7 +159,8 @@ Besides maintaining clean, high-vacuum near a target, another common method for 
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/expSetup.png}
 \label{fig: setup}
 \caption{Depiction of the experimental setup used in this work, including the angled target holder, HPGe detector, and cold trap.}
 \end{figure}
@@ -177,7 +182,8 @@ On balance, there are three primary modes for photons to interact with matter: 1
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/photonInteraction.png}
 \label{fig: radiationInteraction}
 \caption{Depiction of the modes for photons to interact with matter, showing a) the photoelectric effect, b) Compton scattering, and c) electron-positron pair production. }
 \end{figure}
@@ -196,9 +202,9 @@ Compton scattering is a similar process in that it also ends up producing an ene
 The final mechanism by which photons interact with matter is through electron-positron pair production, often shortened to just pair production. This occurs when a photon traveling spontaneously transforms into a matter-antimatter pair, the electron and positron, respectively.  This effect is induced by an interaction with a virtual photon from the electromagnetic field in the space the real photon is traveling. For this to occur, the photon's energy must be greater than the rest mass-energy of the pair, namely 1.022 MeV for electron-positron. After creation, the pair will share the total original energy (less their rest mass-energy) and momentum of the photon in their subsequent kinetic energies and momenta. From this point, the electron will continue to scatter and deposit energy in the normal manner for charged particles, while the positron will annihilate with one of the atomic electrons in the surrounding material, creating to diametrically opposed gamma-rays at 511 keV. With these, there are three potential outcomes: 1) the two new photons will interact with the surrounding medium through the processes already detailed, depositing their energy, and resulting in the total deposition of the initial photon's energy in the detection medium; 2) one of the new 511 keV photons will leave the detector without interacting and result in a deposition of the total initial energy less 511 keV; 3) both of the subsequent 511 keV photons leave the detector, resulting in an energy deposition of the total initial photon's energy minus 1.022 MeV. The two situations where a subsequent photon leaves the material are more comon with higher initial photon energies, manifesting in their own peaks in a measured spectrum. These are called escape peaks, shown in Fig. \ref{fig: gammaSpec}, with the single escape peak being when one photon leaves the medium and the double arising when both 511 keV photons escape the system. Whereas the full deposition of the photons energy is also shown in that spectrun and known as the full-energy peak. 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\includegraphics[width=\linewidth]{figures/photonSpectrum.png}
 \label{fig: gammaSpec}
-\caption{Cartoon depiction of an example experimental spectrum for photon interactions. Artifacts from the ways in which photons interact with matter are highlighted in the spectrum and are common in experimental gamma spectra  }
+\caption{Cartoon depiction of an example experimental spectrum for photon interactions cite{Hall2018}. Artifacts from the ways in which photons interact with matter are highlighted in the spectrum and are common in experimental gamma spectra.   }
 \end{figure}
 
 
@@ -222,19 +228,19 @@ The goal of this experiment was to measure the $^{14}$N$\left( p,\gamma \right) 
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\includegraphics[width=\linewidth]{figures/nslLab.png}
 \label{fig: nsl}
 \caption{The Notre Dame Nuclear Science Laboratory, with experimental areas important for this work identified. }
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\includegraphics[width=\linewidth]{figures/targetRoom.pdf}
 \label{fig: targetRoom}
 \caption{Schematic of the Sta. Ana accelerator's target room, showing all experimental stations. The solid target beam line used in this experiment is emphasized for clarity. For these experiments, the target chamber and detectors were placed at the location named Georgina. } 
 \end{figure}
 
 
-In this measurement, the $\gamma$-rays were observed with a coaxial p-type HPGe detector rated with 130\% relative efficiency (relative to the efficiency of a 3" $\times$ 3" NaI detector with 1332 keV $\gamma$-rays). Five mm of lead shielding was placed in front of the crystal's face to reduce the number of low-energy x-rays entering the detector (<100 keV photon energy) because they increase the dead time in the electronics decreasing processing time for signals of interest. The detector was placed at an angle of 55$^{\deg}$ in order to minimize any angular distribution effects on the cross section, as that is the minimum of the second order Legendre polynomial which describes the angular behavior of the cross section. The detector was placed on a sliding, isolating platform, enabling it's distance to the target to be easily changed. Measurements were primarily taken with the detector in close geometry, with only 2 mm between the target and lead shielding (closer would have resulted in them touching on the corner because of their different orientation) but some were measured in far geometry, up to 25.4 cm between the target and lead shielding. This was done to provide a reference for the effects of summing on our detector response at high energies, which will be discussed further in following chapter. Additionally, a more detailed description of all targets used in this work will be presented in the next chapter, but for completeness, this portion of the experiment utilized a solid, TiN target. This measurement was performed 
+In this measurement, the $\gamma$-rays were observed with a coaxial p-type HPGe detector rated with 130\% relative efficiency (relative to the efficiency of a 3" $\times$ 3" NaI detector with 1332 keV $\gamma$-rays). Five mm of lead shielding was placed in front of the crystal's face to reduce the number of low-energy x-rays entering the detector (<100 keV photon energy) because they increase the dead time in the electronics decreasing processing time for signals of interest. The detector was placed at an angle of 55$^{\deg}$ in order to minimize any angular distribution effects on the cross section, as that is the minimum of the second order Legendre polynomial which describes the angular behavior of the cross section. The detector was placed on a sliding, isolating platform, enabling it's distance to the target to be easily changed. Measurements were primarily taken with the detector in close geometry, with only 2 mm between the target and lead shielding (closer would have resulted in them touching on the corner because of their different orientation) but some were measured in far geometry, up to 25.4 cm between the target and lead shielding. This was done to provide a reference for the effects of summing on our detector response at high energies, which will be discussed further in following chapter. Additionally, a more detailed description of all targets used in this work will be presented in the next chapter, but for completeness, this portion of the experiment utilized a solid, TiN target. This measurement was performed on the solid target beam line within the Sta. Ana target room, shown in Fig. \ref{fig: targetRoom}.
 
 
 \subsection{The CASPAR facility}
@@ -263,10 +269,13 @@ Some of the problems with performing low-energy nuclear astrophysics measurement
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=\linewidth]{figures/casparBackgrounds.png}
 \label{fig: backgroundComparison}
 \caption{Background $\gamma$ spectrum taken at the NSL, CASPAR, and CASPAR utilizing passive lead shielding, with a) showing the full spectrum and b) showing a subset of the spectrum at low energies to highlight the radiogenic background, which is higher at CASPAR without lead shielding. Clearly, the facility provides a prodigious reduction of cosmogenic background, making the facility advantageous for low-energy nuclear astrophysics experiments.}
 \end{figure}
+
+
 
 Additionally, the JN accelerator at CASPAR expands on the potential measurement range compared to the LUNA II facility, the other preeminent underground nuclear astrophysics laboratory in the world cite{Formicola2005}. The two have similar background reduction due to their environments and equal capacity to perform extensive measurements. However, until the LUNA MV facility is completed cite{something}, CASPAR's expanded energy regime allows its measurements to overlap with those performed at surface laboratories, unlike LUNA II, making it the ideal facility for low-energy nuclear astrophysics. 
 
@@ -364,23 +373,23 @@ A typical spectrum from the implanted targets produced at the NSL is shown in Fi
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\includegraphics[width=\linewidth]{figures/typicalSpectrum.pdf}
 \label{fig: implantedSpectrum}
-\caption{A typical spectrum from the implanted targets produced at the NSL. This spectrum specifically comes from the low-dose tantalum backed target at an on-resonance proton energy. The three prominent decay peaks at 3043, 5241, and 8284 keV, respectively, are shown with the arrows while the contaminant peak from $^{19}$F$\left( p, \alpha\gamma \right)^{16}$O at 6190 keV is in the box.  }
+\caption{A spectrum from the low-dose tantalum backed target at an on-resonance proton energy with features typical of the implanted targets produced at the NSL. The three prominent decay peaks at 3043, 5241, and 8284 keV, respectively, are shown with the arrows while the contaminant peak from $^{19}$F$\left( p, \alpha\gamma \right)^{16}$O at 6190 keV is in the box.  }
 \end{figure}
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\includegraphics[width=\linewidth]{figures/comparePercentageBW.pdf}
 \label{fig: yieldCurves}
-\caption{Yield curves (showing the 5241 keV line) for the different implanted targets produced as a part of this work with each backing and nitrogen dose: a) Mo targets, b) Ta targets, and c) W targets. The legend of each only gives the nominal goal percentage of nitrogen in the targets, not the actual implanted does (see text for details).}
+\caption{Yield curves (showing the 5240 keV line) for the different implanted targets produced as a part of this work with each backing and nitrogen dose: a) Mo targets, b) Ta targets, and c) W targets. The legend of each only gives the nominal goal percentage of nitrogen in the targets, not the actual implanted does (see text for details).}
 \end{figure}
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/dopplerEffects.png}
+\includegraphics[width=\linewidth]{figures/tiNcompare.pdf}
 \label{fig: yieldComparison}
-\caption{Yield curves of the 5141 keV line for the high dose implantation of each backing and the reference target: a) yield curve for the TiN target and b) yield curve for the high dose implanted targets plotted with that of the TiN target. Percentages quoted in the legend are for identification and differentiation only (see text for details).}
+\caption{Yield curves of the 5140 keV line for the target comparisons: a) yield curve for the TiN target alone and b) yield curve for the high dose implanted targets plotted with that of the TiN target. Percentages quoted in the legend are for identification and differentiation only (see text for details).}
 \end{figure}
 
 
@@ -409,17 +418,30 @@ $--$                    & $--$   & $--$                                         
 \subsection{Measurement at Notre Dame}
 \label{sec: lifetimeND}
 
-
-
-
+In August 2019, the Doppler Shift Attenuation Method was used to measure the lifetime of the 6.79 MeV state in $^{15}$O with some of the implanted targets described in the previous section. In this measurement, the $\gamma$-rays were observed with one of the GEORGINA detectors, a coaxial p-type HPGe detector rated with \textbf{GET THE GEORGINA EFFICIENCY} relative efficiency (relative to the efficiency of a 3" $\times$ 3" NaI detector with 1332 keV $\gamma$-rays). Five mm of lead shielding was placed in front of the crystal's face to reduce the number of low-energy x-rays entering the detector ($<$100 keV photon energy) because they increase the dead time in the electronics. The detector was placed a rotating table with angular precision such that the detector's center could be placed within $\pm$0.5$^{\deg}$ of the intended angle. Angles used in the course of the experiment were $0^{\deg}$, $45^{\deg}$, $60^{\deg}$, $75^{\deg}$, $90^{\deg}$, $111^{\deg}$, $135^{\deg}$, and $-90^{\deg}$. Measurements were taken with the detector in far geometry, with 25.4 cm between the target and lead shielding at the crystal's face. At this distance, the entire crystal face spanned an angular range of $\pm11^{\deg}$. This measurement was also performed on the solid target beam line within the Sta. Ana target room, shown in Fig. \ref{fig: targetRoom}. Unlike the cross-section measurement, however, the yield produced in the reaction is unimportant, so there was no need to account for summing in this case. 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/energyProduction.png}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/schroderSfac.png}
 \label{fig: schroderSfac}
 \caption{Astrophysical $S$ factor for the R/DC $\rightarrow$ 6.79 MeV transition from cite{Schroder1987}. With the exception of the resonance at $E_{c.m.}$ = 259 keV, the $S$ factor is remarkably flat, even decreasing at high energies, indicating that the state is weakly populated in all energy ranges accessible with the Sta. Ana accelerator used herein. }
 \end{figure}
 
 
+The astrophysical $S$ factor for the R/DC $\rightarrow$ 6.79 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction (as measured by Schr{\"o}der \textit{et al.} cite{Schroder1987}) is shown in Fig. \ref{fig: schroderSfac}. The only resonance which populates the state of interest is that at  $E_{c.m.}$ = 259 keV, which is unfortunately below the minimum voltage threshold for the Sta. Ana accelerator. This indicates that, for the purposes of this experiment, the 6.79 MeV state must be populated through direct capture which is a significantly weaker process. 
+
+As such, multiple energies were chosen at which to measure the reaction, $E_{p}$ = 1020 keV and $E_{p}$ = 1570 keV, which provided good signal-to-background discrimination for the states of interest, where the primary background contribution is from the strong 6.12 MeV line coming from the $^{19}$F$\left( p, \alpha\gamma \right)^{16}$O reaction. The reaction at 1570 keV also produced $^{15}$O nuclei in the 5.24 MeV and 6.18 MeV excited states, which have known lifetimes of $8.2 \pm 1.0$ fs and $< 2.5$ fs, respectively cite{compilation}. Both of these states are also within the range of DSAM to measure, allowing cross-validation of results for the measurement of the 6.79 MeV state. An example spectrum from the measurement showing the presence of all described states is given in Fig. \ref{fig: lifetimeSpec}.
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/lifetimeSpectrum.png}
+\label{fig: lifetimeSpec}
+\caption{Example spectrum from the measurement of the 6.79 MeV state lifetime. This was produced with the high-dose Ta implanted target, proton energy $E_{p}$ = 1570 keV, and the detector at $0^{\deg}$. The excited states of $^{15}$O are indicated, where the 5.24, 6.18, and 6.79 MeV states are all available to measurement with DSAM.  }
+\end{figure}
+
+As the energy at which the peak is observed for each detector angle is of critical importance for determining the overall Doppler shift (and therefore measured lifetime), the relative position of the peaks within each spectrum is also highly salient. To prevent any artificial peak shifting arising from gain shifts in the electronics to enter into the final product, the data were saved and the data acquisition restarted hourly at each angle. This allowed us to monitor for gain shifting throughout the experiment prevent it from obfuscating results. Ultimately, no evidence of gain shifting was found throughout the experiment.
+
+The goal of this measurement was to determine the lifetime of the 6.79 MeV state with a variety of target materials and nitrogen contents in order to identify any systematic effects which were unidentified in previous measurements. The targets then selected for the identification of different backing materials were the high-dose Ta, W, and Mo implanted targets while the low-dose Ta target was measured at the end of the experiment to provide a comparison on the nitrogen content in the targets. Specifically, these were selected to highlight the desired effects and be completed within the experimental time constraint. If more time had been available, all of the targets would have been studied for a complete mapping of the parameter space. The results of this undertaking as well as the analysis to arrive at those conclusions will be detailed in Chapter \ref{chap: lifetime}.
 
 
 
