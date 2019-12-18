@@ -385,7 +385,7 @@ To characterize this, we replace the Breit-Wigner formula from Equation \ref{eqn
 
 In many cases, the nuclear cross-section landscape is quite complicated, with the combined effects of multiple resonances and direct capture contributions. With all of this overlap, the Breit-Wigner formulation starting in Equation \ref{eqn: BreitWigner} is no longer valid. Therefore, a reliable theory accounting for all contributions and interferences is needed to describe relevant information and perform meaningful extrapolations. For these purposes, $R$-matrix theory was developed and is now commonly used in nuclear astrophysics calculations; details of its formal derivation can be found in References \cite{Lane1958, Azuma2010}. 
 
-The core concept of $R$-matrix theory is to describe the wave function of the system by matching individual components in the region of the compound nucleus where the nuclear potential present to an exterior region in which only the Coulomb potential contributes and nucleons are treated as individual particles. At the boundary of these two regions, also known as the channel radius $a_{c}$, the wave functions and their derivatives must match. The $R$-matrix actually relates these wave functions for each different reaction channel and is defined as
+The core concept of $R$-matrix theory is to describe the wave function of the system by matching individual components of the wavefunction in both the region of the compound nucleus where the nuclear potential is present and also to an exterior region in which only the Coulomb potential contributes (and nucleons are treated as individual particles). At the boundary of these two regions, known as the channel surface and occurring at the channel radius, $a_{c}$, the wave functions and their derivatives must match. The $R$-matrix relates these wave functions for each different reaction channel and is defined as
 
 \begin{equation}
 \mathbf{R}_{c' c} =  \sum_\lambda \frac{\gamma_{\lambda c'}\gamma_{\lambda c}}{E_\lambda-E},
@@ -398,8 +398,13 @@ The core concept of $R$-matrix theory is to describe the wave function of the sy
 \gamma_\lambda^2 = \hbar^2/(2m a_c)u_\lambda^2(a_c),
 \end{equation}
 
-\noindent with the $u_{\lambda}$ forming a complete set of basis states that satisfy the Schr\"odinger  equation. 
+\noindent with the $u_{\lambda}$ forming a complete set of basis states that satisfy the Schr\"odinger  equation. The reaction channels are defined as 
 
+\begin{equation}
+c = \alpha s \ell,
+\end{equation}
+
+\noindent where the $\alpha$'s identify the interacting particle pair, the $\ell$'s are the respective orbital angular momenta of the particles, the $s$'s are their respective spins.
 
 While the theory is named for the $R$-matrix, the cross section is actually calculated through other intermediate quantities, namely the collision matrix, $\mathbf{U}$, and the transition matrix, $\mathbf{T}$. The collision matrix relates specifically the incoming channels, $y_{c}$, to those of the outgoing particles, $x_{c}$, defined as
 
@@ -419,15 +424,15 @@ x_{c} = - \sum_{c'} \mathbf{U}_{c' c} y_{c'}.
 \mathbf{T}_{c' c} = e^{2\imath \omega_{c}} \delta_{c' c} - \mathbf{U}_{c' c},
 \end{equation}
 
-\noindent, where $\omega_{c}$ represents the Coulomb phase shift and $\delta_{c' c}$ is the Dirac delta function relating channels $c'$ and $c$. The angle integrated cross section is then 
+\noindent where $\omega_{c}$ represents the Coulomb phase shift and $\delta_{c' c}$ is the Dirac delta function relating channels $c'$ and $c$. The angle integrated cross section is then 
 
 \begin{equation}
 \sigma_{\alpha' \alpha} = \dfrac{\pi}{k_{\alpha}^{2}} \sum_{J \ell' \ell s' s} \omega | \mathbf{T}_{c' c}^{J} |^{2}
 \end{equation}
 
-\noindent where the $\alpha$'s identify the interacting particle pair, the $\ell$'s are the respective orbital angular momenta of the particles, the $s$'s are their respective spins, $J$ is the total angular momentum of the system, and $\omega$ is the statistical spin factor as defined by Equation \ref{eqn: statisticalFactor}. 
+\noindent where $J$ is the total angular momentum of the system and $\omega$ is the statistical spin factor as defined by Equation \ref{eqn: statisticalFactor}. 
 
-In this work, the multichannel, multilevel $R$-matrix code AZURE \cite{Azuma2010} was used to perform the calculations. A user inputs the spin-parity of the nuclear states, initial energies, partial widths of the excited states, the ANCs of bound states, and any external cross section or $S$-factor data into AZURE. The computation of $S$-factor and cross section are done via a simple GUI interface. The results are truncated to finite eigenstates behind the scenes to allow the code to operate quickly. As such, a background pole is typically included at high-energy to account for contributions from states not included in the calculations. The theory is also referred to as phenomenological $R$-matrix because each of the $\gamma_{\lambda}$'s and $E_{\lambda}$'s in Equation \ref{eqn: Rmatrix} are free fit parameters. 
+In this work, the multichannel, multilevel $R$-matrix code AZURE2 \cite{Azuma2010} was used to perform the calculations. A user inputs the spin-parity of the nuclear states, initial energies, partial widths of the excited states, the asymptotic normalization coefficient's (ANC's) of bound states (which describe the tail of the interaction below the particle threshold), and any external cross section or $S$-factor data into AZURE2. The computation of $S$-factor and cross section are done via a simple GUI interface. The results are truncated to finite eigenstates behind the scenes to allow the code to operate quickly. As such, a background pole is typically included at high-energy to account for contributions from states not included directly in the calculations. The theory is also referred to as phenomenological $R$-matrix because each of the $\gamma_{\lambda}$'s and $E_{\lambda}$'s in Equation \ref{eqn: Rmatrix} are free fit parameters. 
 
 
 
