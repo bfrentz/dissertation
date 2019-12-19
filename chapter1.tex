@@ -38,16 +38,17 @@
 
 \subsection{General overview}
 
-Nuclear physics data, in both the forms of theoretical predictions and experimental results, is an ever richer trove of information useful in solving many astrophysical problems. The partnership between the fields of nuclear physics and astrophysics was actually born in the early days of nuclear physics when Sir Arthur Eddington postulated that recent laboratory discoveries could explain the energy generation of the sun and stars \cite{IliadisBook}. Therefore, developments in one area naturally link to increased knowledge in the other - a scientific point and counterpoint. It follows naturally that many astrophysical phenomena are governed by nuclear physics. So it is through this study of the microscopic aspects of the universe that we also elucidate its behavior in the grandest scales imaginable. 
+Nuclear physics data, in both the forms of theoretical predictions and experimental results, is an ever richer trove of information useful in solving many astrophysical problems. The partnership between the fields of nuclear physics and astrophysics was actually born in the early days of nuclear physics when Sir Arthur Eddington postulated that recent laboratory discoveries could explain the energy generation of the sun and stars \cite{IliadisBook}, and the relationship between the two has only deepened in the years since. Today, the field is known as nuclear astrophysics and is understood to be the interdisciplinary branch of physics concerned with the nucleosynthetic processes occurring in stars and their detection on Earth. As many astrophysical phenomena are governed by underlying nuclear physics, developments in one area naturally link to increased knowledge in the other - a scientific point and counterpoint. So, as a nuclear physicist, it is through the study of the microscopic aspects of the universe that we also elucidate its behavior in the grandest scales imaginable. 
 
-The general goals of the field of nuclear astrophysics are as follows:
+The general questions at heart of nuclear astrophysics, as defined by the community in a recent White Paper \cite{Riley2017}, mirror a subset of the fundamental questions from the 2012 Decadal Survey of Nuclear Physics \cite{nrc2013} as follows:
+
 \begin{itemize}
-\item to understand the processes by which the chemical elements were formed
-\item to understand the mechanism(s) responsible for the the relative abundances between the chemical elements
-\item to understand the energy generation during each phase of stellar evolution.
+\item How did visible matter come into being and how does it evolve?
+\item How does subatomic matter organize itself and what phenomena emerge?
+\item How can the knowledge and technological progress provided by nuclear science best be used to benefit society?
 \end{itemize}
 
-\noindent Crucially, stellar evolution is cyclic: stars are born, evolve, and ultimately die, seeding the interstellar medium with the collective material they've created over their life in order to form the building blocks for the next stellar generation. As each of the different stellar phases are guided by the underlying nuclear physics, investigations into these questions provide a rich ink between humans and our place in the cosmos. 
+\noindent Re-formed through the lens of nuclear astrophysics, these can be summarized into an overarching goal: to understand and observe both the processes by which the chemical elements are formed (in either quiescent or explosive scenarios) and also those mechanism(s) responsible for their relative abundance distribution observed today. Crucially, stellar evolution is cyclic: stars are born, evolve, and ultimately die, seeding the interstellar medium with the collective material they've created over their life in order to form the building blocks for the next stellar generation. As each of the different stellar phases are guided in part by the underlying nuclear physics, investigations into these questions provide a rich ink between humans and our place in the cosmos. 
 
 The synthesis of the chemical elements we see began with the universe as the Big Bang created hydrogen, helium, and trace amounts of lithium \cite{Alpher1948}. Shortly after the Big Bang, the temperature and density of the Universe dropped too low for any significant nuclear fusion to occur and overcome the mass 5 and mass 8 barriers. This was the end of Big Bang Nucleosynthesis (BBN), as after this point, the elemental abundances were nearly stable, with the only changes coming from the radioactive decay of $^{3}$He $\rightarrow$ $t$ and $^{7}$Be $\rightarrow$ $^{7}$Li \cite{Fields2011}.
 
@@ -57,7 +58,7 @@ The synthesis of the chemical elements we see began with the universe as the Big
 \caption{The current solar isotopic abundance pattern vs. mass number for even and odd nuclei \cite{Jose2011a}. Abundances are based on both meteoritic samples and observations of the solar photosphere. }
 \end{figure}
 
-From this point, generations of stellar evolution created nearly all other elements, leading to the currently observed elemental abundance distribution, shown in Figure \ref{fig: abundances}. The synthesis of elements heavier than BBN products, commonly referred to as "metals," began with the formation of the first stars. Cold gas clouds, composed primarily the BBN products of hydrogen and helium (and metals in subsequent stellar generations), coalesce under their mutual gravitational attraction, converting their gravitational potential energy to heat -- increasing their pressure, density, and temperature. Upon passing a critical threshold for these physical quantities, typically temperatures $>$1 MK, thermonuclear fusion reactions begin in the core \cite{RyanNortonBook}. This transition marks the "birth" of a star, having reached a point where nuclear reactions provide a sufficient heat source to balance energy losses from radiation. 
+From this point, generations of stellar evolution created nearly all other elements up to iron, with those beyond iron being formed in exotic phenomena, leading to the currently observed elemental abundance distribution, shown in Figure \ref{fig: abundances}. The synthesis of elements heavier than BBN products, commonly referred to as ``metals" by astronomers, began with the formation of the first stars. Cold gas clouds, composed primarily the BBN products of hydrogen and helium (and metals in subsequent stellar generations), coalesce under their mutual gravitational attraction, converting their gravitational potential energy to heat -- increasing their pressure, density, and temperature. Upon passing a critical threshold for these physical quantities, typically temperatures $>$1 MK, thermonuclear fusion reactions begin in the core \cite{RyanNortonBook}. This transition marks the ``birth" of a star, having reached a point where nuclear reactions provide a sufficient heat source to balance energy losses from radiation. 
 
 
 \subsection{Stellar evolution}
@@ -67,6 +68,7 @@ Every star is unique and their intrinsic quantities when forming, such as mass o
 The vast majority of stars lie on the diagonal band stretching from the upper left (hot, bright stars) to the lower right (cool, faint stars) of the diagram. This feature is called the main sequence. These stars support themselves through core hydrogen burning -- implying that stars spend most of their lives in this long period of quiescent hydrogen burning in the \textit{pp chains} and the CNO cycles, detailed in subsequent sections. Other prominent features of typical HR diagrams are the clusters of stars in the upper quadrants (very bright stars), commonly referred to as the giant branch, the lower left quandrant (hot, faint stars), where the white dwarf stars reside, and the lower right quadrant beyond the main sequence, occupied by brown dwarfs. Each classification corresponds to different nuclear reactions, with stars evolving off the main sequence being characterized by phases of burning of heavier elements, like helium or carbon. 
 
 \begin{figure}
+\centering
 \includegraphics[width=\linewidth]{figures/hrDiagram.png}
 \label{fig: HR_diagram}
 \caption{An example of a Herzprung-Russell diagram. The horizontal axis gives the temperature of the star while the vertical shows the stellar luminosities \cite{CarrollOstlieBook}.}
@@ -113,8 +115,15 @@ Within the CNO cycle, the $\ce{^{14}N} \left( p, \gamma \right) \ce{^{15}O}$ rea
 
 The relative energy production between the \textit{pp chains} and CNO cycles are shown in Fig. \ref{fig: CNO-energy}. It can be seen that the CNO cycle accounts for $< $1 \% of solar energy production \cite{Adelberger1998, Adelberger2011}. However, it produces 1.6 \% of solar neutrinos through the $\beta$-decay of $\ce{^{13}N}$ and $\ce{^{15}O}$ \cite{Bahcall2005a}, which can be used to test assumptions of the Standard Solar Model (SSM), as these rates are one of the largest sources of uncertainty in model predictions \cite{Serenelli2013}. Efforts to measure the neutrino fluxes from the $\beta$-decays of $\ce{^{13}N}$ and $\ce{^{15}O}$ are either ongoing or planned at the Borexino, Super-Kamiokande, and SNO+ laboratories \cite{Jose2011a}.
 
-These laboratories are well known for their contributions in solving the \textsl{solar neutrino problem} \cite{Jose2011a} (and references therein). However, after this solar problem was solved, a new problem arose, named the solar abundance problem \cite{Adelberger2011, Serenelli2009}. The problem is as follows, solar models describe the structure, composition, and evolution of a 1$M_{\odot}$ star from ignition through the sun's current age and are constrained by the plethora of helioseismology data from the Sun. Recent analyses of the Sun's photosphere lead to a reduced metallicity estimate, destroying the agreement between helioseismology and solar models \cite{Asplund2009}. In discussing potential solutions to this problem, it was proposed to use the neutrino fluxes from the $\beta$-decay of CNO isotopes $\ce{^{13}N}$ and $\ce{^{15}N}$ to address this problem, as these quantities depend linearly on their abundance within the solar core \cite{Bahcall2005a, Bahcall2005b}. Therefore, with the measurement of these neutrino fluxes imminent, it is ever more important to have precise knowledge of the relevant nuclear cross-sections.  
+These laboratories are well known for their contributions in solving the \textsl{solar neutrino problem} \cite{Jose2011a} (and references therein). However, after this solar problem was solved, a new problem arose, named the solar abundance problem \cite{Adelberger2011, Serenelli2009}. The problem is as follows, solar models describe the structure, composition, and evolution of a 1$M_{\odot}$ star from ignition through the sun's current age and are constrained by the plethora of helioseismology data from the Sun. Recent analyses of the Sun's photosphere lead to a reduced metallicity estimate, destroying the agreement between helioseismology and solar models \cite{Asplund2009}. In discussing potential solutions to this problem, it was proposed to use the neutrino fluxes from the $\beta$-decay of CNO isotopes $\ce{^{13}N}$ and $\ce{^{15}N}$ to address this problem, as these quantities depend linearly on their abundance within the solar core \cite{Bahcall2005a, Bahcall2005b}. Therefore, with more precise measurements of these neutrino fluxes (like the example given in Fig.\ \ref{fig: neutrinoSpectrum} imminent, it is ever more important to have precise knowledge of the relevant nuclear cross-sections, as the fluxes from CNO neutrinos are one of the largest uncertainties present.  
 
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/neutrinoFlux.png}
+\label{fig: neutrinoSpectrum}
+\caption{Predicted solar neutrino flux spectrum, taken from \cite{Wiescher2010} and produced from data in \cite{Bahcall2004}. As measurements of this spectrum are on the way, it is critical to understand the nuclear physics inputs, particularly those coming from the $\beta$-decay of $^{15}$O, in order to resolve discrepancies between solar models and helioseismology.   }
+\end{figure}
 
 
 \begin{figure}
@@ -385,7 +394,7 @@ To characterize this, we replace the Breit-Wigner formula from Equation \ref{eqn
 
 In many cases, the nuclear cross-section landscape is quite complicated, with the combined effects of multiple resonances and direct capture contributions. With all of this overlap, the Breit-Wigner formulation starting in Equation \ref{eqn: BreitWigner} is no longer valid. Therefore, a reliable theory accounting for all contributions and interferences is needed to describe relevant information and perform meaningful extrapolations. For these purposes, $R$-matrix theory was developed and is now commonly used in nuclear astrophysics calculations; details of its formal derivation can be found in References \cite{Lane1958, Azuma2010}. 
 
-The core concept of $R$-matrix theory is to describe the wave function of the system by matching individual components in the region of the compound nucleus where the nuclear potential present to an exterior region in which only the Coulomb potential contributes and nucleons are treated as individual particles. At the boundary of these two regions, also known as the channel radius $a_{c}$, the wave functions and their derivatives must match. The $R$-matrix actually relates these wave functions for each different reaction channel and is defined as
+The core concept of $R$-matrix theory is to describe the wave function of the system by matching individual components of the wavefunction in both the region of the compound nucleus where the nuclear potential is present and also to an exterior region in which only the Coulomb potential contributes (and nucleons are treated as individual particles). At the boundary of these two regions, known as the channel surface and occurring at the channel radius, $a_{c}$, the wave functions and their derivatives must match. The $R$-matrix relates these wave functions for each different reaction channel and is defined as
 
 \begin{equation}
 \mathbf{R}_{c' c} =  \sum_\lambda \frac{\gamma_{\lambda c'}\gamma_{\lambda c}}{E_\lambda-E},
@@ -398,8 +407,13 @@ The core concept of $R$-matrix theory is to describe the wave function of the sy
 \gamma_\lambda^2 = \hbar^2/(2m a_c)u_\lambda^2(a_c),
 \end{equation}
 
-\noindent with the $u_{\lambda}$ forming a complete set of basis states that satisfy the Schr\"odinger  equation. 
+\noindent with the $u_{\lambda}$ forming a complete set of basis states that satisfy the Schr\"odinger  equation. The reaction channels are defined as 
 
+\begin{equation}
+c = \alpha s \ell,
+\end{equation}
+
+\noindent where the $\alpha$'s identify the interacting particle pair, the $\ell$'s are the respective orbital angular momenta of the particles, the $s$'s are their respective spins.
 
 While the theory is named for the $R$-matrix, the cross section is actually calculated through other intermediate quantities, namely the collision matrix, $\mathbf{U}$, and the transition matrix, $\mathbf{T}$. The collision matrix relates specifically the incoming channels, $y_{c}$, to those of the outgoing particles, $x_{c}$, defined as
 
@@ -419,15 +433,15 @@ x_{c} = - \sum_{c'} \mathbf{U}_{c' c} y_{c'}.
 \mathbf{T}_{c' c} = e^{2\imath \omega_{c}} \delta_{c' c} - \mathbf{U}_{c' c},
 \end{equation}
 
-\noindent, where $\omega_{c}$ represents the Coulomb phase shift and $\delta_{c' c}$ is the Dirac delta function relating channels $c'$ and $c$. The angle integrated cross section is then 
+\noindent where $\omega_{c}$ represents the Coulomb phase shift and $\delta_{c' c}$ is the Dirac delta function relating channels $c'$ and $c$. The angle integrated cross section is then 
 
 \begin{equation}
 \sigma_{\alpha' \alpha} = \dfrac{\pi}{k_{\alpha}^{2}} \sum_{J \ell' \ell s' s} \omega | \mathbf{T}_{c' c}^{J} |^{2}
 \end{equation}
 
-\noindent where the $\alpha$'s identify the interacting particle pair, the $\ell$'s are the respective orbital angular momenta of the particles, the $s$'s are their respective spins, $J$ is the total angular momentum of the system, and $\omega$ is the statistical spin factor as defined by Equation \ref{eqn: statisticalFactor}. 
+\noindent where $J$ is the total angular momentum of the system and $\omega$ is the statistical spin factor as defined by Equation \ref{eqn: statisticalFactor}. 
 
-In this work, the multichannel, multilevel $R$-matrix code AZURE \cite{Azuma2010} was used to perform the calculations. A user inputs the spin-parity of the nuclear states, initial energies, partial widths of the excited states, the ANCs of bound states, and any external cross section or $S$-factor data into AZURE. The computation of $S$-factor and cross section are done via a simple GUI interface. The results are truncated to finite eigenstates behind the scenes to allow the code to operate quickly. As such, a background pole is typically included at high-energy to account for contributions from states not included in the calculations. The theory is also referred to as phenomenological $R$-matrix because each of the $\gamma_{\lambda}$'s and $E_{\lambda}$'s in Equation \ref{eqn: Rmatrix} are free fit parameters. 
+In this work, the multichannel, multilevel $R$-matrix code AZURE2 \cite{Azuma2010} was used to perform the calculations. A user inputs the spin-parity of the nuclear states, initial energies, partial widths of the excited states, the asymptotic normalization coefficient's (ANC's) of bound states (which describe the tail of the interaction below the particle threshold), and any external cross section or $S$-factor data into AZURE2. The computation of $S$-factor and cross section are done via a simple GUI interface. The results are truncated to finite eigenstates behind the scenes to allow the code to operate quickly. As such, a background pole is typically included at high-energy to account for contributions from states not included directly in the calculations. The theory is also referred to as phenomenological $R$-matrix because each of the $\gamma_{\lambda}$'s and $E_{\lambda}$'s in Equation \ref{eqn: Rmatrix} are free fit parameters. 
 
 
 
@@ -472,7 +486,7 @@ Year & Reference                                                & R/DC $\rightar
 \caption{A summary of previous $S$-factor determinations. a) $R$-matrix analysis on available data, not a measurement. b) Adopted from Angulo \textit{et al.} \cite{Angulo2001}. c) Measured $S$-factor at 70 keV. d) Calculated difference of the total $S(0)$ from the other transitions.}
 \end{sidewaystable}
 
-The most recent measurements were published by Li \textit{et al.} in 2016 \cite{Li2016} and Wagner \textit{et al.} in 2018 \cite{Wagner2018}. These experiments differed in their aim. The Li experiment focused on higher-energy contributions and determined radiative capture data for capture to the 6.79 MeV level in the 1.5- to 3.4-MeV proton energy range and the proton energy range of 0.6 - 3.4 MeV for the DC/R$\rightarrow$gs transition from 0.6 to 3.4 MeV. The authors also reported angular distributions for their measurements. The authors identified the primary, remaining sources of uncertainty as the DC/R$\rightarrow$gs primary transition, the DC/R$\rightarrow$6.17 MeV level primary transition, and the $\Gamma$ width of the 6.79 MeV state. Fig. \ref{fig: QianRmatrix} shows the effects of these uncertainties in the authors' $R$-matrix calculations and how it differs from other calculations. Due to the astrophysical importance of this reaction detailed in Section \ref{sec: Nuclear astrophysics overview}, an accurate determination of this extrapolated $S$-factor is of the utmost importance. Critically, the data reported do not overlap with the low energy measurements of the LUNA and TUNL groups and their absolute scale does not align, also leading to further inconsistent extrapolation and significant error in the deduced $S(0)$ value.
+The most recent measurements were published by Li \textit{et al.} in 2016 \cite{Li2016} and Wagner \textit{et al.} in 2018 \cite{Wagner2018}. These experiments differed in their aim. The Li experiment focused on higher-energy contributions and determined radiative capture data for capture to the 6.79 MeV level in the 1.5 - 3.4 MeV proton energy range and the proton energy range of 0.6 - 3.4 MeV for the DC/R$\rightarrow$gs transition from 0.6 to 3.4 MeV. The authors also reported angular distributions for their measurements. The authors identified the primary, remaining sources of uncertainty as the DC/R$\rightarrow$gs primary transition, the DC/R$\rightarrow$6.17 MeV level primary transition, and the $\Gamma$ width of the 6.79 MeV state. Fig. \ref{fig: QianRmatrix} shows the effects of these uncertainties in the authors' $R$-matrix calculations and how it differs from other calculations. Due to the astrophysical importance of this reaction detailed in Section \ref{sec: Nuclear astrophysics overview}, an accurate determination of this extrapolated $S$-factor is of the utmost importance. Critically, the data reported do not overlap with the low energy measurements of the LUNA and TUNL groups and their absolute scale does not align, also leading to further inconsistent extrapolation and significant error in the deduced $S(0)$ value.
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/qianSfactor.pdf}
@@ -487,7 +501,7 @@ The Wagner \textit{et al.} study attempted to remedy this, providing an independ
 \subsection{Lifetime}
 
 
-As discussed, the $\Gamma$ width of the 6.79 MeV subthreshold state is the dominant uncertainty on the total $S$-factor at zero energy, as illustrated by Fig. \ref{fig: QianRmatrix}. The literature to date on the lifetimes/widths of the important levels in $\ce{^{15}O}$ are summarized in Table \ref{table: lifetimes}. Some of the values present in the table are those extracted as a fit parameter from $R$-matrix analyses, instead of experimental measurements \cite{Schroder1987, Angulo2001, Fomicola2004, Runkle2005, Marta2008, Azuma2010, Adelberger2011}. By having a dominant term of the calculation be a floating fit parameter, accuracy and reliability in the extrapolations are lost. Therefore, determination of this quantity experimentally is critical. 
+The $\Gamma$ width of the 6.79 MeV subthreshold state is the dominant uncertainty on the total $S$-factor at zero energy, as illustrated by Fig. \ref{fig: QianRmatrix}. The literature to date on the lifetimes/widths of the important levels in $\ce{^{15}O}$ are summarized in Table \ref{table: lifetimes}. Some of the values present in the table are those extracted as a fit parameter from $R$-matrix analyses, instead of experimental measurements \cite{Schroder1987, Angulo2001, Fomicola2004, Runkle2005, Marta2008, Azuma2010, Adelberger2011}. By having a dominant term of the calculation be a floating fit parameter, accuracy and reliability in the extrapolations are lost. Therefore, determination of this quantity experimentally is critical. 
 
 
 \begin{table}[]
@@ -529,18 +543,18 @@ In aggregate, these results are unsatisfactory, with an error that is still unco
 
 
 
-\section{Thesis outline}
+\section{Objective}
 \label{sec: thesis outline}
 
-In this dissertation, the results of a series of experiments and subsequent analyses performed to better understand the low energy behavior of the $^{14}$N$\left( p,\gamma \right) ^{15}$O will be presented. These include the measurement of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction at the University of Notre Dame Nuclear Science Laboratory (NSL) and the Compact Accelerator System for Performing Astrophysical Research (CASPAR), located in the Sanford Underground Research Facility in the renovated Homestake Gold Mine in South Dakota, as well as a measurement of the lifetime of the 6.79 MeV level in $^{15}$O also at the NSL. 
+The results of a series of experiments and subsequent analyses performed to better understand the low energy behavior of the $^{14}$N$\left( p,\gamma \right) ^{15}$O will be presented herein. These include the measurement of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction at the University of Notre Dame Nuclear Science Laboratory (NSL) and the Compact Accelerator System for Performing Astrophysical Research (CASPAR), located in the Sanford Underground Research Facility in the renovated Homestake Gold Mine in South Dakota, as well as a measurement of the lifetime of the 6.79 MeV level in $^{15}$O also at the NSL. These data will then be used in an $R$ Matrix calculation to provide a new determination of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction rate.
 
-An outline of the experimental techniques used in these measurements will be presented in Chapter \ref{chap: experiment}. There will be a brief overview of the equipment common to each of the measurements, with emphasis on the Van de Graaff accelerators and High-purity Germanium detectors used. Following this, the specific features of the different types of measurements and the facilities in which they were made will be presented. 
+An outline of the experimental techniques used in these measurements will be presented in Chapter \ref{chap: experiment}, including specific details about each phase of the measurement. There will be a brief overview of the standard equipment common to each of the measurements. Following this, the specific features of the different types of measurements and the facilities in which they were made will be presented in further detail. 
 
-Chapters \ref{chap: data} - \ref{chap: lifetime} will present details on the different facets of the data reduction and analysis. The first of these, Chapter \ref{chap: data}, presents the data for $^{14}$N$\left( p,\gamma \right) ^{15}$O taken at the NSL and CASPAR while detailing the process by which the cross-section and astrophysical $S$-factor were extracted. Shifting focus, Chapter \ref{chap: simulation} will focus on the Monte Carlo code that was developed and used to simulate the lifetime of the states in $^{15}$O, presenting the results of these tests and displaying their ability to reproduce experimental cases. Finally, Chapter \ref{chap: lifetime} will present the actual Doppler shift analysis of the data done to extract the lifetime of the 6.79 MeV state in $^{15}$O. The validity of the method will be checked against other known levels populated in the reaction, like the states at 5.18 MeV and 6.17 MeV, respectively.
+Chapters \ref{chap: data} - \ref{chap: lifetime} will present details on the different facets of the data reduction and analysis. The first of these, Chapter \ref{chap: data}, shows the data for $^{14}$N$\left( p,\gamma \right) ^{15}$O taken at the NSL and CASPAR while detailing the process by which the cross-section and astrophysical $S$-factor were extracted. Shifting focus, Chapter \ref{chap: simulation} will focus on the Monte Carlo code that was developed and used to simulate the lifetime of the states in $^{15}$O, presenting the results of these tests and displaying their ability to reproduce experimental cases. Finally, Chapter \ref{chap: lifetime} will present the actual Doppler shift analysis of the data done to extract the lifetime of the 6.79 MeV state in $^{15}$O. The validity of the method will be checked against other known levels populated in the reaction, like the states at 5.18 MeV and 6.17 MeV, respectively.
 
 The cross-section information and newly measured lifetime will be utilized in a new $R$-matrix analysis of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, presented in Chapter \ref{chap: r-matrix}. The new constraints these data provide on the low-energy behavior of the extrapolated $S$-factor will be provided, alongside a description of their impact to relevant astrophysical quantities.
 
-Finally, the contents of this dissertation will be summarized in Chapter \ref{chap: conclusions}. This will present an overview of the described measurements, analysis, respective impacts, and future outlook. 
+Finally, Chapter \ref{chap: conclusions} will present an overview of the respective impacts of the measurements paired with future outlook. 
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
