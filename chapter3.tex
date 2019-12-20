@@ -79,9 +79,59 @@ E_{\gamma} = m \times \text{Channel} + b
 \section{Efficiency}
 \label{sec: efficiency}
 
-
+For this experiment, both the total efficiency, $\eta^{tot}$, and the full-energy peak (FEP) efficiency, $\eta^{fep}$, were required. The total efficiency is the probability that the $\gamma$ ray enters and deposits any amount of energy within the detector, while, on the other hand, the FEP efficiency is the probability that the full energy of an emitted $\gamma$ ray will be deposited within the detector. As both efficiency types are dependent on the physical geometry of the system, they are determined for each experimental setup in turn. 
 
 \subsection{Total efficiency}
+
+The total efficiency of a detector / source geometry is the probability that a given photon from the source will enter and deposit any amount of energy within the detector. For extremely simple geometries, the total efficiency can be calculated following the approach laid out in Debertin and Helmer cite{DebertinHelmerBook},
+
+\begin{equation}
+\eta^{tot} = \dfrac{1}{4\pi} \int \left(1 - e^{-\mu x} \right) d\Omega
+\end{equation}
+
+\noindent where $\mu$ is the energy and absorber dependent attenuation coefficient, x is the position from the detector face, and the integration takes place over the solid angle of the detector from the front to the back. This formulation makes it abundantly clear that $\eta^{tot}$ is so highly dependent on the geometry of the setup. 
+
+However, in practice, there is no analytic formulation of the total efficiency because one needs to account for any potential scattering of $\gamma$-rays off of any surrounding material, like the shielding or target chamber, for example. Additionally, when measuring the total efficiency for a given setup, the presence of multiple decays from physical sources provides additional complications. Therefore, most commonly the total efficiency is determined using single-line radioactive sources, like $^{137}$Cs. In this case, when accounting for the ever-present background, the total efficiency is the total number of counts in a spectrum divided by the total number of decays occurring during the measurement time, which can be easily calculated with the radioactive decay law
+
+\begin{equation}
+N(t) = N_{0} e^{- \lambda t} \hfill A(t) = A_{0} e^{- \lambda t},
+\end{equation}
+
+\noindent where $N(t)$ is the number of nuclei remaining after time $t$, $N_{0}$ is the initial number of radioactive nuclei, $\lambda$ is the radioactive decay constant for a given nucleus, $A(t)$ is the activity of the source at time $t$ compared to the activity at time $t=0$ of $A_{0}$. The decay constant, $\lambda$, can be calculated from either the nuclear lifetime, $\tau$, or the decay half-life, $t_{1/2}$, as
+
+\begin{equation}
+\lambda = \dfrac{1}{\tau} \hfill \lambda = \dfrac{\text{ln}(2)}{t_{1/2}}.
+\end{equation}
+
+\noindent This is how the total efficiency for the detector systems was determined at 662 keV, the $\gamma$ energy from the decay of $^{137}$Cs.
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/shieldingSimulation.png}
+\label{fig: simulatedSetup}
+\caption{Simulation of the experimental setup at CASPAR, including the target chamber (in gold), water cooling (in light blue), HPGe detector (in dark blue), and lead bricks for shielding (in gray). Both pictures are of the same experimental setup from different angles to convey the layout. Simulating this setup is necessary to determine the total efficiency of the experimental setup. In this determination, a single-line $\gamma$ source is placed at the target location and its decays simulated for a variety of energies, allowing a determination of the total efficiency at each.}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/shieldingPicture.jpg}
+\label{fig: actualSetup}
+\caption{A picture of the experimental setup at CASPAR, showing the lead shielding around the detector and target chamber. This figure is provided for comparison to the simulated setup to prove its accuracy. }
+\end{figure} 
+
+To extend $\eta^{tot}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-emission source was placed at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. For each of the different decay energies, the spectrum of recorded events in the detector was analyzed in the exact same way as the actual $^{137}$Cs data to produce the total efficiency at each energy. This simulated data was used in conjunction with the measured $^{137}$Cs total efficiency data point to determine an accurate curve of the total efficiency across all experimentally relevant energies, shown in Fig.\ \ref{fig: totalEfficiency}.
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/totalEfficiency.png}
+\label{fig: totalEfficiency}
+\caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points from the Geant4 simulation are taken raw without scaling, showing the efficacy of this technique and accuracy of the simulation.  }
+\end{figure}
+
+
 
 \subsection{Full energy peak efficiency}
 
