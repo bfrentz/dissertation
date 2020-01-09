@@ -68,7 +68,7 @@ E_{\gamma} = m \times \text{Channel} + b
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\linewidth]{figures/expSetup.png}
+\includegraphics[width=0.8\linewidth]{figures/detEnergyCalibration.png}
 \label{fig: energyCalibration}
 \caption{Energy calibration curve for the HPGe detector taken at CASPAR. The calibration incorporated natural background, radioactive sources, and the products from the $^{27}$Al($p, \gamma$)$^{28}$Si reaction. }
 \end{figure}
@@ -79,11 +79,11 @@ E_{\gamma} = m \times \text{Channel} + b
 \section{Efficiency}
 \label{sec: efficiency}
 
-For this experiment, both the total efficiency, $\eta^{tot}$, and the full-energy peak (FEP) efficiency, $\eta^{fep}$, were required. The total efficiency is the probability that the $\gamma$ ray enters and deposits any amount of energy within the detector, while, on the other hand, the FEP efficiency is the probability that the full energy of an emitted $\gamma$ ray will be deposited within the detector. As both efficiency types are dependent on the physical geometry of the system, they are determined for each experimental setup in turn. 
+Efficiency is a term that can, in different contexts, have many different meanings. However, in experimental physics it is known to be the ratio for the response of an instrument to the actual physical quantity for which it is employed to measure. In these cases, it is the ratio between the photons recorded and those emitted in a given event. For this experiment, both the total efficiency, $\eta^{tot}$, and the full-energy peak (FEP) efficiency, $\eta^{fep}$, were required. The total efficiency is the probability that the $\gamma$ ray enters and deposits any amount of energy within the detector, while, on the other hand, the FEP efficiency is the probability that the full energy of an emitted $\gamma$ ray will be deposited within the detector. As both efficiency types are dependent on the physical geometry of the system, they are determined for each experimental setup in turn. 
 
 \subsection{Total efficiency}
 
-The total efficiency of a detector / source geometry is the probability that a given photon from the source will enter and deposit any amount of energy within the detector. For extremely simple geometries, the total efficiency can be calculated following the approach laid out in Debertin and Helmer cite{DebertinHelmerBook},
+The total efficiency of a detector / source geometry is the probability that a given photon from the source will enter and deposit any amount of energy within the detector. For extremely simple geometries, the total efficiency can be calculated following the approach laid out in Debertin and Helmer \cite{DebertinHelmerBook},
 
 \begin{equation}
 \eta^{tot} = \dfrac{1}{4\pi} \int \left(1 - e^{-\mu x} \right) d\Omega
@@ -135,9 +135,143 @@ To extend $\eta^{tot}$ to the whole range of energies relevant to the experiment
 
 \subsection{Full energy peak efficiency}
 
+The full energy peak (FEP) efficiency, on the other hand, is the probability that the full energy of a given photon will be recorded within the detector. Mathematically, this is
+
+\begin{equation}
+\eta^{FEP} = \dfrac{n(E)}{R(E)}
+\end{equation}
+
+\noindent where $n(E)$ is the count rate in the measured peak at an energy, $E$, where $R(E)$ is the rate at which photons of energy $E$ are emitted from the source \cite{DebertinHelmerBook}. From this point, if not specified, efficiency as a term is used to denote the FEP efficiency whereas the total efficiency will always be named explicitly. 
+
+Determining the efficiency for a given setup is necessary for each geometry since, like the total efficiency, it is related to the specific source-detector geometry; it is not an intrinsic property of a given detector. In this campaign of experiments, the efficiency was determined each time with a combination of radioactive sources, like $^{137}$Cs, $^{60}$Co, and $^{152}$Eu, and well-known nuclear resonances, like $^{14}$N$\left( p,\gamma \right) ^{15}$O at $E_{p}$ = 278 keV and the $^{27}$Al($p, \gamma$)$^{28}$Si resonance at $E_{p}$ = 992 keV. These reactions were chosen because, much like the energy calibration, these extend the detector's measured efficiency to a much higher energy range (up to 10.7 MeV) compared to radioactive sources. 
+
+From radioactive sources, the detector's efficiency at a given $\gamma$ ray energy, $\eta(E_{\gamma})$, can be determined with
+
+\begin{equation}
+\eta (E_{\gamma}) = \dfrac{N_{\gamma}}{A(t) B_{\gamma} t_{live} C_{i}},
+\end{equation}
+
+\noindent where $N_{\gamma}$ is the measured number of counts in the full energy peak, $A(t)$ is the source's activity at the time of the measurement, $B_{gamma}$ is the branching ratio for the specific decay, $t_{live}$ is the live time of the measurement, and $C_{i}$ are the correction factors, if necessary. For nuclear resonances, on the other hand, $\eta (E_{gamma})$ is 
+
+\begin{equation}
+\eta (E_{\gamma}) = \dfrac{N_{\gamma}}{q B_{\gamma} R C_{i}},
+\end{equation}
+
+\noindent where $q$ is the collected charge and
+
+\begin{equation}
+R = \dfrac{\lambda_{r}^{2}}{\pi} \dfrac{\omega \gamma}{\epsilon_{sp}} \dfrac{M + m}{M} \tan^{-1} \left( \dfrac{\Delta E}{\Gamma}  \right)
+\label{eqn: resonanceFactor}
+\end{equation}
+
+\noindent with $\lambda_{r}$ is the proton's de Broglie wavelength at the resonance energy, $\omega \gamma$ is the resonance strength (as defined in Chapter \ref{chap: introduction}), $\epsilon_{sp}$ is the stopping power of the target at the resonance energy, $M$ is the target atomic mass, $m$ is the projectile atomic mass, $\Delta E$ is the thickness of the target, and $\Gamma$ is the resonance width. 
+
+For this determination, the branching ratios for the 278 keV resonance in $^{14}$N$\left( p,\gamma \right) ^{15}$O were taken from Daigle \textit{et al.} \cite{Daigle2016} where for the 992 keV resonance in $^{27}$Al($p, \gamma$)$^{28}$Si they were obtained from Antilla \textit{et al.} \cite{Antilla1977} and those from the 406 keV resonance in $^{27}$Al($p, \gamma$)$^{28}$Si are taken from Powell \textit{et al.} \cite{Powell1998}. The efficiencies were then fit with 
+
+\begin{equation}
+\eta = \exp \left(  \sum_{i=0}^{3} a_{i} ( \ln (E_{\gamma}))^{2}    \right),
+\end{equation}
+
+\noindent where the $a_{i}$ are fit coefficients and $E_{\gamma}$ is the $\gamma$-ray energy and the independent variable in the fit. An example of this determination for the CASPAR setup in both the close and far geometries can be seen in Fig. \ref{fig: efficiency}. In both calculations, only statistical errors were included in the fit and the highest energy point was excluded due to summing effects, which will be discussed in more detail in the next section. This can be clearly seen as the highest energy point at close distance (1.1 cm from target) is off by an inordinately large factor. For a reference, measurements were also taken at 25.24 cm away from the target chamber, making the summing effects negligible. In this case, the summing effects provide very little impact (if any) on the highest energy point, which was still excluded from this fit. However, for the far distance it follows the trend of the other data nearly perfectly.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/efficiencyComplete.png}
+\label{fig: efficiency}
+\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries. The highest energy point in the close geometry was excluded from the fit because it suffers from summing-in effects artificially inflating the count rate of this measured peak (see text for details). At the far distance between the detector and the target, summing effects are negligible. This can be seen as the highest-energy data point now lies perfectly with the fit from the other data.  }
+\end{figure}
+
+
 
 \section{Summing corrections}
 \label{sec: summing}
+
+Summing corrections need to be applied to data due to data-recording phenomena manifesting in measured spectra. There are two different ways in which the recorded data can be affected, the so-called summing-in and summing-out effects, and these are more pronounced when measurements happen with the detector and source in close proximity or with simple reaction product decay structures, as in the case in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/simpleScheme.pdf}
+\label{fig: simpleDecay}
+\caption{Example cascade nuclear decay for demonstrating summing effects (see text for details). }
+\end{figure}
+
+For a simple nuclear decay, like that in Fig. \ref{fig: simpleDecay}, summing manifests in a measured spectrum in two different ways. If any portion of the energy from $\gamma_{1}$ is deposited in the detector simultaneous with $\gamma_{2}$, the the resultant recorded event will have an energy higher than either individual $\gamma$-ray and, therefore, will appear at a different energy in the spectrum. Consequently, $\gamma_{2}$'s count rate will be artificially lowered. By the same logic, the count rate for $\gamma_{1}$ will also be artificially dropped. This loss of counts in the peaks recorded at energies $E_{1}$ and $E_{2}$ is known as the summing-out effect. As an extension of this thought experiment, if the full energy of both $\gamma_{1}$ and $\gamma_{2}$ is deposited in the detector at the same time the resulting measured energy will match $E_{3}$, artificially inflating the count rate of that peak. This increase is called the summing-in effect.
+
+To correct for these effects, the probability of measuring a different energy than expected must be taken into account. For a situation where there is no summing, the rate of $\gamma$ rays is simply the yield
+
+\begin{equation}
+Y_{i} = R B_{i} \eta_{i},
+\end{equation}
+
+\noindent where $R$ is the normalization from Equation \ref{eqn: resonanceFactor}, $B$ is the branching ratio, and $\eta$ is the FEP efficiency. However, when summing-out occurs, the yield is artificially dropped by the factor $R B \eta_{1} \eta^{tot}_{2}$, which is the probability of counting the full energy of $\gamma_{1}$ along with any part of $\gamma_{2}$. Mathematically, this observed yield for both $\gamma_{1}$ and $\gamma_{2}$ is
+
+\begin{align}
+Y_{1} &= R B_{1} \eta_{1} - R B_{1} \eta_{1} \eta^{tot}_{2} \\
+        &= R B_{1} \eta_{1} \left( 1 - \eta^{tot}_{2} \right) \\
+Y_{2} &= R B_{2} \eta_{2} \left( 1 - \eta^{tot}_{1} \right).
+\end{align}
+
+\noindent Then, in order to correct for this, the ratio of the true emitted $\gamma$'s to the observed rate for $\gamma_{1}$ is
+
+\begin{equation}
+\dfrac{Y_{1}}{Y^{obs}_{1}} = \dfrac{1}{1 - \eta^{tot}_{2}} = C_{1},
+\end{equation}
+
+\noindent where the $C_{i}$ is the correction factor. The same relation holds for $\gamma_{2}$. This makes clear why the total efficiency is so important: without it, summing-out is not an effect which can be corrected. For $\gamma_{3}$, however, the situation requires the total energy deposition of $\gamma_{1}$ and $\gamma_{2}$ at the same time, so correcting for summing-in requires the FEP efficiency. This is
+
+\begin{equation}
+Y_{3} = R B_{3} \eta_{3} + R B_{1} \eta_{1} \eta_{2}
+\end{equation} 
+
+\noindent where the second term includes $B_{1}$ because the decay chain has to start with $\gamma_{1}$. By the same token, the correction factor for summing-in is
+
+\begin{equation}
+C_{3} = \dfrac{Y_{3}}{Y_{3}^{obs}} = \dfrac{1}{1 + \left( \dfrac{B_{1} \eta_{1} \eta_{2}} {B_{3} \eta_{3}}  \right)}.
+\end{equation}
+
+
+With a more complicated nuclear level scheme, the summing corrections become more difficult to apply accurately. A more detailed treatment of the necessary methods can be found in \cite{DebertinHelmerBook}. This is primarily due to more complicated feeding and the presence of multiple decays from a given level. In general, the correction is for the $i$th level is
+
+\begin{align}
+C_{i} &= 1 + C_{i}^{in} - C_{i}^{out} \\
+C_{i}^{in} &= \sum_{m,n} \dfrac{B_{m} p_{n} \eta_{m} \eta_{n}}{B_{i} \eta_{i}} \\
+C_{i}^{out} &= \sum_{j,k} p_{k} \eta_{k}^{tot} + \dfrac{B_{j} p_{i} \eta_{j}^{tot}}{B_{i}}
+\end{align}
+
+\noindent where the $p_{i}$ are the probability of feeding. Fortunately, for the $^{15}$O nucleus, all intermediate decays have a branching ratio of 100\%, as can be seen in \ref{fig: summingOxygen}. The summing out corrections in each case can then be
+
+\begin{equation}
+C_{i}^{out} = 1 - \eta^{tot}_{j},
+\end{equation}
+
+\noindent where the $i$ and $j$ denote the $\gamma$ rays feeding into and decaying from the state, respectively (like $\gamma_{1}$ and $\gamma_{6}$ for example). For this measurement, the summing-out effect for every transition except the ground state is relatively small, falling in the range of 3.6 - 5.2 \% for all of the relevant $\gamma$'s.
+
+Conversely, only the R/DC$\rightarrow$GS transition needs to be corrected for summing-in effects as the total energy of the other decay branches matches the energy of $\gamma_{7}$, and, as such, should be a larger effect since the true branch to the ground state is $\sim 4$\%. The observed yield of $\gamma_{7}$ in this case will be
+
+\begin{equation}
+Y_{7} = R B_{7} \eta_{7} + R B_{1} \eta_{1} \eta_{6} +  R B_{2} \eta_{2} \eta_{5} + R B_{3} \eta_{3} \eta_{4} .
+\end{equation}
+
+\noindent From this, then, the correction factor for the ground state transition will necessarily be
+
+\begin{equation}
+C_{7}^{in} = 1 + \dfrac{B_{1} \eta_{1} \eta_{6} + B_{2} \eta_{2} \eta_{5} + B_{3} \eta_{3} \eta_{4} }{B_{7} \eta_{7}}.
+\end{equation}
+
+\noindent In this measurement, this correction is quite large - on the order of $\sim$\textbf{PERCENT}\%. 
+
+
+\begin{figure}
+\hspace{-2cm}
+\includegraphics[width=1.0\linewidth]{figures/summingOxygenDecays.pdf}
+\label{fig: summingOxygen}
+\caption{All decays from the 278 keV proton resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. Other than the resonance level, all decays are sequential, with the levels having only one decay directly to ground state. Of note, this then means that the total energy for each decay sequence matches the direct transition, $\gamma_{7}$, so it must be corrected for summing-in effects from all the other branches. }
+\end{figure}
+
+
+
 
 \section{Target characterization}
 \label{sec: target}
