@@ -63,14 +63,14 @@ It is important to establish the true relationship between $\gamma$-rays of diff
 E_{\gamma} = m \times \text{Channel} + b
 \end{equation}
 
-\noindent where $m$ is simply the slope and $b$ the offset of the fit. For a HPGe detector, a linear relationship is sufficient and appropriate to describe the ADC response. However, this process was redone for every phase of the experiment because slightly different gains applied to the ADC's and signal amplifiers provide a different relationship in the electronics. Therefore, despite using the same detector, each phase of the experiment required its own energy calibration, an example of which is shown in Fig.\ \
+\noindent where $m$ is simply the slope and $b$ the offset of the fit. For a HPGe detector, a linear relationship is sufficient and appropriate to describe the ADC response. However, this process was redone for every phase of the experiment because slightly different gains applied to the ADC's and signal amplifiers provide a different relationship in the electronics. Therefore, despite using the same detector, each phase of the experiment required its own energy calibration, an example of which is shown in Fig.\ \ref{fig: energyCalibration} for the CASPAR setup.
 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{figures/detEnergyCalibration.png}
-\label{fig: energyCalibration}
 \caption{Energy calibration curve for the HPGe detector taken at CASPAR. The calibration incorporated natural background, radioactive sources, and the products from the $^{27}$Al($p, \gamma$)$^{28}$Si reaction. }
+\label{fig: energyCalibration}
 \end{figure}
 
 
@@ -110,16 +110,16 @@ N(t) = N_{0} e^{- \lambda t} \hfill A(t) = A_{0} e^{- \lambda t},
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/shieldingSimulation.png}
-\label{fig: simulatedSetup}
 \caption{Simulation of the experimental setup at CASPAR, including the target chamber (in gold), water cooling (in light blue), HPGe detector (in dark blue), and lead bricks for shielding (in gray). Both pictures are of the same experimental setup from different angles to convey the layout. Simulating this setup is necessary to determine the total efficiency of the experimental setup. In this determination, a single-line $\gamma$ source is placed at the target location and its decays simulated for a variety of energies, allowing a determination of the total efficiency at each.}
+\label{fig: simulatedSetup}
 \end{figure}
 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{figures/shieldingPicture.jpg}
-\label{fig: actualSetup}
 \caption{A picture of the experimental setup at CASPAR, showing the lead shielding around the detector and target chamber. This figure is provided for comparison to the simulated setup to prove its accuracy. }
+\label{fig: actualSetup}
 \end{figure} 
 
 To extend $\eta^{tot}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-emission source was placed at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. For each of the different decay energies, the spectrum of recorded events in the detector was analyzed in the exact same way as the actual $^{137}$Cs data to produce the total efficiency at each energy. This simulated data was used in conjunction with the measured $^{137}$Cs total efficiency data point to determine an accurate curve of the total efficiency across all experimentally relevant energies, shown in Fig.\ \ref{fig: totalEfficiency}.
@@ -127,8 +127,8 @@ To extend $\eta^{tot}$ to the whole range of energies relevant to the experiment
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/totalEfficiency.png}
-\label{fig: totalEfficiency}
 \caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points from the Geant4 simulation are taken raw without scaling, showing the efficacy of this technique and accuracy of the simulation.  }
+\label{fig: totalEfficiency}
 \end{figure}
 
 
@@ -178,8 +178,8 @@ For this determination, the branching ratios for the 278 keV resonance in $^{14}
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/efficiencyComplete.png}
-\label{fig: efficiency}
 \caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries. The highest energy point in the close geometry was excluded from the fit because it suffers from summing-in effects artificially inflating the count rate of this measured peak (see text for details). At the far distance between the detector and the target, summing effects are negligible. This can be seen as the highest-energy data point now lies perfectly with the fit from the other data.  }
+\label{fig: efficiency}
 \end{figure}
 
 
@@ -193,8 +193,8 @@ Summing corrections need to be applied to data due to data-recording phenomena m
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{figures/simpleScheme.pdf}
-\label{fig: simpleDecay}
 \caption{Example cascade nuclear decay for demonstrating summing effects (see text for details). }
+\label{fig: simpleDecay}
 \end{figure}
 
 For a simple nuclear decay, like that in Fig. \ref{fig: simpleDecay}, summing manifests in a measured spectrum in two different ways. If any portion of the energy from $\gamma_{1}$ is deposited in the detector simultaneous with $\gamma_{2}$, the the resultant recorded event will have an energy higher than either individual $\gamma$-ray and, therefore, will appear at a different energy in the spectrum. Consequently, $\gamma_{2}$'s count rate will be artificially lowered. By the same logic, the count rate for $\gamma_{1}$ will also be artificially dropped. This loss of counts in the peaks recorded at energies $E_{1}$ and $E_{2}$ is known as the summing-out effect. As an extension of this thought experiment, if the full energy of both $\gamma_{1}$ and $\gamma_{2}$ is deposited in the detector at the same time the resulting measured energy will match $E_{3}$, artificially inflating the count rate of that peak. This increase is called the summing-in effect.
@@ -240,7 +240,18 @@ C_{i}^{in} &= \sum_{m,n} \dfrac{B_{m} p_{n} \eta_{m} \eta_{n}}{B_{i} \eta_{i}} \
 C_{i}^{out} &= \sum_{j,k} p_{k} \eta_{k}^{tot} + \dfrac{B_{j} p_{i} \eta_{j}^{tot}}{B_{i}}
 \end{align}
 
-\noindent where the $p_{i}$ are the probability of feeding. Fortunately, for the $^{15}$O nucleus, all intermediate decays have a branching ratio of 100\%, as can be seen in \ref{fig: summingOxygen}. The summing out corrections in each case can then be
+
+
+
+\begin{figure}
+\hspace{-2cm}
+\includegraphics[width=1.0\linewidth]{figures/summingOxygenDecays.pdf}
+\caption[All decays from the 278 keV proton resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. Other than the resonance level, all decays are sequential, with the levels having only one decay directly to ground state. Of note, this then means that the total energy for each decay sequence matches the direct transition, $\gamma_{7}$, so it must be corrected for summing-in effects from all the other branches.]
+{{\small All decays from the 278 keV proton resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. Other than the resonance level, all decays are sequential, with the levels having only one decay directly to ground state. Of note, this then means that the total energy for each decay sequence matches the direct transition, $\gamma_{7}$, so it must be corrected for summing-in effects from all the other branches. }}
+\label{fig: summingOxygen}
+\end{figure}
+
+\noindent where the $p_{i}$ are the probability of feeding. Fortunately, for the $^{15}$O nucleus, all intermediate decays have a branching ratio of 100\%, as can be seen in Fig.\ \ref{fig: summingOxygen}. The summing out corrections in each case can then be
 
 \begin{equation}
 C_{i}^{out} = 1 - \eta^{tot}_{j},
@@ -250,9 +261,10 @@ C_{i}^{out} = 1 - \eta^{tot}_{j},
 
 
 \begin{figure}
-\includegraphics[width=1.0\linewidth]{figures/sumOutRange.png}
-\label{fig: sumOutRange}
-\caption{The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.}
+		\includegraphics[width=1.0\linewidth]{figures/sumOutRange.png}
+	\caption[The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.]
+	{{\small The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.}}
+	\label{fig: sumOutRange}
 \end{figure}
 
 
@@ -276,18 +288,54 @@ The fact that these two methods give nearly the same value for the summing-in ef
 
 
 
-\begin{figure}
-\hspace{-2cm}
-\includegraphics[width=1.0\linewidth]{figures/summingOxygenDecays.pdf}
-\label{fig: summingOxygen}
-\caption{All decays from the 278 keV proton resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. Other than the resonance level, all decays are sequential, with the levels having only one decay directly to ground state. Of note, this then means that the total energy for each decay sequence matches the direct transition, $\gamma_{7}$, so it must be corrected for summing-in effects from all the other branches. }
-\end{figure}
-
 
 
 
 \section{Target characterization}
-\label{sec: target}
+\label{sec: targetCharacterization}
+
+Fig.\ \ref{fig: targetThicknesses} shows the deterioration of the targets as a function of the delivered charge throughout the experiment.
+
+\begin{figure}
+     \centering
+        \begin{subfigure}[b]{0.475\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/targetThickness0.png}
+            \caption[TiN sputtered target]%
+            {{\small TiN sputtered target}}    
+            \label{fig: target0}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.475\textwidth}  
+            \centering 
+            \includegraphics[width=\textwidth]{figures/targetThickness5.png}
+            \caption[ZrN sputtered target 5]%
+            {{\small ZrN sputtered target 5}}    
+            \label{fig: target5}
+        \end{subfigure}
+        \vskip\baselineskip
+        \begin{subfigure}[b]{0.475\textwidth}   
+            \centering 
+            \includegraphics[width=\textwidth]{figures/targetThickness1.png}
+            \caption[ZrN sputtered target 1]%
+            {{\small ZrN sputtered target 1}}    
+            \label{fig: target1}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[b]{0.475\textwidth}   
+            \centering 
+            \includegraphics[width=\textwidth]{figures/targetThickness12.png}
+            \caption[ZrN sputtered target 12]%
+            {{\small ZrN sputtered target 12}}    
+            \label{fig: target12}
+        \end{subfigure}
+        \caption[ The thicknesses of the various targets used in this experiment as a function of the charge delivered. This shows the deterioration of the targets through the course of the experiment where the thickness was monitored by scanning known resonances. ]
+        {\small The thicknesses of the various targets used in this experiment as a function of the charge delivered. This shows the deterioration of the targets through the course of the experiment where the thickness was monitored by scanning known resonances. } 
+        \label{fig: targetThicknesses}
+\end{figure}
+
+
+
 
 \section{Cross-section determination}
 \label{sec: cross-section}
