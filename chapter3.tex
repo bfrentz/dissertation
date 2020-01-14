@@ -246,7 +246,15 @@ C_{i}^{out} &= \sum_{j,k} p_{k} \eta_{k}^{tot} + \dfrac{B_{j} p_{i} \eta_{j}^{to
 C_{i}^{out} = 1 - \eta^{tot}_{j},
 \end{equation}
 
-\noindent where the $i$ and $j$ denote the $\gamma$ rays feeding into and decaying from the state, respectively (like $\gamma_{1}$ and $\gamma_{6}$ for example). For this measurement, the summing-out effect for every transition except the ground state is relatively small, falling in the range of 3.6 - 5.2 \% for all of the relevant $\gamma$'s.
+\noindent where the $i$ and $j$ denote the $\gamma$ rays feeding into and decaying from the state, respectively (like $\gamma_{1}$ and $\gamma_{6}$ for example). For this measurement, the summing-out effect for every transition is relatively small, falling in the range of 3.6 - 5.2 \% for all of the relevant $\gamma$'s. Fig.\ \ref{fig: sumOutRange} shows this, depicting the summing out correction across the range of relevant gamma energies in this experiment. 
+
+
+\begin{figure}
+\includegraphics[width=1.0\linewidth]{figures/sumOutRange.png}
+\label{fig: sumOutRange}
+\caption{The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.}
+\end{figure}
+
 
 Conversely, only the R/DC$\rightarrow$GS transition needs to be corrected for summing-in effects as the total energy of the other decay branches matches the energy of $\gamma_{7}$, and, as such, should be a larger effect since the true branch to the ground state is $\sim 4$\%. The observed yield of $\gamma_{7}$ in this case will be
 
@@ -260,7 +268,12 @@ Y_{7} = R B_{7} \eta_{7} + R B_{1} \eta_{1} \eta_{6} +  R B_{2} \eta_{2} \eta_{5
 C_{7}^{in} = 1 + \dfrac{B_{1} \eta_{1} \eta_{6} + B_{2} \eta_{2} \eta_{5} + B_{3} \eta_{3} \eta_{4} }{B_{7} \eta_{7}}.
 \end{equation}
 
-\noindent In this measurement, this correction is quite large - on the order of $\sim$\textbf{PERCENT}\%. 
+\noindent In this measurement, this correction is quite large. It was determined to be a 61\% correction to the ground state transition using this method. 
+
+There is a second method for calculating the summing-in correction which was also employed. This relies on the measured efficiency being taken at different distances to the source of the $\gamma$ rays. In close geometry, the solid angle of the detector is much larger when viewed from the source and summing is present (which can be seen from the highest energy data point in the detector efficiency plot, Fig.\ \ref{fig: efficiency}). However, at a larger distance, in this case 25.4 cm, the solid angle of the detector is significantly smaller but summing-in effects are not present in the detector. Therefore, the ratio of efficiencies between the close and far distance measurements when accounting for the difference in detector solid angle is the necessary summing-in correction. For this method, the summing-in correction was found to be 57\% for the ground state transition. 
+
+The fact that these two methods give nearly the same value for the summing-in effect is encouraging to the efficacy of these results. When incorporating this result into the final cross section determination, the mean of these two correction values was taken, at 59\%. 
+
 
 
 \begin{figure}
