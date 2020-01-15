@@ -10,5 +10,6 @@ Updates
 * (11/12/19) Added tables to chapter 1.
 * (11/15/19) Finished bibliography and brough chapter 1 to Ani for comments.
 * (11/17/19) Wrote section about VdG accelerators.
-
+* (12/12/19) Finished chapter 2.
+* (01/15/20) Finished chapter 3.
 
