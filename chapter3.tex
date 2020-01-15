@@ -294,7 +294,47 @@ The fact that these two methods give nearly the same value for the summing-in ef
 \section{Target characterization}
 \label{sec: targetCharacterization}
 
-Fig.\ \ref{fig: targetThicknesses} shows the deterioration of the targets as a function of the delivered charge throughout the experiment.
+In order to ultimately determine the nuclear cross section and the astrophysical $S$-factor for a given reaction, the number of active atoms in the target must be known. As a reminder, the nuclear cross is a probability of interaction. The number of possible reaction sites must be known. The targets used in these measurements were sputtered TiN and ZrN targets, backed by Ta and W, respectively. By performing an energy scan over a known, thin resonance with the targets it is possible to determine the number of active atoms in the target. 
+
+%Fig. \ref{fig: yieldRes} presents a typical example of a resonance scan, which is just the measured excitation function over a resonance. This one was taken at CASPAR with the 278 keV resonance in $^{14}$N$\left( p,\gamma \right) ^{15}$O with ZrN target (\# 5) by monitoring the R $\rightarrow$ 6.79 MeV transition. Even for a monoenergetic beam, there is still a small gaussian distribution of energies encompassed in the beam (see Chapter \ref{chap: experiment} for more details). When the high energy tail of this distribution reaches the low energy side of the resonance, the measured yield from that resonance will appear. Further increasing the beam energy implies that more of the energy distribution of the beam reaches the resonance energy and the yield continues to increase. This low-energy side of the scan is referred to as the front edge and contains the intrinsic information about the resonance as well as the beam distribution. The true resonance energy, $E_{r}$ is found halfway up the front edge, 50\% of the maximum yield, because at this point a symmetric beam distribution would be half above and half below the resonance in energy. Similarly, the slope of the front edge details the energy spread in the beam, with a broader distribution corresponding to a lower slope and a tighter distribution providing a sharp front edge. 
+
+For the incident beam particles that are above the resonance energy, they will lose energy traveling through the target and drop to energies within the resonance width and proceed through resonant capture. The maximum yield for such a scan will occur when the entire beam distribution is at an energy such that either a maximum of the ions are within the resonance width or the energy loss in the target brings a maximum number of the ions into that same range.  This maximum is known as the plateau and is the flat portion at the top of the curve in Fig. \ref{fig: yieldRes}. As a target's thickness increases the thicker this plateau becomes, since the ions will have a greater energy loss within the active target material, allowing them to decrease to resonance energy from higher and higher starting energies. For an infinitely thick target, the resonance plateau would never decrease again on the high side, because the beam would always lose enough energy to fall back into the resonance while still in the active target material. 
+
+When targets are not infinitely thick, however, the beam energy can be increased to a point where the energy loss of the ions will eventually be such that the energy of the ions is still above the resonance width when leaving the active target material, meaning the reaction no longer proceeds through the resonant capture mechanism. When this happens, the yield starts to decrease from the level of the plateau. By a similar argument to the beam distribution leading to increased yield on the front edge, the yield on the back edge (where the plateau decreases again) drops because of the same distribution effects. The slope of this decrease is affected by the target material (leading to different energy losses) and the homogeneity (or lack thereof) of the active material. The full-width half-maximum (FWHM) of this excitation curve represents the target thickness in terms of energy loss, $\Delta E$. 
+
+
+
+\begin{figure}
+		\includegraphics[width=1.0\linewidth]{figures/resScan.png}
+	\caption{Resonance scan (measured Excitation curve over a resonance) taken at CASPAR with the 278 keV resonance in $^{14}$N$\left( p,\gamma \right) ^{15}$O with ZrN target}% (\# 5). This shows typical behavior of an energy scan over a thin resonance and from a measurement like this, the number of nitrogen atoms in the target can be determined (see text for details).}
+	\label{fig: yieldRes}
+\end{figure}
+
+
+%There are two main methods by which the number of active atoms in a target can be determined, both of which rely on experimental scans over a thin resonance.  The targets used in these measurements were sputtered TiN and ZrN targets backed with Ta and W. 
+
+For such a thin resonance occurring at $E_{r}$, the stopping power of the target, $\epsilon(E)$, the de Broglie wavelength, $\lambda$, and the partial widths $\Gamma_{i}$ do not change appreciably over the resonance energy. This allows the maximum yield, at $E_{0}$, to be calculated using \cite{IliadisBook}
+
+\begin{align}
+Y(E_{0}) &= \int_{E_{0}-\Delta E}^{E_{0}} \dfrac{1}{\epsilon(E)} \dfrac{\lambda^{2}}{4 \pi} \omega \dfrac{\Gamma_{a}\Gamma_{b}}{(E_{0}-E)^{2} = \Gamma^{2}/4} dE \\
+           &= \dfrac{\lambda_{r}^{2}}{2 \pi} \dfrac{\omega \gamma}{\epsilon_{r}} \left[ \tan^{-1} \left(\dfrac{E_{0} - E_{r}}{\Gamma/2}  \right) - \tan^{-1} \left(  \dfrac{E_{0} - E_{r} - \Delta E}{\Gamma/2} \right)  \right].
+\end{align}
+
+Then, with some further algebraic reduction \cite{IliadisBook}, one can show
+
+\begin{align}
+E_{0} &= E_{r} + \dfrac{\Delta E}{2} \\
+ Y_{max} &= \dfrac{\lambda_{r}^{2}}{\pi} \dfrac{\omega \gamma}{\epsilon_{r}} \arctan \left(\dfrac{\Delta E}{\Gamma} \right) \\
+ FWHM &= \sqrt{\Gamma^{2} + \Delta E^{2}} \\
+ n &= \dfrac{\Delta E}{\epsilon_{r}}, \label{eqn: targetNuclei1}
+\end{align}
+
+\noindent where $n$ is the number density of target atoms, atoms per unit area. When the target thickness, $\Delta E$ is much bigger than the resonance width, $\Gamma$, the FHWM of the resonance scan is simply the target thickness. Thus, by selecting thin resonances and determining the energy loss from their scans, like that in Fig.\ \ref{fig: yieldRes}, the number density of of active nuclei in the target can be determined with Equation \ref{eqn: targetNuclei1}. This method is useful because it does not rely on any external efficiency calibrations or corrections (since such a correction would apply to the entire curve equally, not changing the FWHM and, therefore, the thickness). Thus, this method is effective and appropriate for a uniform target material with known stoichiometry. 
+
+The stopping powers used for these determinations were calculated using the James F. Ziegler's industry standard SRIM program, \cite{Ziegler2010}. The output from this program provides the discrete values for the stopping power of a user specified target material over a range of user specified energies. Using the stopping powers at the resonance energy in units of (eV / (atoms/cm$^{2}$)) and the overall uncertainty in the calculations of 4.6\% \cite{Ziegler2010} the number of target atoms can be determined for each resonance scan. 
+
+
+However, by delivering more beam to the targets, more of the active material is removed and the targets degrade. In order to account for this effect, multiple resonance scans were taken using the different targets at different points in the experiments in order to determine the number of active target atoms throughout the measurement. By taking the initial scans as baseline values and comparing the target thickness as a function of charge delivered a linear relationship can be deduced. Fig.\ \ref{fig: targetThicknesses} shows the deterioration of the targets as a function of the delivered charge throughout the experiment and the linear fits to these data. These relationships can then be used to independently correct the individual measured runs for the accumulated charge on the target up to that particular point. 
 
 \begin{figure}
      \centering
