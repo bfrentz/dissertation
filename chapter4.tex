@@ -100,6 +100,7 @@ I_{norm}(x) = \frac{\lambda^{-1}(1 - e^{-\lambda x})}{\lambda^{-1}} = (1 - e^{-\
 
 
 \begin{figure}
+\thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=0.85\linewidth]{figures/expoDecayGenerator.png}
 \caption{An example of the Monte Carlo method for constructing a relationship between a function and the random number generator. This plots the $I_{norm}(x)$ of Equation \ref{eqn: exponentialGenerator} for an arbitrary choice of $\lambda = 50$ to demonstrate the technique. The range of the response of this function is limited to [0, 1] asymptotically, while the input variable of decay time is unrestricted. }
@@ -126,6 +127,7 @@ r = 1 - e^{-\lambda x} \Rightarrow e^{\lambda x} = \dfrac{1}{1-r} \Rightarrow x 
 
 
 \begin{figure}
+\thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=0.85\linewidth]{figures/simCompareExample.png}
 \caption{An example of the Monte Carlo method for a simulated decay curve. For 100,000 simulated nuclear decays with a $\lambda$=50, the MC method generates the given histogram of decay times.  }
@@ -137,6 +139,9 @@ It is upon these principles and this derived formulation that the experimentally
 
 SRIM \cite{Ziegler2010}
 
+
+\section{Systematic errors}
+\label{sec: systematicErrors}
 
 \section{Lifetime of the 5.18 MeV state in $^{15}$O}
 \label{sec: lifetime518}
