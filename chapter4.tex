@@ -135,7 +135,22 @@ r = 1 - e^{-\lambda x} \Rightarrow e^{\lambda x} = \dfrac{1}{1-r} \Rightarrow x 
 \end{figure}
 
 
-It is upon these principles and this derived formulation that the experimentally measured nuclear lifetimes were extracted. 
+It is upon these principles and this derived formulation that the experimentally measured nuclear lifetimes were extracted. The logic of the code is as follows:
+
+\begin{itemize}
+\item Start with SRIM simulation of tracks
+\item Calculate scattering point, angle, velocity, energy, and time for each collision interaction along the tracks
+\item Using the relationship in Equation \ref{eqn: rand}, generate random decay times for a specified lifetime. 
+\item Randomly select one of the SRIM tracks
+\item At the given, generated decay time, determine the velocity of the ion track at that instant
+\item Calculate, explicitly, the doppler shifted energy from a nucleus decaying at this time and with the gamma hitting a detector at a specified angle. 
+\item Record the energy of the gamma.
+\item Repeat this simulation for 50,000 decays at each angle and lifetime option
+\item Calculate the gamma peak energy for each simulated angle and lifetime
+\item Compile the results for all options of target material/lifetime/angle
+\item Determine the shift for each and use to form the attenuation factor relationship
+\item Lookup the measured attentuation factor with errors and determine the corresponding lifetime range.
+\end{itemize}
 
 SRIM \cite{Ziegler2010}
 
@@ -143,16 +158,43 @@ SRIM \cite{Ziegler2010}
 \section{Systematic errors}
 \label{sec: systematicErrors}
 
+\begin{itemize}
+\item $\pm$ 90$\degree$ Ensures that the distance to target is the same and it is centered around or rotation point.
+\item SRIM
+\item Another one again
+\end{itemize}
+
 \section{Lifetime of the 5.18 MeV state in $^{15}$O}
 \label{sec: lifetime518}
+
+\begin{itemize}
+\item What is the experimental attenuation factor calc?
+\item To what lifetime does that correspond?
+\item Figures of spectra, shift, F, and lifetime comparison.
+\item Table?
+\end{itemize}
 
 
 \section{Lifetime of the 6.17 MeV state in $^{15}$O}
 \label{sec: lifetime617}
 
+\begin{itemize}
+\item What is the experimental attenuation factor calc?
+\item To what lifetime does that correspond?
+\item Figures of spectra, shift, F, and lifetime comparison.
+\item Table?
+\end{itemize}
+
 
 \section{Lifetime of the 6.79 MeV state in $^{15}$O}
 \label{sec: lifetime679}
+
+\begin{itemize}
+\item What is the experimental attenuation factor calc?
+\item To what lifetime does that correspond?
+\item Figures of spectra, shift, F, and lifetime comparison.
+\item Table?
+\end{itemize}
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
