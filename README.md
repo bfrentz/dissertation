@@ -12,4 +12,4 @@ Updates
 * (11/17/19) Wrote section about VdG accelerators.
 * (12/12/19) Finished chapter 2.
 * (01/15/20) Finished chapter 3.
-
+* (02/19/20) Finished chapter 4.
