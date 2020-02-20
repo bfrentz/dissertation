@@ -29,7 +29,7 @@
 % Chapter 3
 %
 
-\chapter{Cross section data Reduction and analysis}
+\chapter{Cross section data reduction and analysis}
 \label{chap: data}
 
 \section{Introduction}
@@ -402,7 +402,7 @@ However, by delivering more beam to the targets, more of the active material is 
 
 
 
-\section{Cross-section determination}
+\section{Cross section determination}
 \label{sec: cross-section}
 
 
@@ -433,7 +433,7 @@ For a thin target, where the cross section is constant over the target thickness
 \label{eqn: thinTargetCS}
 \end{equation}
 
-\noindent where $N_{T}$ is the number of active target nuclei (in this case, nitrogen). This is the method by which the differential cross section of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction was determined for the different transitions. The uncertainty on this differential cross section was calculated for each individual point by propagating the uncertainty in the number of nitrogen atoms with the uncertainty in the calculated yield. This also took into account the loss of nitrogen within the targets over the course of the experiment (see Sec.\ \ref{sec: targetCharacterization} for details). The resulting differential cross sections for the 6.79 MeV and ground state transitions are given in Figs.\ \ref{fig: cs679} and \ref{fig: csGS}, respectively. From these calculations, the astrophysical $S$-factor was subsequently determined. These are shown, alongside literature data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016}, in the series of Figs.\ \ref{fig: full679} - \ref{fig: lowGS}. Since the literature data is given as total $S$-factor, their data was scaled down by a factor of $4\pi$ to give a differential $S$-factor with which to compare our measured data.
+\noindent where $N_{T}$ is the number of active target nuclei (in this case, nitrogen). This is the method by which the differential cross section of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction was determined for the different transitions. The uncertainty on this differential cross section was calculated for each individual point by propagating the uncertainty in the number of nitrogen atoms with the uncertainty in the calculated yield. This also took into account the loss of nitrogen within the targets over the course of the experiment (see Sec.\ \ref{sec: targetCharacterization} for details). The resulting differential cross sections for the 6.79 MeV, ground state, and 6.17 MeV transitions are given in Figs.\ \ref{fig: cs679}, \ref{fig: csGS}, and \ref{fig: cs617}, respectively. From these calculations, the astrophysical $S$-factor was subsequently determined. These are shown, alongside literature data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016}, in the series of Figs.\ \ref{fig: full679} - \ref{fig: lowGS}. Since the literature data is given as total $S$-factor, their data was scaled down by a factor of $4\pi$ to give a differential $S$-factor with which to compare our measured data.
 
 
 
@@ -454,10 +454,21 @@ For a thin target, where the cross section is constant over the target thickness
 	\label{fig: csGS}
 \end{figure}
 
-For the 6.79 MeV transition, the points with large errors (specifically at 900 keV and 1000 keV) are energies at which the 6.79 MeV peak of interest interfered with a background peak (from Ti). The large error point at ~1060 is only in the Notre Dame data and comes from not running long enough to see appreciable counts in this transition. The resonance at this energy populates the ground state strongly and that was the focus of the measurement at those energies. This same lack of statistics is why the data points at 800 keV also have comparatively larger uncertainties. These features can be seen highlighted in Fig.\ \ref{fig: highCompare679}.
+
+\begin{figure}
+\thisfloatpagestyle{plain}
+		\includegraphics[width=1.0\linewidth]{figures/cs617.png}
+	\caption{Differential cross section for the 6.17 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. }
+	\label{fig: cs617}
+\end{figure}
+
+
+For the 6.79 MeV transition, the points with large errors (specifically at 900 keV and 1000 keV) are energies at which the 6.79 MeV peak of interest interfered with a background peak (from Ti). The large error point at ~1060 is only in the Notre Dame data and comes from not running long enough to see appreciable counts in this transition. The resonance at this energy populates the ground state strongly and that was the focus of the measurement at those energies. This same lack of statistics is why the data points at 800 keV also have comparatively larger uncertainties. These features can be seen highlighted in Fig.\ \ref{fig: highCompare679}, while the measured $S$-factor data for this transition in different energy regimes is plotted in Figs.\ \ref{fig: full679}, \ref{fig: highCompare679}, and \ref{fig: low679}.
 
 For the ground state transition, the trend in our data indicates that our
-measurement agrees well with the Schr{\"o}der data \cite{Schroder1987} and Li data \cite{Li2016} coming in from higher energies, with our measured $S$-factor dropping in the interference region between 300-400 keV to agree with the LUNA \cite{Imbriani2005} and Runkle \cite{Runkle2005} data there. Our overall scale seems to be higher in the off resonance region, however, and only agrees with the highest energy data from the TUNL experiment \cite{Runkle2005}. Overall, this data shows significantly higher uncertainties at lower energies than the 6.79 MeV transition data. This is because this is a much more weakly populated transition and it was not feasible to run long enough to achieve appreciable statistics in the $\gamma$-ray data at these energies. Therefore, they have uncertainties dominated by the rate of measured $\gamma$'s in the experiment. 
+measurement agrees well with the Schr{\"o}der data \cite{Schroder1987} and Li data \cite{Li2016} coming in from higher energies, with our measured $S$-factor dropping in the interference region between 300-400 keV to agree with the LUNA \cite{Imbriani2005} and Runkle \cite{Runkle2005} data there. Our overall scale seems to be higher in the off resonance region, however, and only agrees with the highest energy data from the TUNL experiment \cite{Runkle2005}. Overall, this data shows significantly higher uncertainties at lower energies than the 6.79 MeV transition data. This is because this is a much more weakly populated transition and it was not feasible to run long enough to achieve appreciable statistics in the $\gamma$-ray data at these energies. Therefore, they have uncertainties dominated by the rate of measured $\gamma$'s in the experiment. The measured $S$-factor data for this transition is included in different energy regimes in Figs.\ \ref{fig: fullGS}, \ref{fig: highCompareGS}, \ref{fig: midGS}, and \ref{fig: lowGS}.
+
+Finally, with the 6.17 MeV transition, the data measured in this work show good agreement with other reported data. Unfortunately, at higher energies the data from our measurement have significantly larger uncertainties than the results reported by Ref.\ \cite{Schroder1987}. This is due primarily to two factors: this transition's peak appears on the shoulder of that of a background reaction in the spectrum, namely the $^{19}$F($p,\alpha \gamma$)$^{16}$O reaction, and it is by far the weakest transition measured, so it had the largest uncertainty in determining the peak area. The data from this transition is plotted in different energy regimes and included below as Figs.\ \ref{fig: full617}, \ref{fig: highCompare617}, and \ref{fig: low617}.
 
 In order to move from differential measurements to a total cross section or total $S$-factor, as well as extrapolate to the Gamow window, an $R$-matrix calculation was performed combining the results from this measurement with the results from the lifetime measurement, described later in Chapter \ref{chap: lifetime}. The results from this $R$-matrix calculation, extrapolation, and a implications from this measurement are presented in Chapter \ref{chap: r-matrix}.
 
@@ -482,16 +493,32 @@ In order to move from differential measurements to a total cross section or tota
 
 \begin{figure}
 \thisfloatpagestyle{plain}
+		\includegraphics[width=1.0\linewidth]{figures/full617.png}
+	\caption{Differential $S$-factor for the 6.17 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction for the entire energy range measured in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison.  }
+	\label{fig: full617}
+\end{figure}
+
+
+\begin{figure}
+\thisfloatpagestyle{plain}
 		\includegraphics[width=1.0\linewidth]{figures/highCompare679.png}
 	\caption{Differential cross section for the 6.79 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, highlighting the high energy region to compare the data taken at the NSL to CASPAR, showing the efficacy of the facility. Also plotted are data from \cite{Schroder1987, Li2016} for comparison.  }
 	\label{fig: highCompare679}
 \end{figure}
 
+
 \begin{figure}
 \thisfloatpagestyle{plain}
 		\includegraphics[width=1.0\linewidth]{figures/highCompareGS.png}
-	\caption{Differential cross section for the 6.79 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at the NSL to CASPAR, showing the efficacy of the facility. Also plotted are data from \cite{Schroder1987, Li2016} for comparison.  }
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at the NSL to CASPAR, showing the efficacy of the facility. Also plotted are data from \cite{Schroder1987, Li2016} for comparison.  }
 	\label{fig: highCompareGS}
+\end{figure}
+
+\begin{figure}
+\thisfloatpagestyle{plain}
+		\includegraphics[width=1.0\linewidth]{figures/highCompare617.png}
+	\caption{Differential cross section for the 6.17 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at the NSL to CASPAR, showing the efficacy of the facility. Also plotted are data from \cite{Schroder1987, Li2016} for comparison.  }
+	\label{fig: highCompare617}
 \end{figure}
 
 
@@ -516,6 +543,13 @@ In order to move from differential measurements to a total cross section or tota
 		\includegraphics[width=1.0\linewidth]{figures/lowGS.png}
 	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. }
 	\label{fig: lowGS}
+\end{figure}
+
+\begin{figure}
+\thisfloatpagestyle{plain}
+		\includegraphics[width=1.0\linewidth]{figures/low617.png}
+	\caption{Differential cross section for the 6.17 MeV transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. }
+	\label{fig: low617}
 \end{figure}
 
 % % uncomment the following lines,
