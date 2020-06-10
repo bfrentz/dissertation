@@ -31,7 +31,7 @@
 %
 
 
-\chapter{Measured lifetimes}
+\chapter{Lifetime Measurements}
 \label{chap: lifetime}
 
 This chapter presents the details of the analysis used for the determination of the lifetime of the 6.79 MeV state, the 5.18 MeV state, and the 6.17 MeV state in $^{15}$O. These data resulted from a nine-day long experiment at the university of Notre Dame Nuclear Science Laboratory in August 2019. This measurement used protons from the 5U Sta. Ana accelerator for the $^{14}$N(p,$\gamma$)$^{15}$O reaction at beam energies ranging from 1 MeV to 1.6 MeV. Further description of this experimental setup, targets, and methodology can be found in Chapter \ref{chap: experiment}.	
@@ -168,7 +168,7 @@ E_{\gamma} = E_{\gamma}^{0} ( 1 + \beta \cos (\theta)) \times R
 \thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=\linewidth]{figures/simulatedSingle.png}
-\caption{Simulated energy deposition histograms for the Mo target implantation material with a nuclear lifetime of $\tau=0.5$ fs. Each histogram represents the detection of the 50,000 of the decaying $\gamma$-rays at the angle specified. As all the histograms share common axis bounds, the Doppler shift with angle can clearly be seen. }
+\caption{Simulated energy deposition histograms for the Mo target implantation material with a nuclear lifetime of $\tau=0.5$ fs from the decay of the 6792 keV state in $^{15}$O. Each histogram represents the detection of the 50,000 of the decaying $\gamma$-rays at the angle specified. As all the histograms share common axis bounds, the Doppler shift with angle can clearly be seen. The plot for 0 degree shows the maximum shifted gamma ray, where the unshifted photons arrive at 6792 keV in the 90 degree histogram, matching the real data. A plot of all shifts together is shown later, in Fig.\ \ref{fig: simulatedAll}. The shifting down of the peak with respect to angle shows the Doppler Shift in action.}
 \label{fig: simulatedSingle}
 \end{figure}
 
@@ -179,21 +179,23 @@ E_{\gamma} = E_{\gamma}^{0} ( 1 + \beta \cos (\theta)) \times R
 \thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=\linewidth]{figures/simAllAngles.png}
-\caption{Simulated energy deposition histogram for all detection angles. This plot was produced with the Mo backing material and lifetime $\tau=0.5$ fs. Clearly illustrated in this figure is the Doppler shift of the $\gamma$ ray energies with changing angle, the relationship upon which the entire DSA method is predicated. After each peak in this figure is fit with a Gaussian, the centroids were used to determine the energy shift as a function of angle.}
+\caption{Simulated energy deposition histogram for all detection angles. This plot was produced from the decay of $^{15}$O through the 6.79 MeV state with the Mo backing material and lifetime $\tau=0.5$ fs, where each color represents a different detection angle. Clearly illustrated in this figure is the Doppler shift of the $\gamma$ ray energies with changing angle, the relationship upon which the entire DSA method is predicated. After each peak in this figure is fit with a Gaussian, the centroids were used to determine the energy shift as a function of angle. Under these simulated conditions, the maximum shift is roughly 26 keV. The unshifted photons are also detected at 6792 keV, exactly matching experimental conditions.}
 \label{fig: simulatedAll}
 \end{figure}
 
 
-\item These aggregate histograms are all used to determine the peak location and, therefore, shifted $\gamma$ ray energy at each of the conditions for lifetime, angle, and material. 
+\item These aggregate histograms are all used to determine the peak locations since they are the shifted peaks. This establishes the direct link between the gamma's energy and angle. Therefore, the relationship between shifted $\gamma$ ray energy at each of the conditions for lifetime, angle, and material is determined in this way. 
 \item At this point, takes all of this information from each combination to plot a relationship between the observed energy in the detector vs. $\cos(\theta)$, as is done in the experiment. Each is fit with a line, the slope of which contains the attenuation factor information. An example of this process is illustrated in Fig.\ \ref{fig: simSlopes}, showing all of the combinations of lifetime and angle for the Mo target simulations.
 
+\begin{landscape}
 \begin{figure}
 \thisfloatpagestyle{plain}
 \centering
-\includegraphics[width=\linewidth]{figures/simSlopes.png}
+\includegraphics[width=0.7\linewidth]{figures/simSlopes.png}
 \caption{Determining the relationship between shifted peak energy and $\cos(\theta)$ for all simulated Mo lifetime combinations. This provides the output of the slopes for each simulated condition, allowing one to establish a relationship between the slopes and the attenuation factor. More details are provided in the text. }
 \label{fig: simSlopes}
 \end{figure}
+\end{landscape}
 
 These slopes are then normalized to the slope for a maximally shifted distribution, which is calculated from the reaction parameters. This normalized slope value is the attenuation factor, which can be experimentally determined. With this then, a relationship has been fabricated between the attenuation factor, $F(\tau)$, and the nuclear lifetime, $\tau$. An example of this relationship is shown in Fig.\ \ref{fig: attFacExample}. 
 \item With the experimentally determined attenuation factors and uncertainties, the code calculates the corresponding lifetime and uncertainties, allowing one to ultimately determine the lifetime of an experimentally measured Doppler shift. 
@@ -227,6 +229,7 @@ This section details the instances and sources of systematic errors and uncertai
 \label{fig: pm90}
 \end{figure}
 
+
 \item In fitting the peaks present in the spectra, the centroid, area, and width are extracted after removing a linear background contribution from the spectrum. The background was fit separately from the peak using regions surrounding the peak of interest to increase the fidelity of the background estimation. Fig.\ \ref{fig: bgfit} demonstrates this procedure. In this high-energy region of the spectrum, a linear background is a reasonable assumption, as the background always is quite small and peaks are typically well isolated from each other. 
 
 \begin{figure}
@@ -238,6 +241,7 @@ This section details the instances and sources of systematic errors and uncertai
 \end{figure}
 
 \item Due to experimental time constraints, the low dose implanted Ta target was only measured with two angles. Since two points define a line completely, the data give no measure of uncertainty. Therefore, this was ultimately excluded from subsequent analysis.
+\item Compared to the cross section measurements, the number of $^{14}$N($p,\gamma)^{15}$O reactions that occur is not necessary for the lifetime determination, only the shift of the gamma's peak in the spectrum. As such, correcting the spectrum for efficiency or dead-time are unnecessary, as both effects only adjust the number of counts in a spectrum. Particularly when considering a small range of energies (like the 20 keV under a peak), efficiency effects are consistent across the peak range. Similarly, as dead-time effects are not energy dependent, they do not introduce any mis-shaping or artificial shifting of the peak.
 %\item Orthogonal distance relation
 \item The measurement uncertainties in the angle and centroid energy of the $\gamma$ peaks are represented as X and Y uncertainties, respectively, in evaluating the Doppler shift as function of angle. These are then propagated through a fit of the slope as the uncertainty on that fit parameter. As traditional least-squares fitting relies only on uncertainty in the Y position of data, these were fit with a method called Orthogonal Distance Regression (ODR), which incorporates point uncertainties in both the X and Y directions for the fit. Therefore, the slopes and uncertainties extracted by this ODR method have a higher fidelity compared with the traditional least-squares method. 
 \end{enumerate}
@@ -251,7 +255,7 @@ The experimental Doppler shift of the $\gamma$ ray peaks for this decay can be s
 \begin{figure}
 \thisfloatpagestyle{plain}
 \centering
-\includegraphics[width=\linewidth]{figures/shifts518.png}
+\includegraphics[width=0.6\linewidth]{figures/shifts518.png}
 \caption{The Doppler shifted spectra taken during this measurement for the 5.18 MeV state. a) shows the spectra from the Mo implanted target, b) depicts the spectra from the Ta implanted target, and c) gives the spectra from the W implanted target.Within these, the Doppler shift boosting the energy of the $\gamma$ ray peak  with a change in angle can be clearly seen. }
 \label{fig: shift518}
 \end{figure}
@@ -277,7 +281,7 @@ With the measured energies of the $\gamma$-rays and their uncertainties, the rel
 \begin{tabular}{@{}lllll@{}}
 \toprule
                    & Mo Target  & Ta Target & W Target & Weighted Average \\ \midrule
-$F(\tau)_{5.18}$   & $9.04 \pm 0.013$     & $0.911 \pm 0.016$   & $9.12 \pm 0.015$   &                  \\
+$F(\tau)_{5.18}$   & $9.040 \pm 0.013$     & $0.911 \pm 0.016$   & $9.120 \pm 0.015$   &                  \\
 $\tau_{5.18}$ (fs) & $﻿7.1^{+4.8}_{-2.3}$ & $7.1 \pm 5.5$       & $8.0 \pm 6.7$      & $7.3 \pm 3.2$    \\ \bottomrule
 \end{tabular}
 \begin{tablenotes}
@@ -320,7 +324,7 @@ The experimental Doppler shift of the $\gamma$ ray peaks for this decay can be s
 \begin{figure}
 \thisfloatpagestyle{plain}
 \centering
-\includegraphics[width=\linewidth]{figures/shifts617.png}
+\includegraphics[width=0.6\linewidth]{figures/shifts617.png}
 \caption{The Doppler shifted spectra taken during this measurement for the 6.17 MeV state. a) shows the spectra from the Mo implanted target, b) depicts the spectra from the Ta implanted target, and c) gives the spectra from the W implanted target.Within these, the Doppler shift boosting the energy of the $\gamma$ ray peak  with a change in angle can be clearly seen. }
 \label{fig: shift617}
 \end{figure}
@@ -388,7 +392,7 @@ The experimental Doppler shift of the $\gamma$ ray peaks for this decay can be s
 \begin{figure}
 \thisfloatpagestyle{plain}
 \centering
-\includegraphics[width=\linewidth]{figures/shifts679.png}
+\includegraphics[width=0.6\linewidth]{figures/shifts679.png}
 \caption{The Doppler shifted spectra taken during this measurement for the 6.79 MeV state. a) shows the spectra from the Mo implanted target, b) depicts the spectra from the Ta implanted target, and c) gives the spectra from the W implanted target.Within these, the Doppler shift boosting the energy of the $\gamma$ ray peak  with a change in angle can be clearly seen. }
 \label{fig: shift679}
 \end{figure}
