@@ -148,7 +148,7 @@ It is upon these principles and this derived formulation that the experimentally
 
 
 \begin{enumerate}
-\item First, recoil ion travel paths were calculated with the SRIM software \cite{Ziegler2010} (another Monte Carlo simulation) for each target material, accounting for the nitrogen present. For this, the reaction recoil energy was calculated and used as the input energy of the ion. The initial energy was randomly assigned to a reasonable range based on the energy loss in the target before reaching the implanted depth of nitrogen. All recoils were assumed to have initial velocity parallel to the incident beam axis initially. Then, the software calculates the path of the ions travel, recording the the ion's energy, the location of each collision, and the stopping power felt at that position. These tracks are randomly generated for 10,000 different ions. The standard SRIM output is sufficient in this case as the energy regime for this reaction is not high enough to warrant relativistic corrections, like the methods of \cite{Galinski2014, Michelagnoli2013}. 
+\item First, recoil ion travel paths were calculated with the SRIM software \cite{Ziegler2010} (another Monte Carlo simulation) for each target material, accounting for the nitrogen present. For this, the reaction recoil energy was calculated and used as the input energy of the ion. The initial energy was randomly assigned to a reasonable range based on the energy loss in the target before reaching the implanted depth of nitrogen. All recoils were assumed to have initial velocity parallel to the incident beam axis. Then, the software calculates the path of the ions travel, recording the the ion's energy, the location of each collision, and the stopping power felt at that position. These tracks are randomly generated for 10,000 different ions. The standard SRIM output is sufficient in this case as the energy regime for this reaction is not high enough to warrant relativistic corrections, like the methods of \cite{Galinski2014, Michelagnoli2013}. 
 \item Next, based on the information from the SRIM output, further information about each ion's travel is calculated. Specifically, utilizing the position of each interaction, the particle's trajectory is calculated between each collision. Using the ion's energy at each point, the speed is calculated. Then, ultimately using these data, the time for each interaction (in femtoseconds) is determined. This provides a complete picture of any single ion's calculated motion through the target material. As these are not relativistic quantities, standard freshman kinematics relations are all that is necessary to calculate this information.
 \item Of the 10,000 tracks for which the information has been calculated, randomly select one to be the specific decaying ion's path. 
 \item Choose a specific nuclear lifetime for the decaying nuclear state to simulate and angle of detection. The angles chosen to simulate were the same as the angles used in the measurement for a direct comparison. 
@@ -162,7 +162,7 @@ E_{\gamma} = E_{\gamma}^{0} ( 1 + \beta \cos (\theta)) \times R
 \end{equation}
 
 \noindent where $R$ represents a correction to account for the detector size and resolution, determined from the experimental spectra, and $E_{\gamma}^{0}$ is the unshifted $\gamma$ ray energy. At this point, it is important to note that as this measurement was not intended to calculate a cross-section, the detection efficiency is not included in this simulation. 
-\item The code then records the energy of this measured $\gamma$ray and adds it to a histogram for it's specific decay time, measured angle, and target material. This behavior is illustrated in Fig.\ \ref{fig: simulatedSingle}, which shows the simulated energy deposition histograms at each of the angles.
+\item The code then records the energy of this measured $\gamma$-ray and adds it to a histogram for it's specific decay time, measured angle, and target material. This behavior is illustrated in Fig.\ \ref{fig: simulatedSingle}, which shows the simulated energy deposition histograms at each of the angles.
 
 \begin{figure}
 \thisfloatpagestyle{plain}
@@ -448,6 +448,9 @@ For this state, the attenuation factor curves, which relates the nuclear lifetim
 \caption{Measured lifetimes and the weighted average lifetime of the 5.18 MeV state in $^{15}$O determined in this work (green box) alongside literature values. The TUNL measurement is Ref.\ \cite{Bertone2001}, the Bochum measurement is Ref.\ \cite{Schurmann2008}, the TRIUMF measurement is Ref.\ \cite{Galinski2014}, and the Michelagnoli measurement comes from Ref.\ \cite{Michelagnoli2013}. }
 \label{fig: lifetimes679}
 \end{figure}
+
+
+\textbf{GIVE A SUMMARY. WE FOUND SOME GOOD STUFF. SUMMARY TABLE OF ALL OF THE DATA (COPIED FROM PAPER).}
 
 
 
