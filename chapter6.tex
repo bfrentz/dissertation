@@ -35,6 +35,9 @@
 
 
 
+\section{Lifetime measurements}
+\label{sec: resultsLifetime}
+
 In this work, we measured the lifetimes of the excited states in $^{15}$O at $E_{x}$ = 5.18 MeV, 6.17 MeV, and 6.79 MeV. The $^{14}$N$(p,\gamma)^{15}$O reaction was used to populate the excited states of $^{15}$O. The nitrogen targets were made by implantation on backings of Mo, Ta, and W in order to examine the effect of different backing materials for the lifetime determination. The Doppler shift of the $\gamma$-rays emitted by the decaying recoils were measured using the different targets and at seven different angles. A Monte Carlo simulation was applied to reproduce the experimental shifts and extract the lifetimes from the measured attenuation factors. By using multiple implanted targets of different backings, we were able to take a weighted average of our measurements to reduce the overall systematic uncertainty. Additionally, the Monte Carlo approach allowed us to recreate the depth profile of implanted targets with a high degree of accuracy, making the subsequent analysis based on the target composition more robust. The simulation also propagates uncertainties throughout every step, allowing it to reflect the experimental conditions more accurately. This is an improvement over previous measurements and their treatment of their targets.
 
 
@@ -43,13 +46,13 @@ In this work, we measured the lifetimes of the excited states in $^{15}$O at $E_
 \caption{MEASURED LIFETIMES AND COMPARISON WITH PREVIOUS MEASUREMENTS}
 \begin{center}
 \begin{threeparttable}
-\begin{tabular}{lllll}
+\begin{tabular}{llllll}
 \toprule
-$E_{x}$ (keV) & Present       & Ref. \cite{Bertone2001}  & Ref. \cite{Schurmann2008} & Ref. \cite{Galinski2014} \\
+$E_{x}$ (keV) & Present       & Ref. \cite{Bertone2001}  & Ref. \cite{Schurmann2008} & Ref. \cite{Galinski2014} & Ref. \cite{Sharma2020} \\
 \midrule
-5181          & $7.5 \pm 3.0$ & 9.67$^{+1.34}_{-1.24}$ & 8.40$\pm$1.00            & -                       \\
-6172          & $0.7 \pm 0.5$ & 2.10$^{+1.33}_{-1.32}$  & $< 0.77$                 & $< 2.5$                 \\
-6793          & $0.6 \pm 0.4$ & 1.60$^{+0.75}_{-0.72}$  & $< 0.77$                 & $< 1.8$    \\ \bottomrule
+5181          & $7.5 \pm 3.0$ & 9.67$^{+1.34}_{-1.24}$ & 8.40$\pm$1.00            & -  & 10.45$^{+2.07}_{-2.21}$                      \\
+6172          & $0.7 \pm 0.5$ & 2.10$^{+1.33}_{-1.32}$  & $< 0.77$                 & $< 2.5$   & $< 1.22$              \\
+6793          & $0.6 \pm 0.4$ & 1.60$^{+0.75}_{-0.72}$  & $< 0.77$                 & $< 1.8$  & $< 1.18$       \\ \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small 
@@ -60,20 +63,65 @@ $E_{x}$ (keV) & Present       & Ref. \cite{Bertone2001}  & Ref. \cite{Schurmann2
 \end{center}
 \end{table}
 
-The results show no evidence of systematic variations with previous measurements arising from the choice of backing materials. This work shows a larger uncertainty for the lifetime of the 5.18 MeV state but agrees within the uncertainties of the previous measurements. For the other transitions at 6.17 MeV and 6.79 MeV, the present measurement agrees well with the values reported in previous works. Our work represents another finite measurement for the lifetime of the 6.79 MeV state, like reported by \citet{Bertone2001}. This work, however, is in agreement with the limits provided by \citet{Schurmann2008} and \citet{Galinski2014} and provides even more stringent constraints on the level lifetimes. The discrepancies in previous measurements were resolved in this measurement with three different backings. All of our reported lifetimes are given in comparison with those of previous measurements in Table \ref{table: lifetimesConclusion}.
+The results show no evidence of systematic variations with previous measurements arising from the choice of backing materials. This work shows a larger uncertainty for the lifetime of the 5.18 MeV state but agrees within the uncertainties of the previous measurements. For the other transitions at 6.17 MeV and 6.79 MeV, the present measurement agrees well with the values reported in previous works. Our work represents another finite measurement for the lifetime of the 6.79 MeV state, like reported by \citet{Bertone2001}. This work, however, is in agreement with the limits provided by \citet{Schurmann2008}, \citet{Galinski2014}, and \citet{Sharma2020} while providing even more stringent constraints on the level lifetimes. The discrepancies in previous measurements were resolved in this measurement with three different backings. All of our reported lifetimes are given in comparison with those of previous measurements in Table \ref{table: lifetimesConclusion}.
 
 
-\section{Reaction rates}
-\label{sec: rates}
+\section{Cross section results}
+\label{sec: csResults}
 
+In this work, the ground state transitions and the R/DC $\rightarrow$ 6.79 MeV transition from the $^{14}$N$(p,\gamma)^{15}$O reaction have been measured. The reaction was induced at energies between 270 keV and 1200 keV in order to bridge the gap between previous sets of measurements. The experiment was undertaken at both the University of Notre Dame NSL and the CASPAR.
+
+From our extrapolation, we recommend $S_{6.79}(0) = XXX$ keV b, which is very robust with all fits and agrees well with previous measurements. Furthermore, we recommend $S_{gs}(0) = XXX$ keV b which \textbf{RELATES TO OTHER MEASUREMENTS SOMEHOW}. 
+
+The results are summarized in Table \ref{table: sfactorSummary} together with literature values.
+
+
+\begin{sidewaystable*}[]
+\thisfloatpagestyle{plain}
+\caption{SUMMARY OF THE EXTRAPOLATED $S$-FACTORS}
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{llll}
+\toprule
+Year & Reference & $S_{gs}(0)$       & $S_{6.79}(0)$ \\
+\midrule
+1987 & \citet{Schroder1987}   & $0.25 \pm 0.06$ & $1.20 \pm 0.05$  \\
+2001 & \citet{Angulo2001}  (a) & 0.08$^{+0.13}_{-0.06}$  & 1.63 $\pm$ 0.17 \\
+2003 & \citet{Mukhamedzhanov2003} & 0.15 $\pm$ 0.07 & 1.40 $\pm$ 0.20 \\
+2004 & \citet{Formicola2004}  & 0.25 $\pm$ 0.06 & 1.35 $\pm$ 0.05 (stat)$\pm$ 0.08 (sys) \\
+2005 &\citet{Angulo2005}   & 0.25 $\pm$ 0.08  & 1.35 $\pm$ 0.04  \\
+2005 & \citet{Imbriani2005}   & $0.25 \pm 0.06$ & $1.20 \pm 0.05$  \\
+2005 & \citet{Runkle2005}   & $0.49 \pm 0.08$ & $1.15 \pm 0.05$  \\
+2008 & \citet{Marta2008}  & 0.20 $\pm$ 0.05   & $--$ \\
+2010 & \citet{Azuma2010}   & $0.28$ & $1.30$  \\
+2011 & \citet{Adelberger2011}   & $0.27 \pm 0.05$ & $1.18 \pm 0.05$  \\
+2016 & \citet{Li2016}   & 0.42 $\pm$ 0.04 (stat)  $^{+0.09}_{-0.19}$(sys) & 1.29 $\pm$ 0.06 (stat) $\pm$ 0.06 (sys)  \\
+2018 & \citet{Wagner2018}   & 0.19 $\pm$ 0.01 (stat) $\pm$ 0.05 (sys) & 1.24 $\pm$ 0.02 (stat) $\pm$ 0.11 (sys)  \\ 
+2021 & Present work  & $XXX5 \pm XXX$ & $XXX \pm XXX$  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small 
+\item A summary of the zero-energy $S$-factors (all given in keV b) for both the ground state and 6.79 MeV excited state transition in $^{15}$O. Shows this work's results and how they compare with those of previous measurements.  (a) $R$-matrix analysis of available data, not a measurement.
+\end{tablenotes}
+\end{threeparttable}
+\label{table: sfactorSummary}
+\end{center}
+\end{sidewaystable*}
+
+
+
+The approach taken here for the study of the $^{14}$N$(p,\gamma)^{15}$O reaction has succeeded in combining both the efforts of an improved lifetime measurement and new cross section data in underground accelerator experiments. The combination of these two complementary measurements \textbf{GIVES US SOME FINAL RESULT AND CONCLUSION ABOUT THE REACTION AT LOW ENERGY AND HOW THIS RELATES TO THE BOREXINO RESULTS}.
+
+\textbf{OUR RESULTS LAY OUT THAT THE DOMINANT UNCERTAINTIES FROM HERE ARE XXXXX}.
 
 
 \section{$^{14}$N$\left( p,\gamma \right) ^{15}$O reaction outlook}
 \label{sec: outlook}
 
-At this point, there isn't much else that we can say or do. A better, longer measurement of the capture to ground state at really low energies would be the best. Beyond that, much comes down to how the data is interpreted. The region immediately above the $E_{p}$ = 278 keV resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction is immensely difficult due to the diffusion of nitrogen into the backing. With how strong the resonance is when compared to the direct capture for the ground state, any amount of nitrogen that diffuses into the backing will cause an elevation in the data at energies above the resonance. Therefore, if the data is cut out in the region of $\sim 300 - 400$ keV and ignored, the fit might be more accurate and provide a higher quality understanding of the behavior at low energy. 
+At this point, there \textbf{IS SOMETHING TO SAY OR DO}. A longer measurement of the capture to ground state at really low energies would be the best for the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. Beyond that, much comes down to how the data is interpreted. The region immediately above the $E_{p}$ = 278 keV resonance in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction is immensely difficult due to the diffusion of nitrogen into the backing. With how strong the resonance is when compared to the direct capture for the ground state, any amount of nitrogen that diffuses into the backing will cause an elevation in the data at energies above the resonance. Therefore, if the data is cut out in the region of $\sim 300 - 400$ keV and ignored, the fit might be more accurate and provide a higher quality understanding of the behavior at low energy. 
 
-In terms of doing a better measurement of the important lifetimes, it requires more data. Taking more measurements with even more varying targets would allow for an even more precise measurements (especially when taken in aggregate). However, as was seen, it would take a drastic reduction in the lifetime uncertainty to provide a meaningful constraint on the low-energy reaction cross-section. Such a drastic reduction is likely to be impossible due to the lifetime's proximity to the technique's limit. So, with conventional techniques maybe just measure with even more targets and take a better weighted average is the only improvement to be made? However, a measurement with a state-of-the-art detection array with gamma tracking, like the AGATA Demonstrator or (the MSU ONE), would be the ultimate tool in reducing the lifetime uncertainty by making the angular measurements extremely precise for nearly every single gamma produced in the reaction. 
+In terms of doing a better measurement of the important lifetimes, it simply requires more data. This work has shown that taking more measurements with even more varying targets would allow for an even more precise measurements, especially when taken in aggregate as a weighted average. However, as was seen, it would take a drastic reduction in the lifetime uncertainty alone to provide a meaningful constraint on the low-energy reaction cross-section. Such a drastic reduction is likely to be impossible due to the lifetime's proximity to the DSAM technique's limit. So, with conventional techniques the best approach would be to measure with even more targets and take another weighted average of all results. However, a measurement with a state-of-the-art detection array with gamma tracking, like GRETINA at FRIB, would be the ultimate tool in reducing the lifetime uncertainty by making the angular measurements extremely precise for nearly every single gamma produced in the reaction. 
 
 
 
