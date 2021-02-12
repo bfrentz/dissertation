@@ -130,7 +130,7 @@ To extend $\eta^{tot}$ to the whole range of energies relevant to the experiment
 \thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=\linewidth]{figures/totalEfficiency.png}
-\caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points from the Geant4 simulation are taken raw without scaling, showing the efficacy of this technique and accuracy of the simulation. Further details about the calculation of these curves can be found in Sec. \ref{subsec: totEff}.}
+\caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points from the Geant4 simulation are taken raw without scaling, showing the efficacy of this technique and accuracy of the simulation. Further details about the calculation of these curves can be found in Sec. \ref{subsec: totEff}. \textbf{I'M PRETTY SURE I'VE MADE AN UPDATED VERSION OF THIS FIGURE BUT I WASN'T ABLE TO EASILY FIND IT. I'LL KEEP LOOKING THOUGH.}}
 \label{fig: totalEfficiency}
 \end{figure}
 
@@ -181,7 +181,7 @@ For this determination, the branching ratios for the 278 keV resonance in $^{14}
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/efficiencyComplete.png}
-\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries. The highest energy point in the close geometry was excluded from the fit because it suffers from summing-in effects artificially inflating the count rate of this measured peak (see text for details). At the far distance between the detector and the target, summing effects are negligible. This can be seen as the highest-energy data point now lies perfectly with the fit from the other data.  }
+\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries. The highest energy point in the close geometry was excluded from the fit because it suffers from summing-in effects artificially inflating the count rate of this measured peak (see text for details). At the far distance between the detector and the target, summing effects are negligible.   }
 \label{fig: efficiency}
 \end{figure}
 
@@ -261,18 +261,18 @@ C_{i}^{out} &= \sum_{j,k} p_{k} \eta_{k}^{tot} + \dfrac{B_{j} p_{i} \eta_{j}^{to
 C_{i}^{out} = 1 - \eta^{tot}_{j},
 \end{equation}
 
-\noindent where the $i$ and $j$ denote the $\gamma$ rays feeding into and decaying from the state, respectively (like $\gamma_{1}$ and $\gamma_{6}$ for example). For this measurement, the summing-out effect for every transition is relatively small, falling in the range of 3.6 - 5.2 \% for all of the relevant $\gamma$'s. Fig.\ \ref{fig: sumOutRange} shows this, depicting the summing out correction across the range of relevant gamma energies in this experiment. 
+\noindent where the $i$ and $j$ denote the $\gamma$ rays feeding into and decaying from the state, respectively (like $\gamma_{1}$ and $\gamma_{6}$ for example). For this measurement, the summing-out effect for every transition falls in the range of 28 - 32 \% for all of the relevant $\gamma$'s. %Fig.\ \ref{fig: sumOutRange} shows this, depicting the summing out correction across the range of relevant gamma energies in this experiment. 
 
 
-\begin{figure}
-		\includegraphics[width=1.0\linewidth]{figures/sumOutRange.png}
-	\caption[The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.]
-	{{\small The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.}}
-	\label{fig: sumOutRange}
-\end{figure}
+%\begin{figure}
+%		\includegraphics[width=1.0\linewidth]{figures/sumOutRange.png}
+%	\caption[The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.]
+%	{{\small The summing out correction as a function of incident $\gamma$-ray energy. This figure shows the percentage of gammas recorded to the true incident number.}}
+%	\label{fig: sumOutRange}
+%\end{figure}
 
 
-Conversely, only the R/DC$\rightarrow$GS transition needs to be corrected for summing-in effects as the total energy of the other decay branches matches the energy of $\gamma_{7}$, and, as such, should be a larger effect since the true branch to the ground state is $\sim 4$\%. The observed yield of $\gamma_{7}$ in this case will be
+Conversely, only the R/DC$\rightarrow$GS transition needs to be corrected for summing-in effects as the total energy of the other decay branches matches the energy of $\gamma_{7}$, and, as such, should be a larger effect since the true branch to the ground state is $\sim 1.5$\% \cite{Daigle2016}. The observed yield of $\gamma_{7}$ in this case will be
 
 \begin{equation}
 Y_{7} = R B_{7} \eta_{7} + R B_{1} \eta_{1} \eta_{6} +  R B_{2} \eta_{2} \eta_{5} + R B_{3} \eta_{3} \eta_{4} .
@@ -284,11 +284,23 @@ Y_{7} = R B_{7} \eta_{7} + R B_{1} \eta_{1} \eta_{6} +  R B_{2} \eta_{2} \eta_{5
 C_{7}^{in} = 1 + \dfrac{B_{1} \eta_{1} \eta_{6} + B_{2} \eta_{2} \eta_{5} + B_{3} \eta_{3} \eta_{4} }{B_{7} \eta_{7}}.
 \end{equation}
 
-\noindent In this measurement, this correction is quite large. It was determined to be a 61\% correction to the ground state transition using this method. 
+\noindent In this measurement, this correction is quite large, as expected. It was determined to be a 61\% correction to the ground state transition using this method. \textbf{THIS NUMBER NEEDS TO BE UPDATED WHEN I HAVE FIXED THIS CALCULATION. I EXPECT SOMETHING IN THE RANGE OF 70-80 PERCENT AND IT CURRENTLY CALCULATES TO 15. ONCE THESE AGREE, I CAN PROCEED.}
 
-There is a second method for calculating the summing-in correction which was also employed. This relies on the measured efficiency being taken at different distances to the source of the $\gamma$ rays. In close geometry, the solid angle of the detector is much larger when viewed from the source and summing is present (which can be seen from the highest energy data point in the detector efficiency plot, Fig.\ \ref{fig: efficiency}). However, at a larger distance, in this case 25.4 cm, the solid angle of the detector is significantly smaller but summing-in effects are not present in the detector. Therefore, the ratio of efficiencies between the close and far distance measurements when accounting for the difference in detector solid angle is the necessary summing-in correction. For this method, the summing-in correction was found to be 57\% for the ground state transition. 
+There is a second method for calculating the summing-in correction which was also employed. This relies on the measured efficiency being taken at different distances to the source of the $\gamma$ rays. In close geometry, the solid angle of the detector is much larger when viewed from the source and summing is present (which can be seen from the highest energy data point in the detector efficiency plot, Fig.\ \ref{fig: efficiency}). However, at a larger distance, in this case 25.4 cm, the solid angle of the detector is significantly smaller but summing-in effects are not present in the detector. Therefore, the ratio of efficiencies between the close and far distance measurements when accounting for the difference in detector solid angle is the necessary summing-in correction. 
 
-The fact that these two methods give nearly the same value for the summing-in effect is encouraging to the accuracy of these results. When incorporating this result into the final cross section determination, the mean of these two correction values was taken, at 59\%. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/carbonComparison.png}
+\caption{Spectra from the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction obtained at CASPAR. The ratio of counts in the near (blue) and far (red) spectra gives us a ratio with which to correct between the near/far efficiencies. }
+\label{fig: 12cpg}
+\end{figure}
+
+More accurately than calculating the solid angle geometrically, the near/far correction factor can be determined using another set of measurements with the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction. For this method, the reaction decays via a single $\gamma$ at 2.37 MeV and requires no additional correction for summing. This means that the difference between the data taken in near/far distances is due to the geometric effects and allows us to relate the efficiencies between the two measurement distances without the need for correcting for summing-out or summing-in. Spectra from the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction taken at CASPAR are shown in Fig.\ \ref{fig: 12cpg}. The ratio of counts in these two peaks gives a near/far ratio of $R_{c} = 27.8$. Using this ratio, we scale up the fitted far-efficiencies and the difference between this and the ground state peak provides the needed summing-in correction. For our data, the summing-in correction was found to be 74.6\% for the ground state transition. 
+
+
+
+The fact that these two methods give nearly the same value for the summing-in serves as good cross-validation of these corrections. When incorporating this result into the final cross section determination, the mean of these two correction values was taken, at 75\%. 
 
 
 
@@ -476,8 +488,8 @@ This is the method by which the differential cross section of the $^{14}$N$\left
 \begin{figure}
 \thisfloatpagestyle{plain}
 		\includegraphics[width=1.0\linewidth]{figures/cs679_targs.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, separated by the target used in measurement, showing the overlapping measurements and agreement between them. The target labels are nominal and do not represent the properties of the target, but targets 1 and 5 were the same thickness while target 12 was roughly double. \textbf{BUT ACTUALLY FIVE THE FIGURE FOR THE GROUND STATE AND NOT THE 679 WHEN THE DATA HAVE BEEN SUMMING CORRECTED}.}
-	\label{fig: cs679_targs}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, separated by the target used in measurement, showing the overlapping measurements and agreement between them. The target labels are nominal and do not represent the properties of the target, but targets 1 and 5 were the same thickness while target 12 was roughly double. \textbf{BUT ACTUALLY GIVE THE FIGURE FOR THE GROUND STATE AND NOT THE 679 WHEN THE DATA HAVE BEEN SUMMING CORRECTED}.}
+	\label{fig: csGS_targs}
 \end{figure}
 
 
@@ -486,8 +498,7 @@ This is the method by which the differential cross section of the $^{14}$N$\left
 In order to move from differential measurements to a total cross section or total $S$-factor, as well as extrapolate to the Gamow window, an $R$-matrix calculations were performed with the \texttt{AZURE2} software \cite{Azuma2010}. A full description of this and incorporating the lifetime results into this analysis are presented later in Chapter \ref{chap: r-matrix}. Within the calculations, our data and the data from \citet{Li2016} are treated as differential. To compare our results alongside those from literature data \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016, Wagner2018}, we scaled the resulting $S$-factors by $4\pi$ for plotting only.  These comparisons can be seen in the series of Figs.\ \ref{fig: full679} - \ref{fig: lowGS}. 
 
 
-For the 6.79 MeV transition, the data are shown in Fig.~\ref{fig: full679} - \ref{fig: low679}. \textbf{ADJUST THE TEXT HERE TO DISCUSS THE RESULTS}.
-% points with large errors (specifically at 900 keV and 1000 keV) are energies at which the 6.79 MeV peak of interest interfered with a background peak (from Ti). The large error point at ~1060 is only in the Notre Dame data and comes from not running long enough to see appreciable counts in this transition. The resonance at this energy populates the ground state strongly and that was the focus of the measurement at those energies. This same lack of statistics is why the data points at 800 keV also have comparatively larger uncertainties. These features can be seen highlighted in Fig.\ \ref{fig: highCompare679}, while the measured $S$-factor data for this transition in different energy regimes is plotted in Figs.\ \ref{fig: full679}, \ref{fig: highCompare679}, and \ref{fig: low679}.
+For the 6.79 MeV transition, the data are shown in Fig.~\ref{fig: full679} - \ref{fig: low679}. Our measurement agrees well with the data from \citet{Schroder1987} and \citet{Li2016} coming in from higher energies but is lower than the data from \citet{Wagner2018}. Our highest uncertainty data points overlap with the data from \citet{Wagner2018} but are otherwise discrepant. Our results agree well with the literature data in the lower-energy region where the results from LUNA \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011} and LENA \cite{Runkle2005} made their measurements. Some of our data shows higher uncertainties at lower energies than other, measured data, but they agree well. Unlike the ground state data, the measurements for this transition stop at $\sim 1$ MeV. The runs at these energies were not done long enough to have appreciable statistics in the 6.79 peak. The resonance at this energy populates the ground state strongly and that was the focus of the measurement at those energies. This same lack of statistics is why the data points at 850 keV and 1000 keV also have comparatively larger uncertainties. These features can be seen highlighted in Fig.\ \ref{fig: highCompare679}, while the measured $S$-factor data for this transition in different energy regimes is plotted in Figs.\ \ref{fig: full679}, \ref{fig: highCompare679}, and \ref{fig: low679}.
 
 
 \begin{figure}
@@ -523,8 +534,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/fullGS.png}
-	\caption{Differential $S$-factor for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction for the entire energy range measured in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison.  }
+		\includegraphics[width=1.0\linewidth]{figures/full679.png}
+	\caption{Differential $S$-factor for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction for the entire energy range measured in this experiment. Also plotted are data from \cite{Schroder1987, Formicola2004, Imbriani2005, Runkle2005, Marta2008, Marta2011, Li2016, Wagner2018} for comparison. The LUNA data specifically represents the measurements \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.}}
 	\label{fig: fullGS}
 \end{figure}
 
@@ -539,8 +550,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/highCompareGS.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at the NSL to CASPAR, showing the efficacy of the facility. Also plotted are data from \cite{Schroder1987, Li2016} for comparison.  }
+		\includegraphics[width=1.0\linewidth]{figures/highCompare679.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at CASPAR to literature data in the same region. Also plotted are data from \cite{Schroder1987, Li2016, Wagner2018} for comparison. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes.  \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.} }
 	\label{fig: highCompareGS}
 \end{figure}
 
@@ -554,8 +565,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/midGS.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, primarily detailing the off resonance region measured at CASPAR in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison.  }
+		\includegraphics[width=1.0\linewidth]{figures/highCompare679.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, primarily detailing the off resonance region measured at CASPAR in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.}  }
 	\label{fig: midGS}
 \end{figure}
 
@@ -563,8 +574,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/lowGS.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. }
+		\includegraphics[width=1.0\linewidth]{figures/low679.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.} }
 	\label{fig: lowGS}
 \end{figure}
 
