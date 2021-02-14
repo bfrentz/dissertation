@@ -351,11 +351,11 @@ E_{0} &= E_{r} + \dfrac{\Delta E}{2} \\
 The stopping powers used for these determinations were calculated using the James F. Ziegler's industry standard SRIM program, \cite{Ziegler2010}. The output from this program provides the discrete values for the stopping power of a user specified target material over a range of user specified energies. Using the stopping powers at the resonance energy in units of (eV / (atoms/cm$^{2}$)) and the overall uncertainty in the calculations of 4.6\% \cite{Ziegler2010} the number of target atoms can be determined for each resonance scan. Table \ref{tbl: targetAtoms} summarizes the results for this calculation and gives the initial number density of nitrogen atoms for the targets used throughout this experiment. 
 
 
-\begin{table*}[]
+\begin{table}[]
 \caption{NITROGEN CONTENT OF TARGETS}
 \centering
 \begin{threeparttable}
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}{ll}
 \toprule
 Target & $n$ $\left(10^{17} \text{atoms / cm}^{2} \right)$ \\ \midrule
 TiN    & 7.070 $\pm$ 0.566                        \\
@@ -369,7 +369,7 @@ ZrN \#12 & 10.480 $\pm$ 0.834                       \\ \bottomrule
 \end{tablenotes}
 \end{threeparttable}
 \label{tbl: targetAtoms}
-\end{table*}
+\end{table}
 
 
 However, by delivering more beam to the targets, more of the active material is removed and the targets degrade. In order to account for this effect, multiple resonance scans were taken using the different targets at different points in the experiments in order to determine the number of active target atoms throughout the measurement. By taking the initial scans as baseline values and comparing the target thickness as a function of charge delivered a linear relationship can be deduced. Fig.\ \ref{fig: targetThicknesses} shows the deterioration of the targets as a function of the delivered charge throughout the experiment and the linear fits to these data. These relationships can then be used to independently correct the individual measured runs for the accumulated charge on the target up to that particular point. 
@@ -471,7 +471,7 @@ Y_{NR}(E) = \dfrac{d \sigma}{d \Omega} \dfrac{\Delta(E_{p})}{\epsilon(E_{p})}
    &=& \dfrac{\lambda_{R}^{2}}{2} \dfrac{\omega \gamma}{\Delta(E_{p})} \dfrac{Y_{NR}}{Y_{max}(\infty)} 
 \end{eqnarray}
 
-\noindent This allows an experimental determination of the cross section by using only the de Broglie wavelength, which can be calculated from the experimental parameters, the resonance strength, which has been previously determined \cite{Imbriani2005, Daigle2016}, the target thickness, and the relative yields between a known resonance (in this case, the $E_{p}$ = 278 keV resonance) and the non-resonant capture yields. 
+\noindent This allows an experimental determination of the cross section by using only the de Broglie wavelength, which can be calculated from the experimental parameters, the resonance strength, which has been previously determined \cite{Imbriani2005, Daigle2016}, the target thickness, the relative yields between a known resonance (in this case, the $E_{p}$ = 278 keV resonance) and the non-resonant capture yields. 
 
 
 This is the method by which the differential cross section of the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction was determined for the different transitions. The uncertainty on this differential cross section was calculated for each individual point by propagating the uncertainty in the number of nitrogen atoms with the uncertainty in the calculated yields. This also took into account the loss of nitrogen within the targets over the course of the experiment (see Sec.\ \ref{sec: targetCharacterization} for details). The resulting differential cross sections are shown in Figs.\ \ref{fig: cs679_targs} and \ref{fig: csGS_targs}. 
