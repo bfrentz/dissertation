@@ -1,6 +1,6 @@
 # Frentz Dissertation
 ## Version control manager for my dissertation
-Bryce Frentz
+Bryce Frentz  
 Created: 11/04/19  
 Updated: 02/14/21
 
