@@ -93,19 +93,42 @@ The total efficiency of a detector / source geometry is the probability that a g
 
 \noindent where $\mu$ is the energy and absorber dependent attenuation coefficient, x is the position from the detector face, and the integration takes place over the solid angle of the detector from the front to the back. This formulation makes it abundantly clear that $\eta^{tot}$ is so highly dependent on the geometry of the setup. 
 
-However, in practice, there is no analytic formulation of the total efficiency because one needs to account for any potential scattering of $\gamma$-rays off of any surrounding material, like the shielding or target chamber, for example. Additionally, when measuring the total efficiency for a given setup, the presence of multiple decays from physical sources provides additional complications. Therefore, most commonly the total efficiency is determined using single-line radioactive sources, like $^{137}$Cs, with well known activity. In this case, when accounting for the ever-present background, the total efficiency is the total number of counts in a spectrum divided by the total number of decays occurring during the measurement time, which can be easily calculated with the radioactive decay law
+However, in practice, there is no analytic formulation of the total efficiency because one needs to account for any potential scattering of $\gamma$-rays off of any surrounding material, like the shielding or target chamber, for example. Additionally, when measuring the total efficiency for a given setup, the presence of multiple decays from physical sources provides additional complications.
+
+So, one can use the summing-out correction effects within one's data to determine the total efficiency of the detector. For each line in a spectrum, a ratio of the intensities in close and far geometries can be obtained, $R_{i} = I_{\gamma}^{close} / I_{\gamma}^{far}$, where $I$ is the measured intensity of the $\gamma$-ray. Further discussion on this point will follow in Sec. \ref{sec: summing}, but ultimately, this ratio can be used to determine the total efficiency. For transitions with summing present, this ratio is deflated by a factor because of the lost counts in the relevant peaks. Mathematically, this is expressed as
 
 \begin{equation}
-N(t) = N_{0} e^{- \lambda t} \hfill A(t) = A_{0} e^{- \lambda t},
+I_{\gamma}^{close} = R_{true} C_{out} I_{\gamma}^{far} = R_{true} (1-\eta^{tot}) I_{\gamma}^{far}
 \end{equation}
 
-\noindent where $N(t)$ is the number of nuclei remaining after time $t$, $N_{0}$ is the initial number of radioactive nuclei, $\lambda$ is the radioactive decay constant for a given nucleus, $A(t)$ is the activity of the source at time $t$ compared to the activity at time $t=0$ of $A_{0}$. The decay constant, $\lambda$, can be calculated from either the nuclear lifetime, $\tau$, or the decay half-life, $t_{1/2}$, as
+\noindent where $R_{true}$ is the true, geometric difference between the near and far data without summing effects, $C_{out}-(1-\eta^{tot})$ is the summing-out effect, and $eta^{tot}$ is the total efficiency. For our data, the $R_{true}$ ratio was obtained by measuring the monoenergetic, isotropic decay from $^{12}$C($p, \gamma$)$^{13}$N reaction at 2365 keV. Thus, the $i$th transition's near/far ratio in the nitrogen data (which would contain summing effects) would allow us to determine the total efficiency by 
 
 \begin{equation}
-\lambda = \dfrac{1}{\tau} \hfill \lambda = \dfrac{\text{ln}(2)}{t_{1/2}}.
+ I_{\gamma}^{close} = R_{i} I_{\gamma}^{far}
 \end{equation}
 
-\noindent This is how the total efficiency for the detector systems was determined at 662 keV, the $\gamma$ energy from the decay of $^{137}$Cs.
+\begin{equation}
+R_{i} I_{\gamma}^{far} = R_{true} (1-\eta^{tot}) I_{\gamma}^{far}
+\end{equation}
+
+\begin{equation}
+\Rightarrow (1-\eta^{tot}) = \dfrac{R_{i}}{R_{true}}.
+\end{equation}
+
+
+% Therefore, most commonly the total efficiency is determined using single-line radioactive sources, like $^{137}$Cs, with well known activity. In this case, when accounting for the ever-present background, the total efficiency is the total number of counts in a spectrum divided by the total number of decays occurring during the measurement time, which can be easily calculated with the radioactive decay law
+
+%\begin{equation}
+%N(t) = N_{0} e^{- \lambda t} \hfill A(t) = A_{0} e^{- \lambda t},
+%\end{equation}
+
+%\noindent where $N(t)$ is the number of nuclei remaining after time $t$, $N_{0}$ is the initial number of radioactive nuclei, $\lambda$ is the radioactive decay constant for a given nucleus, $A(t)$ is the activity of the source at time $t$ compared to the activity at time $t=0$ of $A_{0}$. The decay constant, $\lambda$, can be calculated from either the nuclear lifetime, $\tau$, or the decay half-life, $t_{1/2}$, as
+
+%\begin{equation}
+%\lambda = \dfrac{1}{\tau} \hfill \lambda = \dfrac{\text{ln}(2)}{t_{1/2}}.
+%\end{equation}
+
+%\noindent This is how the total efficiency for the detector systems was determined at 662 keV, the $\gamma$ energy from the decay of $^{137}$Cs.
 
 
 
@@ -124,13 +147,15 @@ N(t) = N_{0} e^{- \lambda t} \hfill A(t) = A_{0} e^{- \lambda t},
 \label{fig: actualSetup}
 \end{figure} 
 
-To extend $\eta^{tot}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-line emission source was recreated at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. For each of the different decay energies, the spectrum of recorded events in the detector was analyzed in the exact same way as the actual $^{137}$Cs data to produce the total efficiency at each energy. This simulated data was used in conjunction with the measured $^{137}$Cs total efficiency data point to determine an accurate curve of the total efficiency across all experimentally relevant energies, shown in Fig.\ \ref{fig: totalEfficiency}.
+To extend $\eta^{tot}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-line emission source was recreated at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. 
+
+Geant4 simulations are highly sensitive to detailed, accurate recreations of all aspects of the setup, including the beamline meters away or the internal structure of the detector (which isn't known). Therefore, the simulation's output was used in conjunction with the measured total efficiency data point to determine an accurate curve of the total efficiency across all experimentally relevant energies, shown in Fig.\ \ref{fig: totalEfficiency}.
 
 \begin{figure}
 \thisfloatpagestyle{plain}
 \centering
 \includegraphics[width=\linewidth]{figures/totalEfficiency.png}
-\caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points from the Geant4 simulation are taken raw without scaling, showing the efficacy of this technique and accuracy of the simulation. Further details about the calculation of these curves can be found in Sec. \ref{subsec: totEff}. \textbf{I'M PRETTY SURE I'VE MADE AN UPDATED VERSION OF THIS FIGURE BUT I WASN'T ABLE TO EASILY FIND IT. I'LL KEEP LOOKING THOUGH.}}
+\caption{The total efficiency of the HPGe in the CASPAR setup across all relevant energies. The points are obtained from the transitions in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction while the line is determined from a Geant4 simulation across the relevant energies to interpolate the total efficiency. Further details can be found in Sec. \ref{subsec: totEff}. }
 \label{fig: totalEfficiency}
 \end{figure}
 
@@ -175,14 +200,21 @@ For this determination, the branching ratios for the 278 keV resonance in $^{14}
 \eta = \exp \left(  \sum_{i=0}^{3} a_{i} ( \ln (E_{\gamma}))^{2}    \right),
 \end{equation}
 
-\noindent where the $a_{i}$ are fit coefficients and $E_{\gamma}$ is the $\gamma$-ray energy and the independent variable in the fit. An example of this determination for the CASPAR setup in both the close and far geometries can be seen in Fig. \ref{fig: efficiency}. In both calculations, only statistical errors were included in the fit and the highest energy point was excluded due to summing effects, which will be discussed in more detail in the next section. This can be clearly seen as the highest energy point at close distance (1.1 cm from target) is off by an inordinately large factor. For a reference, measurements were also taken at 25.24 cm away from the target chamber, making the summing effects negligible. In this case, the summing effects provide very little impact (if any) on the highest energy point, which was still excluded from this fit. However, for the far distance it follows the trend of the other data nearly perfectly.
+\noindent where the $a_{i}$ are fit coefficients and $E_{\gamma}$ is the $\gamma$-ray energy and the independent variable in the fit. An example of this determination for the CASPAR setup in both the close and far geometries can be seen in Fig. \ref{fig: efficiency}, with the percentage residuals shown in Fig. \ref{fig: effResiduals}. In both calculations, only statistical errors were included in the fit and the highest energy point was excluded due to summing effects, which will be discussed in more detail in the next section. This can be clearly seen as the highest energy point at close distance (1.1 cm from target) is off by an inordinately large factor. For a reference, measurements were also taken at 25.24 cm away from the target chamber, making the summing effects negligible and for these far distance data, the fit follows the data nearly perfectly. The curve for the near position efficiency, which was used in the subsequent cross-section analysis, was obtained by taking the far distance fit (which had no summing effects present) and scaling by a geometric factor to account for the difference in solid angle subtended by the detector in the two configurations. As was discussed in Section \ref{sec: angularCorrections}, the angular effects for the data are negligible and the efficiency reactions were isotropic, so correcting for the solid angle alone is sufficient. 
 
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{figures/efficiencyComplete.png}
-\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries. The highest energy point in the close geometry was excluded from the fit because it suffers from summing-in effects artificially inflating the count rate of this measured peak (see text for details). At the far distance between the detector and the target, summing effects are negligible.   }
+\includegraphics[width=\linewidth]{figures/efficiency103104.png}
+\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries, obtained from the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. At the far distance between the detector and the target, summing effects are negligible. Therefore, the efficiency in far distance was fitted and scaled by the geometric factor to account for solid angle difference between the close and far geometries. The filled points in close distance have been corrected for summing effects.     }
 \label{fig: efficiency}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/effResiduals.png}
+\caption{Residuals between the corrected near efficiency and the obtained curve. Residuals are given as a decimal percentage of difference to give more context. The largest residual obtained is near six percent and there is no systematic trend indicating issues with the methodology.   }
+\label{fig: effResiduals}
 \end{figure}
 
 
@@ -284,9 +316,9 @@ Y_{7} = R B_{7} \eta_{7} + R B_{1} \eta_{1} \eta_{6} +  R B_{2} \eta_{2} \eta_{5
 C_{7}^{in} = 1 + \dfrac{B_{1} \eta_{1} \eta_{6} + B_{2} \eta_{2} \eta_{5} + B_{3} \eta_{3} \eta_{4} }{B_{7} \eta_{7}}.
 \end{equation}
 
-\noindent In this measurement, this correction is quite large, as expected. It was determined to be a 61\% correction to the ground state transition using this method. \textbf{THIS NUMBER NEEDS TO BE UPDATED WHEN I HAVE FIXED THIS CALCULATION. I EXPECT SOMETHING IN THE RANGE OF 70-80 PERCENT AND IT CURRENTLY CALCULATES TO 15. ONCE THESE AGREE, I CAN PROCEED.}
+\noindent In this measurement, this correction is quite large, as expected. It was determined to be an approximately 80\% correction to the ground state transition in the energy range near the 278 keV resonance and as much as 61\% off the resonance.
 
-There is a second method for calculating the summing-in correction which was also employed. This relies on the measured efficiency being taken at different distances to the source of the $\gamma$ rays. In close geometry, the solid angle of the detector is much larger when viewed from the source and summing is present (which can be seen from the highest energy data point in the detector efficiency plot, Fig.\ \ref{fig: efficiency}). However, at a larger distance, in this case 25.4 cm, the solid angle of the detector is significantly smaller but summing-in effects are not present in the detector. Therefore, the ratio of efficiencies between the close and far distance measurements when accounting for the difference in detector solid angle is the necessary summing-in correction. 
+There is a second method for calculating the summing-in correction which was also employed. This relies on the measured efficiency being taken at different distances to the source of the $\gamma$ rays on the resonance. In close geometry, the solid angle of the detector is much larger when viewed from the source and summing is present (which can be seen from the highest energy data point in the detector efficiency plot, Fig.\ \ref{fig: efficiency}). However, at a larger distance, in this case 25.4 cm, the solid angle of the detector is significantly smaller but summing-in effects are not present in the detector. Therefore, the ratio of efficiencies between the close and far distance measurements when accounting for the difference in detector solid angle is the necessary summing-in correction. 
 
 
 \begin{figure}
@@ -296,11 +328,8 @@ There is a second method for calculating the summing-in correction which was als
 \label{fig: 12cpg}
 \end{figure}
 
-More accurately than calculating the solid angle geometrically, the near/far correction factor can be determined using another set of measurements with the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction. For this method, the reaction decays via a single $\gamma$ at 2.37 MeV and requires no additional correction for summing. This means that the difference between the data taken in near/far distances is due to the geometric effects and allows us to relate the efficiencies between the two measurement distances without the need for correcting for summing-out or summing-in. Spectra from the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction taken at CASPAR are shown in Fig.\ \ref{fig: 12cpg}. The ratio of counts in these two peaks gives a near/far ratio of $R_{c} = 27.8$. Using this ratio, we scale up the fitted far-efficiencies and the difference between this and the ground state peak provides the needed summing-in correction. For our data, the summing-in correction was found to be 74.6\% for the ground state transition. 
+More accurately than calculating the solid angle geometrically, the near/far correction factor can be determined using another set of measurements with the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction. For this method, the reaction decays via a single $\gamma$ at 2.37 MeV and requires no additional correction for summing. This means that the difference between the data taken in near/far distances is due to the geometric effects and allows us to relate the efficiencies between the two measurement distances without the need for correcting for summing-out or summing-in. Spectra from the $^{12}$C$\left( p,\gamma \right) ^{13}$N reaction taken at CASPAR are shown in Fig.\ \ref{fig: 12cpg}. The ratio of counts in these two peaks gives a near/far ratio of $R_{c} = 27.8$. Using this ratio, we scale up the fitted far-efficiencies and the difference between this and the ground state peak provides the needed summing-in correction. For our data, the summing-in correction was found to be 74.6\% for the ground state transition. This agrees well with the numerically determined method in the resonance range where they overlap. This serves as good cross-validation of the summing-in correction when applying it to all of the ground state transition data.
 
-
-
-The fact that these two methods give nearly the same value for the summing-in serves as good cross-validation of these corrections. When incorporating this result into the final cross section determination, the mean of these two correction values was taken, at 75\%. 
 
 
 
@@ -487,8 +516,8 @@ This is the method by which the differential cross section of the $^{14}$N$\left
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/cs679_targs.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, separated by the target used in measurement, showing the overlapping measurements and agreement between them. The target labels are nominal and do not represent the properties of the target, but targets 1 and 5 were the same thickness while target 12 was roughly double. \textbf{BUT ACTUALLY GIVE THE FIGURE FOR THE GROUND STATE AND NOT THE 679 WHEN THE DATA HAVE BEEN SUMMING CORRECTED}.}
+		\includegraphics[width=1.0\linewidth]{figures/cs_gs_targs.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, separated by the target used in measurement, showing the overlapping measurements and agreement between them. The target labels are nominal and do not represent the properties of the target, but targets 1 and 5 were the same thickness while target 12 was roughly double.}
 	\label{fig: csGS_targs}
 \end{figure}
 
@@ -522,11 +551,7 @@ For the 6.79 MeV transition, the data are shown in Fig.~\ref{fig: full679} - \re
 	\label{fig: low679}
 \end{figure}
 
-For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - \ref{fig: lowGS}. \textbf{THE TREND IN THE DATA SHOWS THAT WE HAVE SOME RELATION TO PREVIOUS MEASUREMENTS. THERE IS SOME AGREEMENT MAYBE. I WILL GIVE MORE DISCUSSION TO THE GROUND STATE RESULTS HERE}. 
-
-%Our measurement agrees well with the Schr{\"o}der data \cite{Schroder1987} and Li data \cite{Li2016} coming in from higher energies, with our measured $S$-factor dropping in the interference region between 300-400 keV to agree with the LUNA \cite{Imbriani2005} and LENA \cite{Runkle2005} data there. Our overall scale seems to be higher in the off resonance region, however, and only agrees with the highest energy data from the TUNL experiment \cite{Runkle2005}. Overall, this data shows significantly higher uncertainties at lower energies than the 6.79 MeV transition data. This is because this is a much more weakly populated transition and it was not feasible to run long enough to achieve appreciable statistics in the $\gamma$-ray data at these energies. Therefore, they have uncertainties dominated by the rate of measured $\gamma$'s in the experiment. The measured $S$-factor data for this transition is included in different energy regimes in Figs.\ \ref{fig: fullGS}, \ref{fig: highCompareGS}, \ref{fig: midGS}, and \ref{fig: lowGS}.
-
-%Finally, with the 6.17 MeV transition, the data measured in this work show good agreement with other reported data. Unfortunately, at higher energies the data from our measurement have significantly larger uncertainties than the results reported by Ref.\ \cite{Schroder1987}. This is due primarily to two factors: this transition's peak appears on the shoulder of that of a background reaction in the spectrum, namely the $^{19}$F($p,\alpha \gamma$)$^{16}$O reaction, and it is by far the weakest transition measured, so it had the largest uncertainty in determining the peak area. The data from this transition is plotted in different energy regimes and included below as Figs.\ \ref{fig: full617}, \ref{fig: highCompare617}, and \ref{fig: low617}.
+For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - \ref{fig: lowGS} alongside those from Refs. \cite{Schroder1987, Formicola2004, Imbriani2005, Runkle2005, Marta2008, Marta2011, Li2016, Wagner2018}. Our measurement is in very good agreement with all reported literature data. At energies above 800 keV, shown in Fig. \ref{fig: highCompareGS}, our data overlaps perfectly with that from \citet{Schroder1987} and \citet{Li2016}. Our measured $S$-factor drops below the other reported measurements between 800 keV and 600 keV. At energies below this point, our data agrees well with the published data from \citet{Runkle2005} and the LUNA data \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}, although it has larger uncertainties. In the region between 300-500 keV, right above the resonance, our data continues to agree well with literature. However, our data becomes noticably sparser in this energy regime. WIth such low statistics in the data for these points, most had uncertainties greater than 100\% after accounting for all sources of uncertainty and were excluded. The few points that we were able to successfully take below the 278 keV resonance are in good agreement with the data taken by the LUNA group. Overall, this data shows higher uncertainties than the literature data and our own  6.79 MeV transition data. This is because this is a much more weakly populated transition and it was not feasible to run long enough to achieve appreciable statistics in the $\gamma$-ray data at these energies. Therefore, they have uncertainties dominated by the rate of measured $\gamma$'s in the experiment. Ultimately, this is a robust data set showing excellent agreement with previously published data.
 
 
 
@@ -534,8 +559,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/full679.png}
-	\caption{Differential $S$-factor for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction for the entire energy range measured in this experiment. Also plotted are data from \cite{Schroder1987, Formicola2004, Imbriani2005, Runkle2005, Marta2008, Marta2011, Li2016, Wagner2018} for comparison. The LUNA data specifically represents the measurements \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.}}
+		\includegraphics[width=1.0\linewidth]{figures/full_gs.png}
+	\caption{Differential $S$-factor for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction for the entire energy range measured in this experiment. Also plotted are data from \cite{Schroder1987, Formicola2004, Imbriani2005, Runkle2005, Marta2008, Marta2011, Li2016, Wagner2018} for comparison. The LUNA data specifically represents the measurements \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes. }
 	\label{fig: fullGS}
 \end{figure}
 
@@ -550,8 +575,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/highCompare679.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at CASPAR to literature data in the same region. Also plotted are data from \cite{Schroder1987, Li2016, Wagner2018} for comparison. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes.  \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.} }
+		\includegraphics[width=1.0\linewidth]{figures/high_gs.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction highlighting the high energy region to compare the data taken at CASPAR to literature data in the same region. Also plotted are data from \cite{Schroder1987, Li2016, Wagner2018} for comparison. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes.  }
 	\label{fig: highCompareGS}
 \end{figure}
 
@@ -565,8 +590,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/highCompare679.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, primarily detailing the off resonance region measured at CASPAR in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.}  }
+		\includegraphics[width=1.0\linewidth]{figures/low_mid_gs.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, primarily detailing the off resonance region measured at CASPAR in this experiment. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. The LUNA data specifically represents the measurements \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes.    }
 	\label{fig: midGS}
 \end{figure}
 
@@ -574,8 +599,8 @@ For the ground state transition, the data is shown in Figs.~\ref{fig: fullGS} - 
 
 \begin{figure}
 \thisfloatpagestyle{plain}
-		\includegraphics[width=1.0\linewidth]{figures/low679.png}
-	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. \textbf{THIS FIGURE NEEDS TO BE UPDATED TO THE GROUND STATE WHEN THAT IS CALCULATED AFTER THE SUMMING CORRECTIONS.} }
+		\includegraphics[width=1.0\linewidth]{figures/low_gs.png}
+	\caption{Differential cross section for the ground state transition in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction, showing the behavior of the $S$-factor at low energy. Also plotted are data from \cite{Schroder1987, Imbriani2005, Runkle2005, Li2016} for comparison. The LUNA data specifically represents the measurements \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}. Our data and that from \citet{Li2016} were both calculated as differential $S$-factors but scaled up by a factor of $4\pi$ for plotting purposes. }
 	\label{fig: lowGS}
 \end{figure}
 
