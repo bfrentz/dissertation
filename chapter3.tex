@@ -80,7 +80,7 @@ E_{\gamma} = m \times \text{Channel} + b
 \section{Efficiency}
 \label{sec: efficiency}
 
-Efficiency is a term that can, in different contexts, have many different meanings. However, in experimental physics it is known to be the ratio for the response of an instrument to the actual physical quantity for which it is employed to measure. In these cases, it is the ratio between the photons recorded and those emitted in a given event. For this experiment, both the total efficiency, $\eta^{tot}$, and the full-energy peak (FEP) efficiency, $\eta^{fep}$, were required. The total efficiency is the probability that the $\gamma$ ray enters and deposits any amount of energy within the detector, while, on the other hand, the FEP efficiency is the probability that the full energy of an emitted $\gamma$ ray will be deposited within the detector. As both efficiency types are dependent on the physical geometry of the system, they are determined for each experimental setup in turn. 
+Efficiency is a term that can, in different contexts, have many different meanings. However, in experimental physics it is known to be the ratio for the response of an instrument to the actual physical quantity for which it is employed to measure. In these cases, it is the ratio between the photons recorded and those emitted in a given event. For this experiment, both the total efficiency, $\eta^{TOT}$, and the full-energy peak (FEP) efficiency, $\eta^{fep}$, were required. The total efficiency is the probability that the $\gamma$ ray enters and deposits any amount of energy within the detector, while, on the other hand, the FEP efficiency is the probability that the full energy of an emitted $\gamma$ ray will be deposited within the detector. As both efficiency types are dependent on the physical geometry of the system, they are determined for each experimental setup in turn. 
 
 \subsection{Total efficiency}
 \label{subsec: totEff}
@@ -88,10 +88,10 @@ Efficiency is a term that can, in different contexts, have many different meanin
 The total efficiency of a detector / source geometry is the probability that a given photon from the source will enter and deposit any amount of energy within the detector. For extremely simple geometries, the total efficiency can be calculated following the approach laid out in Debertin and Helmer \cite{DebertinHelmerBook},
 
 \begin{equation}
-\eta^{tot} = \dfrac{1}{4\pi} \int \left(1 - e^{-\mu x} \right) d\Omega
+\eta^{TOT} = \dfrac{1}{4\pi} \int \left(1 - e^{-\mu x} \right) d\Omega
 \end{equation}
 
-\noindent where $\mu$ is the energy and absorber dependent attenuation coefficient, x is the position from the detector face, and the integration takes place over the solid angle of the detector from the front to the back. This formulation makes it abundantly clear that $\eta^{tot}$ is so highly dependent on the geometry of the setup. 
+\noindent where $\mu$ is the energy and absorber dependent attenuation coefficient, x is the position from the detector face, and the integration takes place over the solid angle of the detector from the front to the back. This formulation makes it abundantly clear that $\eta^{TOT}$ is so highly dependent on the geometry of the setup. 
 
 However, in practice, there is no analytic formulation of the total efficiency because one needs to account for any potential scattering of $\gamma$-rays off of any surrounding material, like the shielding or target chamber, for example. Additionally, when measuring the total efficiency for a given setup, the presence of multiple decays from physical sources provides additional complications.
 
@@ -101,18 +101,18 @@ So, one can use the summing-out correction effects within one's data to determin
 I_{\gamma}^{close} = R_{true} C_{out} I_{\gamma}^{far} = R_{true} (1-\eta^{tot}) I_{\gamma}^{far}
 \end{equation}
 
-\noindent where $R_{true}$ is the true, geometric difference between the near and far data without summing effects, $C_{out}-(1-\eta^{tot})$ is the summing-out effect, and $eta^{tot}$ is the total efficiency. For our data, the $R_{true}$ ratio was obtained by measuring the monoenergetic, isotropic decay from $^{12}$C($p, \gamma$)$^{13}$N reaction at 2365 keV. Thus, the $i$th transition's near/far ratio in the nitrogen data (which would contain summing effects) would allow us to determine the total efficiency by 
+\noindent where $R_{true}$ is the true, geometric difference between the near and far data without summing effects, $C_{out}-(1-\eta^{TOT})$ is the summing-out effect, and $eta^{TOT}$ is the total efficiency. For our data, the $R_{true}$ ratio was obtained by measuring the monoenergetic, isotropic decay from $^{12}$C($p, \gamma$)$^{13}$N reaction at 2365 keV. Thus, the $i$th transition's near/far ratio in the nitrogen data (which would contain summing effects) would allow us to determine the total efficiency by 
 
 \begin{equation}
  I_{\gamma}^{close} = R_{i} I_{\gamma}^{far}
 \end{equation}
 
 \begin{equation}
-R_{i} I_{\gamma}^{far} = R_{true} (1-\eta^{tot}) I_{\gamma}^{far}
+R_{i} I_{\gamma}^{far} = R_{true} (1-\eta^{TOT}) I_{\gamma}^{far}
 \end{equation}
 
 \begin{equation}
-\Rightarrow (1-\eta^{tot}) = \dfrac{R_{i}}{R_{true}}.
+\Rightarrow (1-\eta^{TOT}) = \dfrac{R_{i}}{R_{true}}.
 \end{equation}
 
 
@@ -147,7 +147,7 @@ R_{i} I_{\gamma}^{far} = R_{true} (1-\eta^{tot}) I_{\gamma}^{far}
 \label{fig: actualSetup}
 \end{figure} 
 
-To extend $\eta^{tot}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-line emission source was recreated at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. 
+To extend $\eta^{TOT}$ to the whole range of energies relevant to the experiments, the experimental setup (including the target chamber, water cooling, and shielding) was built and simulated in Geant4 \cite{Agostinelli2003}, an example of the simulation for the CASPAR setup is shown in Fig.\ \ref{fig: simulatedSetup} where the actual setup is given in Fig.\ \ref{fig: actualSetup} for comparison. Then, a single-line emission source was recreated at the target location and simulated 10,000,000 decays, recording the deposited energy inside the detector. The energy of the source was changed and simulated at energies of 662, 1300, 2000, 3000, 4000, 6000, 7000, 8000, and 10000 keV to cover the entire range of $\gamma$ ray energies present in the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. 
 
 Geant4 simulations are highly sensitive to detailed, accurate recreations of all aspects of the setup, including the beamline meters away or the internal structure of the detector (which isn't known). Therefore, the simulation's output was used in conjunction with the measured total efficiency data point to determine an accurate curve of the total efficiency across all experimentally relevant energies, shown in Fig.\ \ref{fig: totalEfficiency}.
 
@@ -163,7 +163,7 @@ Geant4 simulations are highly sensitive to detailed, accurate recreations of all
 
 \subsection{Peak efficiency}
 
-The full energy peak (FEP) efficiency, on the other hand, is the probability that the full energy of a given photon will be recorded within the detector. Mathematically, this is
+The full-energy peak (FEP) efficiency, on the other hand, is the probability that the full energy of a given photon will be recorded within the detector. Mathematically, this is
 
 \begin{equation}
 \eta^{FEP} = \dfrac{n(E)}{R(E)}
@@ -173,16 +173,16 @@ The full energy peak (FEP) efficiency, on the other hand, is the probability tha
 
 Determining the efficiency for a given setup is necessary for each geometry since, like the total efficiency, it is related to the specific source-detector geometry; it is not an intrinsic property of a given detector. In this campaign of experiments, the efficiency was determined each time with a combination of radioactive sources, like $^{137}$Cs, $^{60}$Co, and $^{152}$Eu, and well-known nuclear resonances, like $^{14}$N$\left( p,\gamma \right) ^{15}$O at $E_{p}$ = 278 keV and the $^{27}$Al($p, \gamma$)$^{28}$Si resonance at $E_{p}$ = 992 keV. These reactions were chosen because, much like the energy calibration, these extend the detector's measured efficiency to a much higher energy range (up to 10.7 MeV) compared to radioactive sources. 
 
-From radioactive sources, the detector's efficiency at a given $\gamma$ ray energy, $\eta(E_{\gamma})$, can be determined with
+From radioactive sources, the detector's efficiency at a given $\gamma$ ray energy, $\eta^{FEP}(E_{\gamma})$, can be determined with
 
 \begin{equation}
-\eta (E_{\gamma}) = \dfrac{N_{\gamma}}{A(t) B_{\gamma} t_{live} C_{i}},
+\eta^{FEP} (E_{\gamma}) = \dfrac{N_{\gamma}}{A(t) B_{\gamma} t_{live} C_{i}},
 \end{equation}
 
-\noindent where $N_{\gamma}$ is the measured number of counts in the full energy peak, $A(t)$ is the source's activity at the time of the measurement, $B_{gamma}$ is the branching ratio for the specific decay, $t_{live}$ is the live time of the measurement, and $C_{i}$ are the correction factors, if necessary. For nuclear resonances, on the other hand, $\eta (E_{gamma})$ is 
+\noindent where $N_{\gamma}$ is the measured number of counts in the full energy peak, $A(t)$ is the source's activity at the time of the measurement, $B_{gamma}$ is the branching ratio for the specific decay, $t_{live}$ is the live time of the measurement, and $C_{i}$ are the correction factors, if necessary. For nuclear resonances, on the other hand, $\eta^{FEP} (E_{gamma})$ is 
 
 \begin{equation}
-\eta (E_{\gamma}) = \dfrac{N_{\gamma}}{q B_{\gamma} R C_{i}},
+\eta^{FEP} (E_{\gamma}) = \dfrac{N_{\gamma}}{q B_{\gamma} R C_{i}},
 \end{equation}
 
 \noindent where $q$ is the collected charge and
@@ -197,7 +197,7 @@ R = \dfrac{\lambda_{r}^{2}}{\pi} \dfrac{\omega \gamma}{\epsilon_{sp}} \dfrac{M +
 For this determination, the branching ratios for the 278 keV resonance in $^{14}$N$\left( p,\gamma \right) ^{15}$O were taken from Daigle \textit{et al.} \cite{Daigle2016} where for the 992 keV resonance in $^{27}$Al($p, \gamma$)$^{28}$Si they were obtained from Antilla \textit{et al.} \cite{Antilla1977} and those from the 406 keV resonance in $^{27}$Al($p, \gamma$)$^{28}$Si are taken from Powell \textit{et al.} \cite{Powell1998}. The efficiencies were then fit with 
 
 \begin{equation}
-\eta = \exp \left(  \sum_{i=0}^{3} a_{i} ( \ln (E_{\gamma}))^{2}    \right),
+\eta^{FEP} = \exp \left(  \sum_{i=0}^{3} a_{i} ( \ln (E_{\gamma}))^{2}    \right),
 \end{equation}
 
 \noindent where the $a_{i}$ are fit coefficients and $E_{\gamma}$ is the $\gamma$-ray energy and the independent variable in the fit. An example of this determination for the CASPAR setup in both the close and far geometries can be seen in Fig. \ref{fig: efficiency}, with the percentage residuals shown in Fig. \ref{fig: effResiduals}. In both calculations, only statistical errors were included in the fit and the highest energy point was excluded due to summing effects, which will be discussed in more detail in the next section. This can be clearly seen as the highest energy point at close distance (1.1 cm from target) is off by an inordinately large factor. For a reference, measurements were also taken at 25.24 cm away from the target chamber, making the summing effects negligible and for these far distance data, the fit follows the data nearly perfectly. The curve for the near position efficiency, which was used in the subsequent cross-section analysis, was obtained by taking the far distance fit (which had no summing effects present) and scaling by a geometric factor to account for the difference in solid angle subtended by the detector in the two configurations. As was discussed in Section \ref{sec: angularCorrections}, the angular effects for the data are negligible and the efficiency reactions were isotropic, so correcting for the solid angle alone is sufficient. 
@@ -205,17 +205,11 @@ For this determination, the branching ratios for the 278 keV resonance in $^{14}
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{figures/efficiency103104.png}
-\caption{Detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries, obtained from the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. At the far distance between the detector and the target, summing effects are negligible. Therefore, the efficiency in far distance was fitted and scaled by the geometric factor to account for solid angle difference between the close and far geometries. The filled points in close distance have been corrected for summing effects.     }
+\includegraphics[width=\linewidth]{figures/efficiencyAndResiduals.png}
+\caption{Top panel: detector efficiency as a function of $\gamma$-ray energy for the measurement at CASPAR in both close and far geometries, obtained from the $^{14}$N$\left( p,\gamma \right) ^{15}$O reaction. At the far distance between the detector and the target, summing effects are negligible. Therefore, the efficiency in far distance was fitted and scaled by the geometric factor to account for solid angle difference between the close and far geometries. The filled in close distance have been corrected for summing effects.  Bottom panel: relative residuals between the corrected data and the efficiency curve at the detector distance of 1.0 cm.    }
 \label{fig: efficiency}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{figures/effResiduals.png}
-\caption{Residuals between the corrected near efficiency and the obtained curve. Residuals are given as a decimal percentage of difference to give more context. The largest residual obtained is near six percent and there is no systematic trend indicating issues with the methodology.   }
-\label{fig: effResiduals}
-\end{figure}
 
 
 
@@ -237,10 +231,10 @@ For a simple nuclear decay, like that in Fig. \ref{fig: simpleDecay}, summing ma
 To correct for these effects, the probability of measuring a different energy than expected must be taken into account. For a situation where there is no summing, the rate of $\gamma$ rays is simply the yield
 
 \begin{equation}
-Y_{i} = R B_{i} \eta_{i},
+Y_{i} = R B_{i} \eta^{FEP}_{i},
 \end{equation}
 
-\noindent where $R$ is the normalization from Equation \ref{eqn: resonanceFactor}, $B$ is the branching ratio, and $\eta$ is the FEP efficiency. However, when summing-out occurs, the yield is artificially dropped by the factor $R B \eta_{1} \eta^{tot}_{2}$, which is the probability of counting the full energy of $\gamma_{1}$ along with any part of $\gamma_{2}$. Mathematically, this observed yield for both $\gamma_{1}$ and $\gamma_{2}$ is
+\noindent where $R$ is the normalization from Equation \ref{eqn: resonanceFactor}, $B$ is the branching ratio, and $\eta^{FEP}$ is the FEP efficiency. However, when summing-out occurs, the yield is artificially dropped by the factor $R B \eta^{FEP}_{1} \eta^{TOT}_{2}$, which is the probability of counting the full energy of $\gamma_{1}$ along with any part of $\gamma_{2}$. Mathematically, this observed yield for both $\gamma_{1}$ and $\gamma_{2}$ is
 
 \begin{align}
 Y_{1} &= R B_{1} \eta_{1} - R B_{1} \eta_{1} \eta^{tot}_{2} \\
