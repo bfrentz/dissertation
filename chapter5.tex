@@ -34,7 +34,7 @@
 \chapter{R-matrix analysis}
 \label{chap: r-matrix}
 
-An $R$-matrix analysis was performed to analyze the effects of the new lifetime and cross sections measurements described earlier. Such an analysis can be used to transform the cross sections into $S$-factors, which removes the Coulomb repulsion component of the cross-section and provides higher fidelity extrapolations to astrophysical energies. The $^{14}$N$(p,\gamma)^{15}$O system is ideal for $R$-matrix analysis because it is comprised of light nuclei with a discrete level structure at relatively low energies. While there are many programs available for performing $R$-matrix fits, we use the \texttt{AZURE2} code \cite{Azuma2010}, which was also used for similar, previous measurements \cite{Li2016}. 
+An $R$-matrix analysis was performed to analyze the effects of the new lifetime and cross sections measurements described earlier. Such an analysis can be used to transform the cross sections into $S$ factors, which removes the Coulomb repulsion component of the cross-section and provides higher fidelity extrapolations to astrophysical energies. The $^{14}$N$(p,\gamma)^{15}$O system is ideal for $R$-matrix analysis because it is comprised of light nuclei with a discrete level structure at relatively low energies. While there are many programs available for performing $R$-matrix fits, we use the \texttt{AZURE2} code \cite{Azuma2010}, which was also used for similar, previous measurements \cite{Li2016}. 
 
 \section{Impact of new lifetimes}
 \label{sec: lifetime fit}
@@ -141,6 +141,8 @@ $E_x$ (Ref.~\cite{Ajzenberg-Selove1991}) &   $E_x$ (fit) & $J^\pi$ & Channel & l
 
 The cross-section data utilized in the fitting routine were from measurements at LUNA \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}, TUNL \cite{Runkle2005}, Bochum \cite{Schroder1987}, and the University of Notre Dame \cite{Li2016}. All of these data sets were left without scaling during the fits. The Bochum data from \citet{Schroder1987} were corrected as detailed in SFII \cite{Adelberger2011}. Additionally, the data used from \citet{Li2016} are a differential cross section taken at 45$\degree$ and are treated as such in the fits. This dataset was scaled by a factor of 4$\pi$ in the plotting only to compare to the angle integrated data. 
 
+Only statistical uncertainties were included in the fitting. The alternative parameterization of \citet{PhysRevC.66.044611} was used. Its two main advantages are that it eliminates the need for boundary conditions and that the fit parameters correspond directly to physical level parameters.
+
 
 
 \begin{figure}[h!]
@@ -167,9 +169,9 @@ While the experimental results limit the previous uncertainty range in the lifet
 \label{sec: complete fit}
 
 
-Beyond our new lifetime measurements, an $R$-matrix analysis was used to fit all the ground state and the 6.79 MeV transition differential cross section data measured in the current experiment, incorporating the new lifetimes, and an exhaustive set of previously measured data of the $^{14}$N$(p,\gamma)^{15}$O reaction.
+Beyond our new lifetime measurements, an $R$-matrix analysis was used to fit all the ground state and the 6.79 MeV transition differential cross section data measured in the current experiment, incorporating the new lifetimes, and an exhaustive set of previously measured data of the $^{14}$N$(p,\gamma)^{15}$O reaction. Only statistical uncertainties were included in the fitting and, again, the alternative parameterization of \citet{PhysRevC.66.044611} was used.
 
-Similar to the fits for examining the lifetime's effects, the information about the levels was obtained from \citet{Ajzenberg-Selove1991} or \citet{Daigle2016} where they had been updated. A channel radius of 5.5 fm was adopted for this work, which matches the analyses done by Refs.  \cite{Adelberger2011, Li2016, Wagner2018, Frentz2021}. Information about the levels and their parameters as used in \texttt{AZURE2} are contained in Table~\ref{table: fitParamsFullFit}. 
+Similar to the fits for examining the lifetime's effects, a channel radius of 5.5~fm was adopted for the present work, the same as that adopted by Refs.~\cite{Adelberger2011, Li2016, Wagner2018, Frentz2021}. Information about the levels and their parameters as used in \texttt{AZURE2} are contained in Table~\ref{table: fitParams}. Some parameters were fixed at previous values from the literature and were obtained from \citet{Ajzenberg-Selove1991} or \citet{Daigle2016} where updated.
 
 
 \begin{table*}[]
@@ -268,9 +270,9 @@ $E_x$ (Ref.~\cite{Ajzenberg-Selove1991, Daigle2016}) &   $E_x$ (fit) & $J^\pi$ &
 \end{table*}  
 
 
-The cross-section data utilized in the fitting routine were from measurements at LUNA \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}, TUNL \cite{Runkle2005}, Bochum \cite{Schroder1987}, the University of Notre Dame \cite{Li2016}, and Dresden \cite{Wagner2018}. All of these data sets were left without scaling during the fits. The Bochum data from \citet{Schroder1987} were corrected as detailed in SFII \cite{Adelberger2011}. Due to target effects artificially inflating the cross section, we excluded some of the data from the fitting procedure close to sharp resonances. Corresponding to this, some of the resonance parameters were fixed in the fitting in order to enforce the known behavior of the resonances in the fit. 
+The cross-section data utilized in the fitting routine were from measurements at LUNA \cite{Formicola2004, Imbriani2005, Marta2008, Marta2011}, TUNL \cite{Runkle2005}, Bochum \cite{Schroder1987}, the University of Notre Dame \cite{Li2016}, and Dresden \cite{Wagner2018}. All of these data sets were fit without scaling. The Bochum data from \citet{Schroder1987} were corrected as detailed in SFII \cite{Adelberger2011}. Due to target effects artificially inflating the cross section, some of the data was excluded from the fitting procedure close to sharp resonances. Corresponding to this, some of the resonance parameters were fixed in the fitting in order to enforce the known behavior of the resonances in the fit. 
 
-Through our fitting process, we tested whether it was most appropriate to treat the various datasets as angle integrated or differential. For nearly all of the prior data, the original reported treatment was best. However, specifically for the data of \citet{Schroder1987}, by treating the dataset as differential in the fit instead of angle integrated, we dramatically improved our results, as evidenced by the reduction of 37$\%$ in the $\chi^{2}$ resulting from that change. Thus, our best fit from the data consisted of our measurements, \citet{Schroder1987}, and \citet{Li2016} as differential while the rest were treated angle integrated. These results can be seen in Figs.~\ref{fig: sfactor_best_fit} and \ref{fig: sfactor_best_low} and the final fit parameters are given in Table~\ref{table: fitParams}. 
+Through the fitting process, it was tested whether it was most appropriate to treat the various datasets as angle integrated or differential cross sections. For nearly all of the prior data, the fitting was insensitive to this choice. However, specifically for the data of \citet{Schroder1987}, by treating the data set as differential in the fit instead of angle integrated, the results were dramatically improved, as evidenced by the reduction of 37$\%$ in the $\chi^{2}$ resulting from that change. Thus, the best fit from the data consisted of this measurement, \citet{Schroder1987}, and \citet{Li2016} as differential while the rest were treated as angle integrated. These results can be seen in Figs.~\ref{fig: sfactor_best_fit} and \ref{fig: sfactor_best_low} and the final fit parameters are given in Table~\ref{table: fitParams}. 
 
 \begin{figure}
 \centering
@@ -287,9 +289,7 @@ Through our fitting process, we tested whether it was most appropriate to treat 
 \end{figure}
 
 
-Following this, we also examined the ways in which the differential cross section was affected by different angles. We calculated the differential $S$-factor at four different angles, namely $0\degree$, $45\degree$, $55\degree$, and $135\degree$, based on the results of our best fit to the data. As can be seen in Fig.~\ref{fig: sfactor_differential_angles}, there are significant differences in the differential $S$-factor across the entire energy landscape. Unsurprisingly, the fits at $45\degree$ and $55\degree$ are nearly identical. However, the fits at $0\degree$ and $135\degree$, surprisingly, exhibit the same behavior below the 278 keV resonance, and and are notably higher. They are elevated immediately below the resonance, and while the gap decreases with energy, the extrapolated $S_{g.s.}(0)$ for the fits at $0\degree$ and $135\degree$ are approximately 15$\%$ higher than the extrapolations at $45\degree$ and $55\degree$. Interestingly, while reported as angle integrated, the low-energy data of \citet{Imbriani2005} and \citet{Runkle2005} were measured at $55\degree$ and $0\degree$ respectively. As can be seen here, the discrepancy of these two data sets below the 278 keV resonance could be resolved in part by these angular differences. Specifically, a fit of these two datasets and the respective differential fits at $0\degree$ and $55\degree$ are shown in Fig.~\ref{fig: sfactor_runkle_imbriani}.
-
-\textbf{Concluding sentence about this and how we handled it going forward.}
+The differential cross sections were investigated for the ways in which they are affected by different angles. The differential $S$-factor was calculated at four different angles, namely $0\degree$, $45\degree$, $55\degree$, and $135\degree$, based on the results of the best fit to the data. As can be seen in Fig.~\ref{fig: sfactor_differential_angles}, there are significant differences in the differential $S$-factor across the entire energy landscape. The fits at $45\degree$ and $55\degree$ are nearly identical. The fits at $0\degree$ and $135\degree$ exhibit the same behavior below the 278~keV resonance, and are notably larger. They are elevated immediately below the resonance, and while the gap decreases with energy, the extrapolated $S_{g.s.}(0)$ for the fits at $0\degree$ and $135\degree$ are approximately 15$\%$ higher than the extrapolations at $45\degree$ and $55\degree$. While reported as angle integrated, the low-energy data of \citet{Imbriani2005} and \citet{Runkle2005} were measured at $55\degree$ and $0\degree$ respectively, albeit, in very close geometry. As can be seen here, the discrepancy of these two data sets below the 278~keV resonance might be partly resolved by this effect. Specifically, a fit of these two datasets, and the respective differential fits at $0\degree$ and $55\degree$, are shown in Fig.~\ref{fig: sfactor_runkle_imbriani}. 
 
 
 \begin{figure}
@@ -302,18 +302,22 @@ Following this, we also examined the ways in which the differential cross sectio
 \begin{figure}
 \centering
 \includegraphics[width=1.0\columnwidth]{./figures/compare_runkle_imbriani.png}
-\caption{$S$ factors for the R/DC $\rightarrow$ ground state transition from I\citet{Runkle2005} and \citet{Imbriani2005}, alongside the differential $S$-factors determined in this work at $0\degree$ and $55\degree$, respectively. The fits show signficant differences in the behavior of the reaction below the resonance, where the large discrepancy between these datasets lie. The data have been scaled by a factor of $4\pi$ for the purposes of comparing to the differential fits, but were treated an angle integrated when performing the fits. }
+\caption{$S$ factors for the R/DC $\rightarrow$ ground state transition from I\citet{Runkle2005} and \citet{Imbriani2005}, alongside the differential $S$-factors determined in this work at $0\degree$ and $55\degree$, respectively. The fits show significant differences in the behavior of the reaction below the resonance, where the large discrepancy between these datasets lie. The data have been scaled by a factor of $4\pi$ for the purposes of comparing to the differential fits, but were treated an angle integrated when performing the fits. }
 \label{fig: sfactor_runkle_imbriani}
 \end{figure}
 
 
-For the capture to the excited state at 6.79 MeV, the present fit is in agreement with earlier investigations. The present extrapolated $S$-factor for this transition is $S_{6.79}(0) = 1.24 \pm XX$ keV b. This agrees exactly with the recent measurement from \citet{Wagner2018} and simulataneously lies between the reports from \citet{Adelberger2011} and \citet{Li2016}, while agreeing with both. \textbf{I assume it will when the uncertainty is finished running anyway. }
+For the capture to the excited state at 6.79 MeV, the present fit is in agreement with earlier investigations. The present extrapolated $S$-factor for this transition is $S_{6.79}(0) = 1.24 \pm 0.09$~keV~b. This agrees exactly with the recent measurement from \citet{Wagner2018} and simultaneously lies between those reported by \citet{Adelberger2011} and \citet{Li2016}, while agreeing with both with in their quoted uncertainties. 
 
-For the capture to the ground state, the present result for the zero-energy extrapolated $S$-factor is $S_{g.s.}(0) = 0.33 \pm XX$ keV b. This value is higher than either that of \citet{Wagner2018} ($0.19 \pm 0.05$ keV b) and \citet{Adelberger2011} ($0.27 \pm 0.05$ keV b) while being lower than reported by \citet{Li2016} ($0.42 \pm 0.04$(stat)$^{+0.09}_{-0.19}$(syst) keV b). \textbf{Depending on our uncertainty, we will either agree or not with some of these or not. } 
+For the capture to the ground state, the present result for the zero-energy extrapolated $S$-factor is $S_{g.s.}(0) = 0.33_{-0.08}^{+0.16} $~keV~b. This value is higher than either that of \citet{Wagner2018} ($0.19 \pm 0.05$ keV b), \citet{Adelberger2011} ($0.27 \pm 0.05$ keV b) or \citet{Imbriani2005} ($0.25 \pm 0.06$ keV b) while being lower than that reported by \citet{Li2016} ($0.42 \pm 0.04$(stat)$^{+0.09}_{-0.19}$(syst) keV b) and \citet{Runkle2005} ($0.49 \pm 0.08$ keV b). With these results for context, the current extrapolated value lies in the middle of the landscape of previous measurements. In addition, the data from the present measurement above the resonance agrees well with that from \citet{Runkle2005}, while the $R$-matrix fit overproduces the cross section over this energy range. This is not limited just to the present $R$-matrix fit. Most previous fits~\cite{PhysRevC.67.065804, Imbriani2005, Azuma2010, Adelberger2011, Li2016, Wagner2018} show a similar overproduction of the cross section in this energy region. 
 
-\textbf{While we did not make any measurements for the transition to the excited state at 6.17 MeV, we included performed a fit and subsequent $S$-factor extrapolation using the data from \citet{Schroder1987}, \citet{Runkle2005}, and \citet{Imbriani2005}. The present extrapolated $S$-factor for this transition is $S_{6.17}(0) = 0.12 \pm XX$ keV b. Without any new data, this agrees well with the recently reported values of 0.12 by \citet{Azuma2010} and 0.13 $\pm$ 0.06 from \citet{Adelberger2011}.}
+The discrepancy between the ground state transition data sets (\citet{Imbriani2005} and \citet{Runkle2005}) and the $R$-matrix fit at low energies is reflected in the estimated uncertainty band of the low energy $S$ factor extrapolation. For the other 6.79~MeV transition, the data are in good agreement and a relative uncertainty in line with previous measurements was adopted. 
 
-\textbf{Altogether, this allows us to assert a new total $S$-factor for the $^{14}$N$(p,\gamma)^{15}$O reaction. From this work, we find a total $S$-factor to be $S_{tot}(0) = 1.69 \pm XX$ keV b. This value, as well as those for the individual transitions can be seen compared to literature values in Table \ref{table: new_s_factors}.  The other transitions not explicitly reported in this section are expected to contribute approximately $\sim5\%$ to the total. Accounting for this, then, we expect the total $S$-factor to be inflated even more and have reflected that with an increased uncertainty.??} This total $S$-factor at zero-energy is higher than those values reported in \cite{Imbriani2005, Marta2008, Adelberger2011} but agrees reasonably well within uncertainty and lies in near perfect agreement to the extrapolations reported in \cite{Runkle2005, Angulo2005} but also agrees well within error. This suggests an enhancement in the low-energy behavior of the $^{14}$N$(p,\gamma)^{15}$O reaction, agreeing with the recent neutrino measurements by the Borexino group, reported in \citet{agostini2020direct}.
+While this study does not report any measurements for the transition to the excited state at 6.17~MeV, a fit was performed, and an $S$-factor extrapolation was made, using the data from \citet{Schroder1987}, \citet{Runkle2005}, and \citet{Imbriani2005}. The present extrapolated $S$-factor for this transition is $S_{6.17}(0) = 0.12 \pm 0.04$~keV~b. This agrees well with the recently reported values of 0.12 in \citet{Azuma2010} and 0.13 $\pm$ 0.06 in \citet{Adelberger2011}.
+
+With the above considertations, a new total $S$-factor for the $^{14}$N$(p,\gamma)^{15}$O reaction was calculated, giving a total $S$-factor of $S_{tot}(0) = 1.69 \pm 0.13$~keV~b. This value, as well as those for the individual transitions, are compared to literature values in Table \ref{table: new_s_factors}. The other transitions, not explicitly reported in this section, are expected to contribute less than $\sim5\%$ to the total low energy $S$-factor. 
+
+This total $S$-factor, at zero-energy, is higher than those values reported in \cite{Imbriani2005, Marta2008, Adelberger2011} but agrees reasonably well within uncertainty and lies in near perfect agreement to the extrapolations reported in \cite{Runkle2005, Angulo2005}. This suggests a low-energy $S$-factor for the $^{14}$N$(p,\gamma)^{15}$O reaction, agreeing with the recent neutrino measurements by the Borexino group~\citet{agostini2020direct}, lies within the estimated uncertainty range. 
 
 
 \begin{sidewaystable}[]
@@ -345,7 +349,7 @@ Year & Reference                                                & R/DC $\rightar
  & & $^{+0.09}_{-0.19}$(sys) & $\pm$ 0.06 (sys) & & & \\
 2018 & Wagner \textit{et al.} \cite{Wagner2018}                  & 0.19 $\pm$ 0.01 (stat)          & 1.24 $\pm$ 0.02 (stat) & $--$                           & $--$         & $--$                                          \\
  & & $\pm$ 0.05 (sys) &  $\pm$ 0.11 (sys)  & & & \\ 
-2021 & This work                  & 0.33 $\pm$ XX           & 1.24 $\pm$ XX  &  0.12  $\pm$ XX $^{d}$              & $--$         & 1.69 $\pm$ XX \\
+2021 & This work                  & $0.33_{-0.08}^{+0.16} $           & 1.24 $\pm$ 0.09  &  0.12 $\pm$ 0.04$^{d}$              & $--$         & 1.69 $\pm$ 0.13 \\
  \bottomrule
 \end{tabular}
 \begin{tablenotes}
@@ -355,6 +359,75 @@ Year & Reference                                                & R/DC $\rightar
 \end{threeparttable}
 \label{table: new_s_factors}
 \end{sidewaystable}
+
+
+
+
+\section{Reaction rates}
+\label{sec: reaction rates}
+
+
+For the transitions reported here, the reaction rates were calculated with \texttt{AZURE2} for the temperature range of 0.001 GK to 10 GK with 2000 steps spaced equally in $\log(T_{9})$. Like the $S$-factors, the reaction rate contributions from the ground state and 6.79~MeV transitions were calculated from our data in tandem with the literature data of Refs.~\cite{Formicola2004, Imbriani2005, Marta2008, Marta2011, Runkle2005, Schroder1987, Li2016, Wagner2018}, while the contribution from the 6.17~MeV transition was calculated exclusively from the literature data of Refs.~\cite{Runkle2005, Imbriani2005, Schroder1987}. Finally, the remainder of the strength from the $E_{x}= 7.556$~MeV from other transitions is added to the reaction rate using the narrow resonance approximation.
+
+The results for the reaction rates are given in Table~\ref{table: reaction_rates} compared with those from \citet{Caughlan1988}, \citet{Angulo1999}, and \citet{Imbriani2005} in Fig.~\ref{fig: rrate_comp}. At lower temperatures, the present rate is approximately 15$\%$ higher than those published by \citet{Imbriani2005}, while the present rates are lower than the other two reported values. It be considered that the calculations of \citet{Caughlan1988} and \citet{Angulo1999} are based only on the uncorrected data from \citet{Schroder1987}. 
+
+
+\begin{sidewaystable}[]
+\thisfloatpagestyle{plain}
+\caption{REACTION RATES FOR $^{14}$N$(p,\gamma)^{15}$O }
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{@{}lllllllll@{}}
+\toprule
+$T_{9}$       & R/DC $\rightarrow$ 0.00 & R/DC $\rightarrow$ 5.18* & R/DC $\rightarrow$ 6.17 & R/DC $\rightarrow$ 6.79 & Total (this work) & Total \cite{Caughlan1988} & Total \cite{Angulo1999} & Total \cite{Imbriani2005} \\ \midrule
+1.00E-03 & 4.92E-58                & 0.00E+00                 & 1.97E-58                & 1.96E-57                & 2.65E-57          & 4.58E-57                  & 5.40E-57                & 2.33E-57                  \\
+1.50E-03 & 8.05E-50                & 0.00E+00                 & 3.29E-50                & 3.27E-49                & 4.40E-49          & 7.63E-49                  & 8.97E-49                & 3.90E-49                  \\
+2.00E-03 & 1.35E-44                & 0.00E+00                 & 5.63E-45                & 5.54E-44                & 7.45E-44          & 1.30E-43                  & 1.52E-43                & 6.66E-44                  \\
+3.01E-03 & 4.10E-38                & 0.00E+00                 & 1.78E-38                & 1.73E-37                & 2.32E-37          & 4.06E-37                  & 4.72E-37                & 2.09E-37                  \\
+4.00E-03 & 4.68E-34                & 0.00E+00                 & 2.10E-34                & 2.02E-33                & 2.70E-33          & 4.74E-33                  & 5.49E-33                & 2.46E-33                  \\
+5.01E-03 & 4.05E-31                & 3.58E-255                & 1.88E-31                & 1.79E-30                & 2.38E-30          & 4.19E-30                  & 4.83E-30                & 2.18E-30                  \\
+7.52E-03 & 2.19E-26                & 1.17E-168                & 1.09E-26                & 1.02E-25                & 1.35E-25          & 2.38E-25                  & 2.72E-25                & 1.24E-25                  \\
+1.00E-02 & 1.98E-23                & 1.05E-125                & 1.05E-23                & 9.58E-23                & 1.26E-22          & 2.24E-22                  & 2.54E-22                & 1.17E-22                  \\
+1.50E-02 & 1.03E-19                & 1.78E-82                 & 6.16E-20                & 5.41E-19                & 7.06E-19          & 1.26E-18                  & 1.42E-18                & 6.63E-19                  \\
+2.00E-02 & 2.30E-17                & 9.58E-61                 & 1.54E-17                & 1.30E-16                & 1.68E-16          & 3.03E-16                  & 3.37E-16                & 1.59E-16                  \\
+3.01E-02 & 1.80E-14                & 2.60E-39                 & 1.47E-14                & 1.16E-13                & 1.49E-13          & 2.69E-13                  & 2.95E-13                & 1.41E-13                  \\
+4.00E-02 & 1.11E-12                & 1.03E-28                 & 1.09E-12                & 8.05E-12                & 1.03E-11          & 1.87E-11                  & 2.03E-11                & 9.81E-12                  \\
+4.99E-02 & 2.00E-11                & 2.20E-22                 & 2.34E-11                & 1.62E-10                & 2.05E-10          & 3.76E-10                  & 4.05E-10                & 1.98E-10                  \\
+7.52E-02 & 2.26E-09                & 7.49E-14                 & 4.08E-09                & 2.39E-08                & 3.02E-08          & 5.52E-08                  & 5.84E-08                & 2.95E-08                  \\
+1.00E-01 & 3.87E-08                & 1.01E-09                 & 1.11E-07                & 5.19E-07                & 6.70E-07          & 1.20E-06                  & 1.25E-06                & 6.68E-07                  \\
+1.50E-01 & 2.38E-06                & 1.22E-05                 & 5.66E-05                & 4.06E-05                & 1.12E-04          & 1.29E-04                  & 1.35E-04                & 1.10E-04                  \\
+2.00E-01 & 1.26E-04                & 1.23E-03                 & 4.99E-03                & 1.86E-03                & 8.21E-03          & 8.34E-03                  & 8.54E-03                & 7.87E-03                  \\
+3.01E-01 & 9.48E-03                & 9.92E-02                 & 3.94E-01                & 1.32E-01                & 6.35E-01          & 6.61E-01                  & 6.55E-01                & 6.03E-01                  \\
+4.00E-01 & 7.41E-02                & 7.74E-01                 & 3.07E+00                & 1.03E+00                & 4.95E+00          & 5.21E+00                  & 5.12E+00                & 4.68E+00                  \\
+4.99E-01 & 2.38E-01                & 2.47E+00                 & 9.80E+00                & 3.30E+00                & 1.58E+01          & 1.66E+01                  & 1.63E+01                & 1.50E+01                  \\
+7.52E-01 & 1.05E+00                & 1.01E+01                 & 4.03E+01                & 1.41E+01                & 6.56E+01          & 6.71E+01                  & 6.71E+01                & 6.24E+01                  \\
+1.00E+00 & 2.41E+00                & 1.78E+01                 & 7.11E+01                & 2.69E+01                & 1.18E+02          & 1.18E+02                  & 1.19E+02                & 1.12E+02                  \\
+1.50E+00 & 1.32E+01                & 2.64E+01                 & 1.06E+02                & 5.29E+01                & 1.98E+02          & 2.02E+02                  & 1.92E+02                & 1.88E+02                  \\
+2.00E+00 & 4.88E+01                & 2.83E+01                 & 1.15E+02                & 8.57E+01                & 2.78E+02          & 3.12E+02                  & 2.69E+02                & 2.43E+02                  \\
+3.01E+00 & 2.28E+02                & 2.54E+01                 & 1.10E+02                & 1.87E+02                & 5.50E+02          & 7.46E+02                  & 5.91E+02                & 3.28E+02                  \\
+4.00E+00 & 5.74E+02                & 2.12E+01                 & 1.02E+02                & 3.33E+02                & 1.03E+03          & 1.46E+03                  & 1.20E+03                & 3.98E+02                  \\
+4.99E+00 & 1.06E+03                & 1.77E+01                 & 9.85E+01                & 5.12E+02                & 1.69E+03          & 2.35E+03                  & 2.06E+03                & 4.57E+02                  \\
+7.52E+00 & 2.51E+03                & 1.17E+01                 & 9.90E+01                & 1.07E+03                & 3.69E+03          & 4.45E+03                  & 4.81E+03                & 5.75E+02                  \\
+9.95E+00 & 3.78E+03                & 8.47E+00                 & 1.07E+02                & 1.64E+03                & 5.54E+03          & 6.23E+03                  & 7.10E+03                & 6.55E+02                  \\ \bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small 
+\item * Contribution added using the narrow resonance approximation.
+\end{tablenotes}
+\end{threeparttable}
+\label{table: reaction_rates}
+\end{center}
+\end{sidewaystable}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\columnwidth]{./figures/rr_with_518_zoom.png}
+\caption{The reaction rate from the present work compared with the rates presented in \citet{Caughlan1988}, \citet{Angulo1999}, and \citet{Imbriani2005}. The rates in this work were calculated numerically with the \texttt{AZURE2} software. a) Reaction rates given in cm$^{3}$ mole$^{-1}$ s$^{-1}$. b) Ratio of the present rate to the given literature rates. The rise at approximately 0.1 GK corresponds to the contribution from the transition to the 5.18 MeV excited state out of the $E_{x}= 7.556$ MeV resonance. }
+\label{fig: rrate_comp}
+\end{figure}
+
+Ultimately, the present higher zero-energy $S$-factors translate to a higher reaction rate at stellar temperatures, indicating an agreement with the results presented by the Borexino group \cite{agostini2020direct}.
 
 
 % % uncomment the following lines,
