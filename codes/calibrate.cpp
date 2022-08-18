@@ -1,4 +1,4 @@
-/*******************************************
+q/*******************************************
  * The calibration program from the 
  * 14N(p,g)15O 6.79 MeV state lifetime
  * measurement (data replay and calibration)
